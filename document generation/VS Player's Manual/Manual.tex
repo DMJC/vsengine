@@ -1,0 +1,171 @@
+\documentclass[10pt]{report}
+%\usepackage{latex8}
+\usepackage{times}
+\usepackage{graphicx,ifthen,subfigure}
+\usepackage{makeidx}
+\input{nomencldef}
+\usepackage[colorlinks,linkcolor=blue,plainpages=false,pdfpagelabels=true]{hyperref}
+\input{prettygloss}
+\makeindex
+\makeglossary
+%\pagestyle{empty}
+
+\newcommand{\ignore}[1]{}
+
+%\renewcommand{\topfraction}{1.0}
+%\renewcommand{\bottomfraction}{1.0}
+%\renewcommand{\textfraction}{0}
+%\renewcommand{\floatpagefraction}{1}
+
+\input{remark}
+%%\remarktrue
+\remarkfalse
+
+\graphicspath{{figs/}{curves/}}
+
+\newcommand{\BL}{{\sf BL}}
+\newcommand{\MR}{{\sf MR}}
+\newcommand{\PR}{{\sf PR}}
+\newcommand{\PIOB}{{\sf PIOB}}
+
+\newcommand{\EG}{{\it e.g.}}
+\newcommand{\IE}{{\it i.e.}}
+
+\newcommand{\READPRIV}{{\tt READ\_PRIV}}
+\newcommand{\READSHAR}{{\tt READ\_SHAR\_OR\_PRIV}}
+
+\newcommand{\RECALLPRIV}{{\tt RECALL\_PRIV}}
+\newcommand{\RECALLSHAR}{{\tt RECALL\_SHAR\_OR\_PRIV}}
+\newcommand{\RECALLPRIVORIG}{{\tt RECALL\_PRIV\_ORIG}}
+\newcommand{\RECALLSHARORIG}{{\tt RECALL\_SHAR\_OR\_PRIV\_ORIG}}
+\newcommand{\RECALLINV}{{\tt RECALL\_INV}}
+
+\newcommand{\RESPINV}{{\tt RESP\_INV}}
+\newcommand{\RESPCANCEL}{{\tt RESP\_CANCEL}}
+\newcommand{\RESPDATA}{{\tt RESP\_DATA}}
+\newcommand{\RESPSHAR}{{\tt RESP\_SHAR}}
+
+\newcommand{\DATASHAR}{{\tt DATA\_SHAR}}
+\newcommand{\DATAPRIV}{{\tt DATA\_PRIV}}
+
+\newcommand{\WRITEBACK}{{\tt WRITE\_BACK}}
+\newcommand{\UPDATETAG}{{\tt UPDATE\_TAG}}
+\newcommand{\UPDATEDATA}{{\tt UPDATE\_DATA}}
+\newcommand{\ALLOCPRIV}{{\tt ALLOC\_PRIV}}
+
+\newcommand{\LDBIAS}{{\tt ld.bias}}
+\newcommand{\LD}{{\tt ld}}
+\newcommand{\LDC}{{\tt ld.c}}
+\newcommand{\LDA}{{\tt ld.a}}
+\newcommand{\LDS}{{\tt ld.s}}
+\newcommand{\LDACQ}{{\tt ld.acq}}
+\newcommand{\PREFEXCL}{{\tt lfetch.excl}}
+
+\textheight 9in
+\columnsep 1.0pc
+\textwidth 6.5in
+%\headheight 0.0in
+%\headsep 0.0in
+\oddsidemargin 0in
+%\footheight 0.0in
+\topmargin -.5in
+
+
+\begin{document}
+\title{Vega Strike Player's Guide}
+
+\author{The Vega Strike Team}
+
+\renewcommand{\thepage}{\roman{page}}
+\maketitle
+\renewcommand{\thepage}{\arabic{page}}
+
+%\pagestyle{empty}
+\thispagestyle{empty}
+
+%\begingroup
+\centerline{\bf {\Huge Notice:}}
+{\it
+\input{splashnotice}
+}
+%\endgroup
+\setcounter{tocdepth}{2}
+\tableofcontents
+\listoftables
+\listoffigures
+\chapter{Overview}
+\input{overview}
+
+\chapter*{APPENDICES}
+\addtocounter{chapter}{1}
+\setcounter{section}{0}
+\addcontentsline{toc}{chapter}{APPENDICES}
+\setcounter{section}{0}
+\renewcommand{\thesection}{A.\arabic{section}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A-\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{A-\arabic{table}}
+\section*{Appendix A: Species information}
+\addcontentsline{toc}{chapter}{Appendix A: Species Information}
+\input{appendixA}
+\addtocounter{chapter}{1}
+\section*{Appendix B: Faction information}
+\addcontentsline{toc}{chapter}{Appendix B: Faction Information}
+\setcounter{section}{0}
+\renewcommand{\thesection}{B.\arabic{section}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{B-\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{B-\arabic{table}}
+\input{appendixB}
+\addtocounter{chapter}{1}
+\section*{Appendix C: Table of Key Bindings}
+\addcontentsline{toc}{chapter}{Appendix C: Table of Key Bindings}
+\setcounter{section}{0}
+\renewcommand{\thesection}{C.\arabic{section}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{C-\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{C-\arabic{table}}
+\input{appendixC}
+DUMMY CITATION~\cite{DallyMPA}
+DUMMY INDEX ENTRIES
+\index{cheese}
+\index{cheese!gouda}
+\index{cheese!gouda!goat gouda}
+\index{cheese!stilton!blue stilton}
+\index{cheese!stilton!white stilton}
+\index{cheese|see{crackers}}
+\index{crackers}
+\index{Fakecheese@\textit{Fakecheese}}
+\index{cheese@(cheese)!Blue Cheese}
+
+{
+\small
+\bibliographystyle{abbrv}
+\small
+\cleardoublepage
+\addcontentsline{toc}{chapter}{References}
+\renewcommand\bibname{References}
+\bibliography{biblio}
+}
+
+\nomenclature{blocks}{test glossary entry}
+\nomenclature{FTL}{Faster than Light}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Glossary}
+\printglossary
+
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\end{document}
+
+
+
+
+
+
+

@@ -1,0 +1,779 @@
+<comm>
+	<node text="startingNode" relationship="0"><!-- node 0 (starting node: Don't link here)-->
+		<edge index="1"/>
+		<edge index="2"/>
+		<edge index="3"/>
+	</node>
+
+<!-- Starting Points -->
+	<node text="Alle Systeme in optimalem Zustand." relationship="0"><!-- node 1-->
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="20"/>
+		<edge index="22"/>
+	</node>
+	<node text="Unsere Aufzeichnungen zeigen, dass du in Frieden zu uns kommst." relationship=".2"><!-- node 2-->
+		<edge index="8"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Deine Handlungsweise hat deinen Tod unausweichlich gemacht." relationship="-.2"><!-- node 3-->
+		<edge index="18"/>
+		<edge index="23"/>
+		<edge index="22"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="17"/>
+		<edge index="27"/>
+	</node>
+<!-- End of Starting Points -->
+
+<!-- Other Nodes -->
+	<node text="Wir gruessen dich." relationship=".025"><!-- node 4-->
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="24"/>
+		<edge index="1"/>
+		<edge index="23"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="13"/>
+	</node>
+	<node text="Waren deine Geschaefte fruchtbar fuer dich?" relationship=".03"><!-- node 5-->
+		<edge index="30"/>
+		<edge index="31"/>
+		<edge index="29"/>
+		<edge index="34"/>
+		<edge index="35"/>
+		<edge index="32"/>
+		<edge index="33"/>
+		<edge index="36"/>
+	</node>
+	<node text="Unsere Wege kreuzen sich einmal mehr." relationship=".05"><!-- node 6-->
+		<edge index="4"/>
+		<edge index="5"/>
+		<edge index="24"/>
+		<edge index="1"/>
+		<edge index="23"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="13"/>
+	</node>
+	<node text="Es befriedigt uns ein befreundetes Fahrzeug wie deins zu sehen." relationship=".058"><!-- node 7-->
+		<edge index="8"/>
+		<edge index="4"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Es ist lange her, dass wir dein Raumschiff gesehen haben." relationship=".07"><!-- node 8-->
+		<edge index="38"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Achte auf deinen Vektor, Mensch." relationship="-.025"><!-- node 9-->
+		<edge index="28"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="32"/>
+		<edge index="14"/>
+		<edge index="19"/>
+		<edge index="39"/>
+		<edge index="11"/>
+	</node>
+	<node text="Unsere Macht liegt jenseits deiner." relationship="-.05"><!-- node 10-->
+		<edge index="18"/>
+		<edge index="40"/>
+		<edge index="23"/>
+		<edge index="14"/>
+		<edge index="26"/>
+		<edge index="39"/>
+		<edge index="11"/>
+		<edge index="3"/>
+	</node>
+	<node text="Du wirst jetzt sterben, Mensch." relationship="-.1"><!-- node 11-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Dies ist gemeinsamer Raum. Kanaele offen halten." relationship=".01"><!-- node 12-->
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="41"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="13"/>
+		<edge index="22"/>
+	</node>
+	<node text="Wir kommunizieren nicht mit mitleiderregenden Kreaturen wie du eine bist." relationship="-.075"><!-- node 13-->
+		<edge index="12"/>
+		<edge index="42"/>
+		<edge index="16"/>
+		<edge index="19"/>
+		<edge index="22"/>
+		<edge index="39"/>
+		<edge index="43"/>
+		<edge index="17"/>
+	</node>
+	<node text="Wo hast du ein so veraltetes Schiff gefunden?" relationship="-.02"><!-- node 14-->
+		<edge index="45"/>
+		<edge index="44"/>
+		<edge index="47"/>
+		<edge index="40"/>
+		<edge index="15"/>
+		<edge index="46"/>
+		<edge index="39"/>
+		<edge index="27"/>
+	</node>
+
+	<node text="Wo hast du ein so erbaermliches Schiff gefunden?" relationship="-.01"><!-- node 15-->
+		<edge index="45"/>
+		<edge index="44"/>
+		<edge index="47"/>
+		<edge index="40"/>
+		<edge index="14"/>
+		<edge index="46"/>
+		<edge index="39"/>
+		<edge index="27"/>
+	</node>
+	<node text="Du bist die Energie nicht wert, die wir verbrauchen um mit dir zu kommunizieren." relationship="-.06"><!-- node 16-->
+		<edge index="18"/>
+		<edge index="23"/>
+		<edge index="12"/>
+		<edge index="9"/>
+		<edge index="10"/>
+		<edge index="22"/>
+		<edge index="13"/>
+		<edge index="3"/>
+	</node>
+	<node text="Du bist einer ohne Ehre." relationship="-.1"><!-- node 17-->
+		<edge index="18"/>
+		<edge index="23"/>
+		<edge index="12"/>
+		<edge index="9"/>
+		<edge index="10"/>
+
+		<edge index="16"/>
+		<edge index="13"/>
+		<edge index="3"/>
+	</node>
+	<node text="Solltest du dich weiter feindlich zeigen, sehen wir uns gezwungen dich zu zerstoeren." relationship=".05"><!-- node 18-->
+		<edge index="59"/>
+		<edge index="1"/>
+		<edge index="12"/>
+		<edge index="9"/>
+		<edge index="36"/>
+		<edge index="22"/>
+		<edge index="13"/>
+		<edge index="3"/>
+	</node>
+	<node text="Deine Handlungen haben zu deinem Tod gefuehrt." relationship="-.05"><!-- node 19-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Bitte identifiziere dich. Bist du ein Haendler? Oder vielleicht ein Schmuggler, der von den regulaeren Routen abgewichen ist?" relationship="-.05"><!-- node 20-->
+		<edge index="12"/>
+		<edge index="42"/>
+		<edge index="41"/>
+		<edge index="56"/>
+		<edge index="35"/>
+		<edge index="48"/>
+		<edge index="36"/>
+		<edge index="46"/>
+	</node>
+	<node text="Wenn du es mit uns in der Schlacht aufnehmen willst brauchst du viel bessere Technologie." relationship="-.1"><!-- node 21-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>	
+	<node text="Es ist toericht von dir den Zorn der Aera zu erregen." relationship="-.075"><!-- node 22-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Kein Mensch erreicht unsere Faehigkeiten." relationship="-.01"><!-- node 23-->
+		<edge index="2"/>
+		<edge index="6"/>
+		<edge index="1"/>
+		<edge index="12"/>
+		<edge index="33"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="16"/>
+	</node>
+	<node text="Wie ist dein Status?" relationship=".01"><!-- node 24-->
+		<edge index="31"/>
+		<edge index="24"/>
+		<edge index="42"/>
+		<edge index="35"/>
+		<edge index="34"/>
+		<edge index="32"/>
+		<edge index="33"/>
+		<edge index="51"/>
+	</node>
+	<node text="Du wirst deine Handlungen bereuen."  relationship="-.08"><!-- node 25-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="11"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Du wirst deinen Tod von uns erflehen." relationship="-.07"><!-- node 26-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="11"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Du wirst nie wieder deine Heimatsterne sehen." relationship="-.08"><!-- node 27-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="11"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Wir wuenschen dir viel Glueck." relationship=".04"><!-- node 28-->
+		<edge index="8"/>
+		<edge index="38"/>
+		<edge index="30"/>
+		<edge index="28"/>
+		<edge index="23"/>
+		<edge index="60"/>
+		<edge index="13"/>
+		<edge index="27"/>
+	</node>
+	<node text="In letzter Zeit erging es uns besonders gut." relationship=".01"><!-- node 29-->
+		<edge index="30"/>
+		<edge index="28"/>
+		<edge index="31"/>
+		<edge index="1"/>
+		<edge index="34"/>
+		<edge index="27"/>
+		<edge index="35"/>
+		<edge index="33"/>
+	</node>
+	<node text="Uns geht es gut, wie geht es dir?" relationship=".05"><!-- node 30-->
+		<edge index="38"/>
+		<edge index="28"/>
+		<edge index="31"/>
+		<edge index="1"/>
+		<edge index="34"/>
+		<edge index="27"/>
+		<edge index="35"/>
+		<edge index="33"/>
+	</node>
+	<node text="Wir gedeihen." relationship=".02"><!-- node 31-->
+		<edge index="38"/>
+		<edge index="28"/>
+		<edge index="30"/>
+		<edge index="1"/>
+		<edge index="34"/>
+		<edge index="27"/>
+		<edge index="35"/>
+		<edge index="33"/>
+	</node>
+	<node text="Unsere Angelegenheiten sind allein unsere." relationship="-.02"><!-- node 32-->
+		<edge index="8"/>
+		<edge index="24"/>
+		<edge index="23"/>
+		<edge index="1"/>
+		<edge index="34"/>
+
+		<edge index="15"/>
+		<edge index="20"/>
+		<edge index="16"/>
+	</node>
+	<node text="Du bist ein Problem." relationship="-.025"><!-- node 33-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Unsere Resourcen sind bei Weitem groesser als deine." relationship="-.01"><!-- node 34-->
+		<edge index="2"/><!-- like skills comment -->
+		<edge index="6"/>
+		<edge index="1"/>
+		<edge index="12"/>
+		<edge index="33"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="16"/>
+	</node>
+	<node text="Ungluecklicherweise sind die neueren Ereignisse zu einem Problem fuer uns geworden." relationship="-.015"><!-- node 35-->
+		<edge index="8"/>
+		<edge index="24"/>
+		<edge index="23"/>
+		<edge index="1"/>
+		<edge index="34"/>
+		<edge index="15"/>
+		<edge index="20"/>
+		<edge index="16"/>
+	</node>
+	<node text="Ist dir heute nach Sterben, Freibeuter?" relationship="-.04"><!-- node 36-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="UNUSED" relationship="0"><!-- node 37-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+	</node>
+	<node text="Moege das Schicksal dich leiten." relationship=".04"><!-- node 38-->
+		<edge index="2"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Es gibt gewisse Dinge, die zu sagen nicht weise waere." relationship="-.075"><!-- node 39-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="11"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Kontrolliere deine Empfindungen bevor sie am Ende dich kontrollieren." relationship=".01"><!-- node 40-->
+		<edge index="6"/>
+		<edge index="1"/>
+		<edge index="23"/>
+		<edge index="41"/>
+		<edge index="36"/>
+		<edge index="43"/>
+		<edge index="39"/>
+		<edge index="13"/>
+
+	</node>
+	<node text="Halte dich an deinen Vektor." relationship="0"><!-- node 41-->
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="13"/>
+		<edge index="22"/>
+	</node>
+	<node text="..." relationship="0"><!-- node 42-->
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="49"/>
+		<edge index="13"/>
+		<edge index="22"/>
+	</node>
+	<node text="Wir werden ueber deine Rasse herrschen." relationship="-.095"><!-- node 43-->
+		<edge index="18"/>
+		<edge index="12"/>
+		<edge index="23"/>
+		<edge index="16"/>
+		<edge index="17"/>
+		<edge index="13"/>
+		<edge index="11"/>
+		<edge index="3"/>
+	</node>
+	<node text="Unsere Schiffe sind die fortschrittlichsten, die du finden wirst." relationship=".015"><!-- node 44-->
+		<edge index="5"/>
+		<edge index="7"/>
+		<edge index="1"/>
+		<edge index="42"/>
+		<edge index="48"/>
+		<edge index="20"/>
+		<edge index="60"/>
+		<edge index="27"/>
+	</node>
+	<node text="Wir sind gewillt, deinen Kommentar als Humor aufzufassen." relationship=".05"><!-- node 45-->
+		<edge index="5"/>
+		<edge index="7"/>
+		<edge index="1"/>
+		<edge index="42"/>
+		<edge index="48"/>
+		<edge index="20"/>
+		<edge index="60"/>
+		<edge index="27"/>
+	</node>
+	<node text="Wenn du unser Schiff beschaedigst wird das Konsequenzen haben." relationship="-.075"><!-- node 46-->
+		<edge index="18"/>
+		<edge index="40"/>
+		<edge index="41"/>
+		<edge index="16"/>
+		<edge index="9"/>
+		<edge index="21"/>
+		<edge index="22"/>
+		<edge index="3"/>
+	</node>
+	<node text="Dieses Schiff kostet viel mehr als sich ein Mensch je leisten koennte." relationship="-.01"><!-- node 47-->
+		<edge index="5"/>
+		<edge index="7"/>
+		<edge index="1"/>
+		<edge index="42"/>
+		<edge index="48"/>
+		<edge index="20"/>
+		<edge index="60"/>
+		<edge index="27"/>
+	</node>
+	<node text="Wir verstehen nicht." relationship="0"><!-- node 48-->
+		<edge index="8"/>
+		<edge index="34"/>
+		<edge index="56"/>
+		<edge index="42"/>
+		<edge index="49"/>
+		<edge index="32"/>
+		<edge index="13"/>
+		<edge index="17"/>
+	</node>
+	<node text="Du bist ein Schmuggler mit fuer uns interessanter Ladung." relationship="-.02"><!-- node 49-->
+		<edge index="48"/>
+		<edge index="34"/>
+		<edge index="50"/>
+		<edge index="23"/>
+		<edge index="35"/>
+		<edge index="36"/>
+		<edge index="46"/>
+		<edge index="39"/>
+	</node>
+	<node text="Nein. Ungluecklicherweise hat unser Navigationscomputer Fehlfunktionen. Wir erkunden diese Gegend des Weltraums und brauchen Informationen ueber die Gegend." relationship="-.01"><!-- node 50-->
+		<edge index="57"/>
+		<edge index="52"/>
+		<edge index="56"/>
+		<edge index="54"/>
+		<edge index="53"/>
+		<edge index="51"/>
+		<edge index="22"/>
+		<edge index="27"/>
+	</node>
+	<node text="Wir glauben dir nicht. Ergib dich oder sei zerstoert." relationship="-.03"><!-- node 51-->
+		<edge index="58"/>
+		<edge index="28"/>
+		<edge index="40"/>
+		<edge index="47"/>
+		<edge index="46"/>
+		<edge index="55"/>
+		<edge index="22"/>
+		<edge index="11"/>
+	</node>
+	<node text="Du bist im oberen noerdlichen Quadranten der weit entfernten Galaxis Beta Minor." relationship=".01"><!-- node 52-->
+		<edge index="2"/>
+		<edge index="38"/>
+		<edge index="62"/><!--int index = ack (62);-->
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="14"/>
+		<edge index="55"/>
+		<edge index="25"/>
+	</node>
+	<node text="Zu weit weg von zu Hause, Mensch. Kehre sofort in dein Territorium zurueck." relationship="-.025"><!-- node 53-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Du solltest funktionierende Technologie kaufen, naerrischer Mensch." relationship="-.01"><!-- node 54-->
+		<edge index="2"/>
+		<edge index="38"/>
+		<edge index="62"/><!--int index = ack (62);-->
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="14"/>
+		<edge index="55"/>
+		<edge index="25"/>
+	</node>
+	<node text="Das ist nicht akzeptabel. Wir werden dich jetzt toeten." relationship="-.05"><!-- node 55-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+	<node text="Diese Information besitzen wir nicht." relationship="0"><!-- node 56-->
+		<edge index="57"/>
+		<edge index="52"/>
+		<edge index="56"/>
+		<edge index="54"/>
+		<edge index="53"/>
+		<edge index="51"/>
+		<edge index="22"/>
+		<edge index="27"/>
+	</node>
+	<node text="Du kannst die Informationen deines Navigationscomputers benutzen... [Nav Daten werden uebertragen.]" relationship=".05"><!-- node 57-->
+		<edge index="2"/>
+		<edge index="38"/>
+		<edge index="62"/><!--int index = ack (62);-->
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="14"/>
+		<edge index="55"/>
+		<edge index="25"/>
+	</node>
+	<node text="Wir sollten darueber reden bevor etwas passiert, das du bedauern koenntest." relationship=".07"><!-- node 58-->
+		<edge index="18"/>
+		<edge index="59"/>
+		<edge index="12"/>
+		<edge index="9"/>
+		<edge index="36"/>
+		<edge index="22"/>
+		<edge index="13"/>
+		<edge index="3"/>
+	</node>
+	<node text="Wir haben eine Waffen Fehlfunktion." relationship=".05"><!-- node 59-->
+		<edge index="18"/>
+		<edge index="12"/>
+		<edge index="15"/>
+		<edge index="9"/>
+		<edge index="25"/>
+		<edge index="22"/>
+		<edge index="17"/>
+		<edge index="3"/>
+	</node>
+	<node text="Wir werden dafuer sorgen, dass dein Tod schnell ist." relationship="-.05"><!-- node 60-->
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="43"/>
+		<edge index="16"/>
+		<edge index="25"/>
+		<edge index="26"/>
+		<edge index="27"/>
+		<edge index="39"/>
+		<!--standard taunt-->
+	</node>
+<!--End of Other Nodes -->
+
+<!-- Built-in Conversations --> 
+	<node text="Dockvorgang beendet. Du bist von den Dockklammern geloest." relationship="0.01">
+		<edge index="8"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Du bist nicht in den Dockklammern. Bewege dich in die weissen Markierungen und versuche erneute, zu docken." relationship="-.005">
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="19"/>
+		<edge index="22"/>
+	</node>
+	<node text="Dockvorgang eingeleitet; druecke 0 um unser Raumschiff zu betreten." relationship="0.01">
+		<edge index="8"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Du bist nicht autorisiert hier zu landen!" relationship="-.005">
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="19"/>
+		<edge index="22"/>
+	</node>
+	<node text="Landeerlaubnis erteilt; bewege dich zu der Landemarkierung und docke an den weissen Stellen  ." relationship="0.01">
+		<edge index="8"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Kann der Forderung nicht entsprechen." relationship="-.005">
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="19"/>
+		<edge index="22"/>
+	</node>
+	<node text="Bestaetigt." relationship="0.01">
+		<edge index="8"/>
+		<edge index="7"/>
+		<edge index="6"/>
+		<edge index="5"/>
+		<edge index="23"/>
+		<edge index="9"/>
+		<edge index="22"/>
+		<edge index="17"/>
+	</node>
+	<node text="Bereitmachen zur Durchsuchung. Geschwindigkeit und Kurs beibehalten." relationship="0">
+	<no_sound file="communications/sounds/contraband.wav" sex="0"/>
+		<edge index="8"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="24"/>
+		<edge index="46"/>
+		<edge index="32"/>
+		<edge index="55"/>
+		<edge index="22"/>
+	</node>
+	<node text="Keine Schmuggelware entdeckt: Du kannst weiterfliegen." relationship="0">
+		<edge index="4"/>
+		<edge index="24"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="15"/>
+		<edge index="14"/>
+		<edge index="20"/>
+		<edge index="22"/>
+	</node>
+	<node text="Schmuggelware entdeckt! Alle Einheiten anruecken und gefecht beginnen!" relationship="-.1">
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="40"/>
+		<edge index="16"/>
+		<edge index="35"/>
+		<edge index="32"/>
+		<edge index="25"/>
+		<edge index="3"/>
+	</node>
+	<node text="Du weichst vom Kurs ab. Kurs halten!" relationship="0">
+		<edge index="8"/>
+		<edge index="12"/>
+		<edge index="1"/>
+		<edge index="24"/>
+		<edge index="46"/>
+		<edge index="32"/>
+		<edge index="55"/>
+		<edge index="22"/>
+	</node>	
+	<node text="Erbitte Landefreigabe." relationship="0">
+		<edge index="4"/>
+		<edge index="7"/>
+		<edge index="12"/>
+		<edge index="9"/>
+	</node>	
+	<node text="Und wieder hab ich einen in die Unterwelt geschickt!" relationship="-.0625">
+		<edge index="4"/>
+		<edge index="7"/>
+		<edge index="12"/>
+		<edge index="9"/>
+	</node>
+	<node text="Dein Ende ist nah!" relationship="-.125">
+		<edge index="4"/>
+		<edge index="7"/>
+		<edge index="12"/>
+		<edge index="9"/>
+	</node>
+	<node text="Auch wenn der Vorteil jetzt auf deiner Seite liegt, die Schlacht ist meine!" relationship="-.125">
+		<edge index="4"/>
+		<edge index="7"/>
+		<edge index="12"/>
+		<edge index="9"/>
+	</node>	
+	<node text="*Treffer*" relationship="-.1">
+		<edge index="18"/>
+		<edge index="58"/>
+		<edge index="47"/>
+		<edge index="19"/>
+		<edge index="22"/>
+		<edge index="46"/>
+		<edge index="36"/>
+		<edge index="25"/>
+	</node>
+<!-- End of Built-in Conversations --> 
+</comm>
+

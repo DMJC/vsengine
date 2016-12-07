@@ -1,0 +1,17 @@
+VegaMapAnd is a tool to view universe maps created for the Vega Strike space simulation engine and various games based on it.
+
+Universe map viewing functionality from the desktop VegaMap application has been preserved, revamped, and enhanced.
+
+Features include:
+-----------------
+- View included universe maps for
+    Vega Strike: Upon The Coldest Sea
+    Privateer Parallel Universe
+    Vega Trek
+    Privateer Gemini Gold
+    PI Armada
+- Add your own maps
+- View sectors, systems, faction space
+- Explore jump paths
+- Find systems by name
+- Optionally listen to Vega Strike sound track while viewing the map

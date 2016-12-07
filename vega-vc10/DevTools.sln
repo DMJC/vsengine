@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mission", "mission\mission.vcxproj", "{CEF355E6-6D70-4F58-A09A-FF148A14E854}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basemaker", "basemaker\basemaker.vcxproj", "{769293BE-B003-42E8-A98A-4818944E6A45}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mesher", "Mesher\Mesher.vcxproj", "{513A290A-C77B-4F9D-AF72-F98009997AC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEF355E6-6D70-4F58-A09A-FF148A14E854}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CEF355E6-6D70-4F58-A09A-FF148A14E854}.Debug|Win32.Build.0 = Debug|Win32
+		{CEF355E6-6D70-4F58-A09A-FF148A14E854}.Release|Win32.ActiveCfg = Release|Win32
+		{CEF355E6-6D70-4F58-A09A-FF148A14E854}.Release|Win32.Build.0 = Release|Win32
+		{769293BE-B003-42E8-A98A-4818944E6A45}.Debug|Win32.ActiveCfg = Debug|Win32
+		{769293BE-B003-42E8-A98A-4818944E6A45}.Debug|Win32.Build.0 = Debug|Win32
+		{769293BE-B003-42E8-A98A-4818944E6A45}.Release|Win32.ActiveCfg = Release|Win32
+		{769293BE-B003-42E8-A98A-4818944E6A45}.Release|Win32.Build.0 = Release|Win32
+		{513A290A-C77B-4F9D-AF72-F98009997AC7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{513A290A-C77B-4F9D-AF72-F98009997AC7}.Debug|Win32.Build.0 = Debug|Win32
+		{513A290A-C77B-4F9D-AF72-F98009997AC7}.Release|Win32.ActiveCfg = Release|Win32
+		{513A290A-C77B-4F9D-AF72-F98009997AC7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		AMDCaProjectFile = E:\Visual Studio 2008\Projects\Vegastrike\vega-vc9\CodeAnalyst\DevTools.caw
+	EndGlobalSection
+EndGlobal

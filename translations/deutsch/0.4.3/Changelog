@@ -1,0 +1,88 @@
+20.09.2006 added initial changelog file < plueschinger > 
+- vegadeutsch-0.1
+- added following files
+
+  Handel treiben, Waffen kaufen,Schiff verbessern
+  /vegastrike/masterpart_list.csv from plueschinger
+
+  Die Missionen 
+  /vegastrike/modules/dynamic_mission.py from plueschinger 
+
+  Der Baarkeeper und sein Wissen
+  /vegastrike/bases/bartender.py from Rockstar
+
+  Die Unterhaltung im Weltraum zwischen den Piloten 
+  /vegastrike/communications/confed.xml from Rockstar
+  /vegastrike/communications/hunter.xml from Rockstar
+  /vegastrike/communications/iso.xml from Rockstar
+  /vegastrike/communications/merchant.xml from Rockstar
+
+03.10.2006 vegadeutsch-0.2
+- added following files
+
+  Die Unterhaltung im Weltraum zwischen den Piloten
+  /vegastrike/communications/aera.xml from To Megatherion
+  /vegastrike/communications/militia.xml from To Megatherion
+  /vegastrike/communications/neutral.xml from To Megatherion
+  /vegastrike/communications/pirates.xml from To Megatherion
+  /vegastrike/communications/privateer.xml from To Megatherion
+  /vegastrike/communications/retro.xml from To Megatherion
+  /vegastrike/communications/rlaan.xml from To Megatherion
+
+  /vegastrike/Changelog from plueschinger
+  /vegastrike/Release from plueschinger
+  /vegastrike/Readme-LesMich from plueschinger
+
+05.10.2006
+- added installation script for linux
+  /vegastrike/Install-Linux from plueschinger
+
+08.10.2006
+- A lot of changes in 
+  /vegastrike/modules/dynamic_missions.py from plueschinger
+
+30.10.2006 vegadeutsch-0.3
+- fixed the mixup between unix and windows files
+  end of line is now windows style
+
+- zip-packages are now made with the command:
+  zip -rkl foo foo
+
+- added following files from plueschinger
+
+  Die Ablehnung der Missionen in der Bar
+  /vegastrike/bases/fixers/no.py
+  Der Text fuer die Frachmissionen in der Bar
+  /vegastrike/modules/cargo_mission.py
+
+  Verschiedene Bilder mit deutschem Text
+  /vegastrike/sprites/bases/fixers/no.png
+  /vegastrike/sprites/bases/fixers/yes.png
+  /vegastrike/sprites/quit.png
+  /vegastrike/textures/cockpit/eject.png
+  /vegastrike/textures/cockpit/jump.png
+
+- some additions to the Linux-Install script
+
+25.01.2007 vegadeutsch-0.3.1
+- following changes from plueschinger
+
+- fixed the Linux-installation-script
+
+- added a batch installation file for windows, you just have to doubleclick it,
+  the name is installgerman.bat, which copies a file in the vegagastrike directory,
+  which is called languagechoice.bat and executes this file, where you can select the language of the game.
+  so the batchfiles can't install until now th png files.
+
+
+
+
+
+- 
+ 
+
+
+
+
+
+

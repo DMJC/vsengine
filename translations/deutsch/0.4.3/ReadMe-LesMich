@@ -1,0 +1,107 @@
+Über Vegadeutsch:
+Vegadeutsch ist ein Übersetzungsprojekt, durch das man Vegastrike in deutscher Sprache spielen kann.
+
+Bis jetzt wurden folgende Dateien übersetzt:
+
+/vegastrike/bases/bartender.py -> Der Baarkeeper und sein Wissen
+/vegastrike/bases/fixers/no.py -> Die Ablehnung der Missionen in der Bar
+/vegastrike/communications/aera.xml -> Die Unterhaltung im Weltraum zwischen den Piloten
+/vegastrike/communications/confed.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/hunter.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/iso.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/merchant.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/militia.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/neutral.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/pirates.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/privateer.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/retro.xml -> Die Unterhaltung im Weltraum zwischen den Piloten 
+/vegastrike/communications/rlaan.xml -> Die Unterhaltung im Weltraum zwischen den Piloten
+/vegastrike/masterpart_list.csv -> Handel treiben, Waffen kaufen,Schiff verbessern
+/vegastrike/modules/cargo_mission.py -> Der Text fuer die Frachmissionen in der Bar
+/vegastrike/modules/dynamic_mission.py -> Die Missionen 
+/vegastrike/sprites/bases/fixers/no.png -> Die Antwort "ja" in der Bar
+/vegastrike/sprites/bases/fixers/yes.png -> Die Antwort "nein" in der Bar
+/vegastrike/sprites/quit.png -> Der Schalter zum Beenden des Spiels
+/vegastrike/textures/cockpit/eject.png -> Das Überlastungszeichen
+/vegastrike/textures/cockpit/jump.png -> Das Sprungzeichen
+ 
+----------------------------------------------------------
+
+Installation:
+- Installation von Hand:
+- Keine Angst, es ist ganz einfach.
+
+1. Die Orginaldateien im Vegastrike-Ordner
+"/vegastrike/bases/bartender.py" in "/vegastrike/bases/bartender.py.en" umbenennen.
+"/vegastrike/bases/fixers/no.py" in "/vegastrike/bases/fixers/no.py.en" umbenennen.
+"/vegastrike/masterpart_list.csv" in "/vegastrike/masterpart_list.csv.en" umbenennen 
+"/vegastrike/modules/cargo_mission.py" in "/vegastrike/modules/cargo_mission.py.en" umbenennen.
+"/vegastrike/modules/dynamic_mission.py" in "/vegastrike/modules/dynamic_mission.py.en" umbenennen.
+"/vegastrike/sprites/bases/fixers/no.png" in "/vegastrike/sprites/bases/fixers/no.png.en" umbenennen.
+"/vegastrike/sprites/bases/fixers/yes.png" in "/vegastrike/sprites/bases/fixers/yes.png.en" umbenennen
+"/vegastrike/sprites/quit.png" in "/vegastrike/sprites/quit.png.en" umbenennen.
+"/vegastrike/textures/cockpit/eject.png" in "/vegastrike/textures/cockpit/eject.png.en" umbenennen.
+"/vegastrike/textures/cockpit/jump.png" in "/vegastrike/textures/cockpit/jump.png.en" umbenennen.
+
+----------------------------------------------------------
+
+2. Den Originalordner
+"/vegastrike/communications" in "/vegastrike/communications.en" umbenennen.
+
+----------------------------------------------------------
+
+3. Die neuen Dateien, die sich im Vegadeutsch-0.3.1-Ordner des Vegadeutsch-Projekts befinden
+
+"/vegastrike/bases/bartender.py"
+"/vegastrike/bases/fixers/no.py"
+"/vegastrike/masterpart_list.csv"
+"/vegastrike/modules/cargo_mission.py"
+"/vegastrike/modules/dynamic_mission.py"
+"/vegastrike/sprites/bases/fixers/no.png"
+"/vegastrike/sprites/bases/fixers/yes.png"
+"/vegastrike/sprites/quit.png"
+"/vegastrike/textures/cockpit/eject.png"
+"/vegastrike/textures/cockpit/jump.png"
+
+an die entsprechenden Stellen kopieren.
+
+----------------------------------------------------------
+
+4. Den neuen Ordner
+"/vegastrike/communications"
+an die entsprechende Stelle kopieren.
+
+----------------------------------------------------------
+
+- Installation mit dem Installationsscript für Linux-Anwender:
+
+1. Einen Terminal öffnen und mit dem Befehl 'cd /Pfadangabe' in den vegadeutsch-0.3.1-Ordner des vegadeutsch-Projekts wechseln,
+also den Ordner ,in dem sich diese Datei befindet.
+2. Den Befehl ./Install-Linux ausführen. Fetig, das war alles.
+Falls vegastrike nicht standardmässig in /usr/local/games/vegastrike installiert ist, erlaubt das
+Shellscript auch die nachträgliche interaktive Eingabe einer individuellen Pfadangabe, z.B. /usr/games/vegastrike
+während des Programmablaufs.
+
+Das Installationsscript gewinnt garantiert keinen Preis für guten Programmierstil, funktioniert aber sehr gut.
+
+-----------------------------------------------------------
+
+- Installation mit der Batchdatei fuer Windows-Anwender (nur mit Windows-XP getestet)
+
+1. In den vegadeutsch-0.3.1 Ordner wechseln
+2. Doppelklicken auf die Datei installgerman.bat
+3. den Anweisungen folgen, fertig.
+4. Es wird ausserdem in den Vegastrike-Ordner eine Datei languagechoice.bat kopiert,
+mit der man durch doppelklicken die Sprachen deutsch und englisch auswaehlen kann,
+diese Datei funktioniert nur im Vegastrike-Ordner und nicht im Vegadeutsch-Ordner.
+
+Die png-Dateien werden von der Batchdatei noch nicht installiert,
+erst ab Version-0.3.2
+-------------------------------------------------------------
+
+Das Team in alphabetischer Reihenfolge:
+Plueschinger
+Rockstar
+To Megatherion
+
+

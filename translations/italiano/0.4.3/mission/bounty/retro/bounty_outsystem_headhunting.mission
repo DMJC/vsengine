@@ -1,0 +1,57 @@
+<mission>
+	<settings>
+		<origin  planet="earth" x="0000" y="100" z="000.0"/>
+	</settings>
+
+	<variables>
+		<var name="defaultplayer" value="blue"/>
+		<var name="system" value="enigma_sector/blake" />
+		<var name="mission_name" value="Bounty Mission" />
+		<var name="description" value="Un gruppo di fanatisti che milita in quest'area deve essere elimiato.  Dopo aver osato attaccare alcuni civili colpevoli di aver violato lo spazio sacro ai loro dei, sono usciti dai monitor; ebbene, se individuerai e distruggerai la flottiglia, riceverai 19855 crediti." />
+	</variables>
+        <flightgroups>
+                <flightgroup name="blue" faction="confed" type="nova" ainame="default" waves="1" nr_ships="2">
+			<pos x="0400" y="-35400" z="47200000"/>
+			<rot x="180.0" y="180.0" z="180.0"/>
+			<order order="tmptarget" target="omikron"/>
+			<order priority="0" order="superiority" target="enemy"/>
+			<order priority="1" order="bomber" target="omikron"/>
+			<order priority="2" order="escort" target="blue"/>
+		</flightgroup>
+        </flightgroups>
+	<python>
+import bounty
+newmission = bounty.bounty (1, 2, 19855, 1, 2, 'retro')
+newmission=0
+
+</python>
+	<madule name="director">
+		<import name="bounty"/>
+		<script name="initgame">
+			<exec module="bounty" name="init">
+			<const type="int" value="1"/> <!--num systems away the delivery point is -->
+			<const type="int" value="2"/> <!--num systems away the delivery point is -->
+			<const type="float" value="19855"/> <!-- how much you are paid -->
+			<const type="bool" value="true"/> <!--does he run away -->
+			<const type="int" value="2"/> <!--difficulty-->
+			<const type="object" object="string" value="retro"/>
+			</exec>
+		</script>
+		<script name="gameloop">
+			<exec module="bounty" name="loop"/>
+		</script>
+		<script name="initbriefing">
+			<exec module="bounty" name="initbriefing">
+			</exec>
+		</script>
+		<script name="loopbriefing">
+			<exec module="bounty" name="loopbriefing">
+			</exec>
+		</script>
+		<script name="endbriefing">
+			<exec module="bounty" name="endbriefing">
+			</exec>
+		</script>
+
+	</module>
+</mission>

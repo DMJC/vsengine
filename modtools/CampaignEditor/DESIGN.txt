@@ -1,0 +1,119 @@
+A little introduction to the general design of the CampaignEditor, and the plans
+not yet implemented.  Well, it's actually just what I can manage today, after
+realising that I've actually forgotten a lot about how the python campaigns
+work (so the majority here is how to hack the java, not whether it will work
+or not ;-) ).
+
+There are three source packages which seperate out the source files into some
+roughly defineable groups.
+
+campaigneditor.arguments
+ -- contains the argument types that the campaign node accept, and the factory
+ to generate them when needed
+
+campaigneditor.display
+ -- contains the swing gui objects used to construct a gui, and a factory in a similar vein to the one
+ in the arguments package
+
+campaigneditor
+ -- has everything else you could imagine, including the Main class and the
+ campaign node objects
+
+So I guess the first thing to get to grips with, before trying to plow into
+the deeper thickets of code that make up the editor, is how the campaigns
+themselves work (because as much as we might like to, we can't abstract
+*everything* away with pretty (or not) interfaces and buttons.
+
+Each campaign consists of a series of 'campaign nodes', which make up a kind of
+web structure (as opposed to a tree).  Each node, depending on
+the conditions set in its arguments, will point to another node in the campaign,
+which may point to other nodes and so on until you get to one of the conclusions
+of the campaign.  The nodes therefore are the backbone of the whole system.
+
+Now, each node may perform a different purpose.  Some may create and monitor the
+success of a missionn (nodes like the special CargoMission constructor create),
+others may merely be branches, and some may merely wait for the player to
+trigger an event.
+
+See lines 263, 308, 424 of campaigns.py for examples of each of the above.
+For now you probably don't need to worry about the exact workings here (hence the
+gloss).
+
+So the aim of the editor therefore is to provide an easy way to create each of
+these campaign nodes, specifying the arguments for each in a straightforward way,
+and and linking them together.  In the future we could probably go for some
+nice error checking too ... I have a parser somewhere that does a lot of that
+already.
+
+
+So what are the goals?
+
+First Alpha:
+Have the minimum supported arguments coded in a workable way to support the
+creation of a campaign based solely on CargoMission nodes.  We are perhaps
+a little over halfway there at present.
+
+Second Alpha:
+Tidy up anything that self destructs when touched, and progress to include
+another node type or two, and the required arguments.
+
+First Beta:
+All currently existing node types, and all argument types to exist in a
+reasonably robust form.
+
+Beyond:
+GUI niceties, and lots of general little tweaks and features that will make
+it more useable (say, data file browsers ... need a sprite? Click browse and
+the editor will load a preview of all the sprites found in teh data tree),
+custom node types (branching support etc built in), nice ways of looking
+at the campaign 'graph' etc
+
+
+How does it work now?
+
+This is the complex bit ... as in, there are lots of hacks I had to do to get
+around limitations I came across with the way inheritance works in java (as
+opposed to the way it's documented ... the minor things missed out make all the
+pain!).  The basic idea is pretty simple, and that's what I'll run through in
+this document.  The tricky bits can be discovered yourself, or in a better form
+of communication (IM or something more realtime) ... but hey, if you can make
+those details run cleaner, then go for it!  One of these problems, when it comes
+down to it, is that I don't know a way to declare that a private variable *must*
+exist in objects inheriting from an abstract class, but also so that the private variable
+can be overridden with the specific one for our new class... ie so our methods
+getArgList() in our campaign node objects can be inherited nicely.
+
+Okay, so at present the campaign editor display has support for one campaign
+only, and will load up an empty one on program start.  If you have a test
+campaign xml file set up (I have a test file that I am committing today).
+
+New nodes are created when you click on the button, here you choose a name and a
+type, and the display calls a CampaignNodeFactory object to make it a campaign
+node of the right type, and appends it to the campaign, before reinitialising
+the displayed tree.
+
+When the campaign node is created, it's argument list is filled with empty
+arguments of the correct type (see line 33 of CampaignNode.java).  In the case
+of loading a file, these can then be overridden using the setArgList() method.
+
+When a campaign is loaded, the Campaign object facilitates the interpretation of
+the xml tree, and converts it into a tree containing nodes and their arguments.
+Use is made of the ArgumentFactory to produce the required nodes from their
+textual tag labels.
+
+Okay, so now we have the tree, but what about the display?  Double clicking on
+one of the campaign nodes will bring up a seperate editing interface.  The
+CampaignNodeDisplayFactory object is queried here (but atm only the default
+display panel is returned), producing a nice panel for our arguments.
+
+Then, the arguments for the campaign node are retrieved, and using the
+ArgumentDisplayFactory, panels for each of the arguments are created and put
+into place in the window.
+
+Each argument display object retains it's state independently of the argument
+object it represents, and will only update the argument when the
+updateArgument() function is called .. ie when the save changes button is
+clicked.
+
+That's about it for the general overview, hope it makes sense.  If not, please
+ask for any clarifications necessary!

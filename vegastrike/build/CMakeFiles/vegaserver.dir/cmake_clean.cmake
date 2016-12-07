@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/vegaserver.dir/src/cmd/atmosphere_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/base_util_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/beam_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/bolt_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/unit_factory_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/unit_functions_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/unit_util_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/unit_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/pilot_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/images_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/faction_xml_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/networking/networkcomm_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/force_feedback_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/faction_util_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfxlib_struct_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/libaudioserver.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/libserver.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/universe_util_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/script/flightgroup_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/script/script_call_unit_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/script/c_alike/c_alike.tab.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/script/c_alike/lex.yy.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfx/sphere_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfx/vsbox_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfx/mesh_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfx/background_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gfx/mesh_bin_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/vegaserver.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/script/director_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/cmd/ai/flykeyboard_server.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gldrv/gl_vertex_list.cpp.o"
+  "CMakeFiles/vegaserver.dir/src/gldrv/gl_sphere_list_server.cpp.o"
+  "vegaserver.pdb"
+  "vegaserver"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/vegaserver.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

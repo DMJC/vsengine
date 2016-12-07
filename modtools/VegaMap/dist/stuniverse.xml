@@ -1,0 +1,1538 @@
+<?xml version="1.0" ?>
+<galaxy>
+<planets>
+   <var name="texture" value="white"/>
+   <var name="texture_min" value="0"/>
+   <var name="texture_max" value="0"/>
+   <var name="texture_ext" value="png"/>
+   <var name="atmosphere" value="false"/>
+   <var name="lights" value=""/>
+   <var name="initial" value=""/>
+   <var name="inhabitable" value="true"/>
+
+   <planet name="Human_Homeworld:Earth">
+       <var name="texture" value="sol2/Earth"/>
+       <var name="initial" value="earth"/>
+       <var name="lights" value="earthlights.jpg "/>
+   </planet>
+   <planet name="Mars">
+       <var name="texture" value="sol2/mars"/>
+       <var name="initial" value="mars"/>
+       <var name="lights" value="marslights.jpg"/>
+   </planet>
+   <planet name="Luna">
+       <var name="texture" value="sol2/moon"/>
+       <var name="initial" value="moon"/>
+   </planet>
+ <planet name="A_class">
+       <var name="texture" value="planets/a_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="a"/>
+       <var name="lights" value="Dirt_light.png Dirt_light_repeat.pngwrapx64wrapy64"/>
+   </planet>
+
+   <planet name="B_class">
+       <var name="texture" value="planets/b_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="b"/>
+       
+   </planet>
+   <planet name="C_class">
+       <var name="texture" value="planets/c_class"/>
+       <var name="initial" value="c"/>
+       <var name="texture_max" value="2"/>
+       
+   </planet>
+   <planet name="D_class">
+       <var name="texture" value="planets/d_class"/>
+       <var name="initial" value="d"/>
+       <var name="lights" value="university_light.png"/>
+       <var name="texture_max" value="3"/>
+       
+   </planet>
+   <planet name="E_class">
+       <var name="texture" value="planets/e_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="e"/>
+       <var name="lights" value="Snow_light.pngwrapx6wrapy3 Dirt_light_repeat.pngwrapx64wrapy64"/>
+   </planet>
+   <planet name="F_class">
+       <var name="texture" value="planets/f_class"/>
+       <var name="initial" value="f"/>
+       <var name="atmosphere" value="true"/>
+       <var name="texture_max" value="2"/>
+   </planet>
+   <planet name="G_class">
+       <var name="texture" value="planets/g_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="g"/> 
+   </planet>
+   <planet name="H_class">
+       <var name="texture" value="planets/h_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="h"/>
+       <var name="atmosphere" value="true"/>
+   </planet>
+   <planet name="I_class">
+       <var name="texture" value="planets/i_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="i"/>
+       <var name="atmosphere" value="true"/>
+   </planet>
+   <planet name="J_class">
+       <var name="texture" value="planets/j_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="j"/> 
+   </planet>
+
+   <planet name="K_class">
+       <var name="texture" value="planets/k_class"/>
+       <var name="texture_max" value="3"/>
+       <var name="initial" value="k"/>
+       <var name="atmosphere" value="true"/>
+       
+   </planet>
+     <planet name="L_class">
+       <var name="texture" value="planets/l_class"/>
+       <var name="initial" value="l"/>
+       <var name="texture_max" value="2"/>
+       
+   </planet>
+ <planet name="M_class">
+       <var name="texture" value="planets/m_class"/>
+       <var name="texture_max" value="5"/>
+       <var name="initial" value="m"/>
+       <var name="atmosphere" value="true"/>
+   </planet>
+
+   <planet name="N_class">
+       <var name="texture" value="planets/n_class"/>
+       <var name="initial" value="n"/>
+       <var name="texture_max" value="2"/>
+   </planet>
+   <planet name="O_class">
+       <var name="texture" value="planets/o_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="o"/>
+       <var name="atmosphere" value="true"/>
+   </planet>
+
+   <planet name="P_class">
+       <var name="texture" value="planets/p_class"/>
+       <var name="initial" value="p"/>
+       <var name="atmosphere" value="true"/>
+       <var name="texture_max" value="3"/>
+   </planet>
+   <planet name="Q_class">
+       <var name="texture" value="planets/q_class"/>
+       <var name="initial" value="q"/>
+       <var name="atmosphere" value="true"/>
+       <var name="texture_max" value="2"/>
+   </planet>
+
+   <planet name="R_class">
+       <var name="texture" value="planets/r_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="r"/>
+       <var name="inhabitable" value="false"/>
+   </planet>
+   <planet name="S_class">
+       <var name="texture" value="planets/s_class"/>
+       <var name="initial" value="s"/>
+       <var name="inhabitable" value="false"/>
+       <var name="texture_max" value="2"/>
+
+   </planet>
+   <planet name="T_class">
+       <var name="texture" value="planets/t_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="t"/>
+       <var name="inhabitable" value="false"/>
+   </planet>
+   <planet name="X_class">
+       <var name="texture" value="planets/x_class"/>
+       <var name="initial" value="x"/>
+       <var name="inhabitable" value="false"/>
+       <var name="texture_max" value="2"/>
+
+   </planet>
+   <planet name="Y_class">
+       <var name="texture" value="planets/y_class"/>
+       <var name="texture_max" value="2"/>
+       <var name="initial" value="y"/>
+       <var name="inhabitable" value="false"/>
+       
+   </planet>
+   <planet name="Z_class">
+       <var name="texture" value="planets/z_class"/>
+       <var name="initial" value="z"/>
+       <var name="inhabitable" value="false"/>
+       <var name="texture_max" value="2"/>
+   </planet>
+  </planets>
+    <systems>
+	<sector name="unknown_sector">
+		<system name="max"><var name="planets" value=""/>
+			<var name="asteroidlist" value="asteroids.txt"/>
+			<var name="asteroids" value="true"/>
+			<var name="backgroundlist" value="background.txt"/>
+			<var name="compactness" value="2.2"/>
+			<var name="data" value="0"/>
+			<var name="faction" value="unknown"/>
+			<var name="gasgiantlist" value="gas_giants.txt"/>
+			<var name="moonlist" value="moons.txt"/>
+			<var name="namelist" value="names.txt"/>
+			<var name="nebulae" value="true"/>
+			<var name="nebulalist" value="nebulae.txt"/>
+			<var name="num_gas_giants" value="4"/>
+			<var name="num_jump" value="5"/>
+			<var name="num_moons" value="8"/>
+			<var name="num_natural_phenomena" value="1"/>
+			<var name="num_planets" value="6"/>
+			<var name="num_starbases" value="3"/>
+			<var name="num_stars" value="2"/>
+			<var name="planetlist" value="planets.txt"/>
+			<var name="starlist" value="stars.txt"/>
+			<var name="sun_radius" value="50000"/>
+			<var name="unitlist" value="smallunits.txt"/>
+		</system>
+		<system name="maxlimit"><var name="planets" value="a a y"/>
+			<var name="asteroidlist" value="asteroids.txt"/>
+			<var name="asteroids" value="true"/>
+			<var name="backgroundlist" value="background.txt"/>
+			<var name="compactness" value="2.5"/>
+			<var name="data" value="0"/>
+			<var name="faction" value="unknown"/>
+			<var name="gasgiantlist" value="gas_giants.txt"/>
+			<var name="moonlist" value="moons.txt"/>
+			<var name="namelist" value="names.txt"/>
+			<var name="nebulae" value="true"/>
+			<var name="nebulalist" value="nebulae.txt"/>
+			<var name="num_gas_giants" value="3"/>
+			<var name="num_jump" value="1000"/>
+			<var name="num_moons" value="7"/>
+			<var name="num_natural_phenomena" value="2"/>
+			<var name="num_planets" value="8"/>
+			<var name="num_starbases" value="6"/>
+			<var name="num_stars" value="4"/>
+			<var name="planetlist" value="planets.txt"/>
+			<var name="starlist" value="stars.txt"/>
+			<var name="sun_radius" value="150000"/>
+			<var name="unitlist" value="smallunits.txt"/>
+		</system>
+		<system name="min"><var name="planets" value="d z s x"/>
+			<var name="asteroidlist" value="asteroids.txt"/>
+			<var name="asteroids" value="true"/>
+			<var name="backgroundlist" value="background.txt"/>
+			<var name="compactness" value="1.4"/>
+			<var name="data" value="0"/>
+			<var name="faction" value="unknown"/>
+			<var name="gasgiantlist" value="gas_giants.txt"/>
+			<var name="moonlist" value="moons.txt"/>
+			<var name="namelist" value="names.txt"/>
+			<var name="nebulae" value="true"/>
+			<var name="nebulalist" value="nebulae.txt"/>
+			<var name="num_gas_giants" value="0"/>
+			<var name="num_jump" value="2"/>
+			<var name="num_moons" value="0"/>
+			<var name="num_natural_phenomena" value="0"/>
+			<var name="num_planets" value="0"/>
+			<var name="num_starbases" value="0"/>
+			<var name="num_stars" value="1"/>
+			<var name="planetlist" value="planets.txt"/>
+			<var name="starlist" value="stars.txt"/>
+			<var name="sun_radius" value="2500"/>
+			<var name="unitlist" value="smallunits.txt"/>
+		</system>
+		<system name="minlimit"><var name="planets" value="a b f g k"/>
+			<var name="asteroidlist" value="asteroids.txt"/>
+			<var name="asteroids" value="false"/>
+			<var name="backgroundlist" value="background.txt"/>
+			<var name="compactness" value="1.1"/>
+			<var name="data" value="0"/>
+			<var name="faction" value="unknown"/>
+			<var name="gasgiantlist" value="gas_giants.txt"/>
+			<var name="moonlist" value="moons.txt"/>
+			<var name="namelist" value="names.txt"/>
+			<var name="nebulae" value="false"/>
+			<var name="nebulalist" value="nebulae.txt"/>
+			<var name="num_gas_giants" value="0"/>
+			<var name="num_jump" value="1"/>
+			<var name="num_moons" value="0"/>
+			<var name="num_natural_phenomena" value="0"/>
+			<var name="num_planets" value="2"/>
+			<var name="num_starbases" value="1"/>
+			<var name="num_stars" value="1"/>
+			<var name="planetlist" value="planets.txt"/>
+			<var name="starlist" value="stars.txt"/>
+			<var name="sun_radius" value="2000"/>
+			<var name="unitlist" value="smallunits.txt"/>
+		</system>
+
+ </sector>
+	<sector name="Beta">
+	<system name="Lalande_25372">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.019"/>
+		<var name="xyz" value="1 -5 -0.132677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="17500"/>
+		<var name="planets" value="a f p t *d *e *y j x"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Alpha_Centauri"/>
+	</system>
+	<system name="P_Jem">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.019"/>
+		<var name="xyz" value="10 15 -0.32677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="17500"/>
+		<var name="planets" value="a f p m t *d *e *y j x"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Vulcan Beta/Orion Beta/Lorillia"/>
+	</system>
+	<system name="Sirius">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.009"/>
+		<var name="xyz" value="5 5 -0.032677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="17500"/>
+		<var name="planets" value="a a d t j x"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Andor Beta/Wolf_359"/>
+	</system>
+
+	<system name="Andor">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.009"/>
+		<var name="xyz" value="5 8 -0.032677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="17500"/>
+		<var name="planets" value="d j x"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Axanar Beta/Wolf_359 Beta/Vulcan Beta/Sirius"/>
+	</system>
+	<system name="Tenebia">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.009"/>
+		<var name="xyz" value="4.61538 -7.07692 -0.032677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="21500"/>
+		<var name="planets" value="d a j s *y *d x"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Epsilon_Indi Beta/Alpha_Centauri Beta/Benzar Beta/Porrima Beta/Tau_Bootis"/>
+	</system>
+	<system name="Epsilon_Indi">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.009"/>
+		<var name="xyz" value="2 -7 -0.032677"/>
+		<var name="spectrum" value="A0k..."/>
+		<var name="magnitude" value="-1.44"/>
+		<var name="radius" value="21500"/>
+		<var name="planets" value="b a e s *y *d x d"/>
+		<var name="absolute_magnitude" value="1.4544"/>
+		<var name="jumps" value="Beta/Tenebia Beta/Alpha_Centauri Beta/Proxima_Centauri"/>
+	</system>
+	<system name="Vulcan">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.82"/>
+		<var name="xyz" value="4 11 -0.01309"/>
+		<var name="spectrum" value="K1V"/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value=""/>"/>
+		<var name="absolute_magnitude" value="5.91596"/>
+		<var name="jumps" value="Beta/Axanar Beta/Wolf_359 Beta/Andor Alpha/Beta_Comae_Berenices Beta/P_Jem"/>
+	</system>
+	<system name="Alpha_Centauri">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="3 -4 0.01282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="g m *y e z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Beta/Sol Beta/Proxima_Centauri Beta/Wolf_359 Beta/Tenebia Beta/Epsilon_Indi Beta/Lalande_25372 Beta/Kaleb"/>
+	</system>
+	<system name="Proxima_Centauri">
+		<var name="faction" value="federation"/>
+		<var name="color" value="1.807"/>
+		<var name="xyz" value="4 -4 -0.014254"/>
+		<var name="spectrum" value="M5Ve"/>
+		<var name="magnitude" value="11.01"/>
+		<var name="radius" value="150000"/>
+		<var name="planets" value="m *r n s *z"/>
+		<var name="absolute_magnitude" value="15.449"/>
+		<var name="jumps" value="Beta/Sol Beta/Epsilon_Indi Beta/Alpha_Centauri"/>
+	</system>
+	<system name="Axanar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.881"/>
+		<var name="xyz" value="2 6 0.080095"/>
+		<var name="spectrum" value="K2V"/>
+		<var name="magnitude" value="3.72"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a *r *r m *r i *f d e"/>
+		<var name="absolute_magnitude" value="6.18206"/>
+		<var name="jumps" value="Beta/Sol Beta/Vulcan Beta/Wolf_359 Beta/Andor Beta/Loracus Alpha/Tau_Ceti Beta/Sirius"/>
+	</system>
+	<system name="Loracus">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.881"/>
+		<var name="xyz" value="1 8 0.680095"/>
+		<var name="spectrum" value="K2V"/>
+		<var name="magnitude" value="3.72"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a *r *d m *f i s *f *d e"/>
+		<var name="absolute_magnitude" value="6.18206"/>
+		<var name="jumps" value="Beta/Axanar"/>
+	</system>
+
+	<system name="Wolf_359">
+		<var name="faction" value="federation"/>
+		<var name="color" value="2"/>
+		<var name="xyz" value="4 2 0.047583"/>
+		<var name="spectrum" value="  M6"/>
+		<var name="magnitude" value="13.45"/>
+		<var name="radius" value="120000"/>
+		<var name="planets" value="a n"/>
+		<var name="absolute_magnitude" value="16.5574"/>
+		<var name="jumps" value="Beta/Sol Beta/Axanar Beta/Andor Beta/Vulcan Beta/Sirius"/>
+	</system>
+	<system name="Sol">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.65"/>
+		<var name="xyz" value="0.01 0.01 0.01"/>
+		<var name="spectrum" value="G2V"/>
+		<var name="magnitude" value="-26.72"/>
+		<var name="radius" value="36500"/>
+		<var name="planets" value=""/>"/>
+		<var name="absolute_magnitude" value="4.85"/>
+		<var name="jumps" value="Beta/Wolf_359 Beta/Epsilon_Indi Beta/Axanar Beta/Proxima_Centauri Beta/Alpha_Centauri Alpha/Beta_Comae_Berenices Alpha/Beta_Canum_Venaticorum Beta/Babel Alpha/Tau_Ceti"/>
+	</system>
+	<system name="Babel">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.781"/>
+		<var name="xyz" value="4 -1 0.03733"/>
+		<var name="spectrum" value="G9V"/>
+		<var name="magnitude" value="7.32"/>
+		<var name="radius" value="36500"/>
+		<var name="planets" value="a m f *r y t *d *z s *e *z t"/>
+		<var name="absolute_magnitude" value="4.86937"/>
+		<var name="jumps" value="Beta/Sol"/>
+	</system>
+	<system name="Benzar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.781"/>
+		<var name="xyz" value="7 -12.5 0.03733"/>
+		<var name="spectrum" value="G9V"/>
+		<var name="magnitude" value="7.32"/>
+		<var name="radius" value="56500"/>
+		<var name="planets" value="a n m *r y t *d *x s *e *z t"/>
+		<var name="absolute_magnitude" value="4.86937"/>
+		<var name="jumps" value="Beta/Tenebia Beta/Bolarus"/>
+	</system>
+	<system name="Porrima">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.781"/>
+		<var name="xyz" value="13 -7.5 0.03733"/>
+		<var name="spectrum" value="G9V"/>
+		<var name="magnitude" value="7.32"/>
+		<var name="radius" value="36500"/>
+		<var name="planets" value="a m f *r y t *d *z s *e *z t"/>
+		<var name="absolute_magnitude" value="4.86937"/>
+		<var name="jumps" value="Beta/Tenebia"/>
+	</system>
+	<system name="Tau_Bootis">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.781"/>
+		<var name="xyz" value="0.1 -12 0.03733"/>
+		<var name="spectrum" value="G9V"/>
+		<var name="magnitude" value="7.32"/>
+		<var name="radius" value="36500"/>
+		<var name="planets" value="a z f *r y s *d *z t *e *z n t"/>
+		<var name="absolute_magnitude" value="4.86937"/>
+		<var name="jumps" value="Alpha/Arcturus Beta/Tenebia"/>
+	</system>
+	<system name="Romulus">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0.781"/>
+		<var name="xyz" value="27 -36 0.03733"/>
+		<var name="spectrum" value="G9V"/>
+		<var name="magnitude" value="7.32"/>
+		<var name="radius" value="36500"/>
+		<var name="planets" value="b *r k t *d *x"/>
+		<var name="absolute_magnitude" value="4.86937"/>
+		<var name="jumps" value="Beta/Romii"/>
+	</system>
+	<system name="Romii">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="25 -34.0 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r k m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Romulus Beta/Rho_Virginis Beta/Terix"/>
+	</system>
+	<system name="Alpha_Hydri">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="33.5 -12.0 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b a *r k m t *d *x s *q *f *r z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Rho_Virginis Beta/Rator"/>
+	</system>
+	<system name="Rho_Virginis">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="27 -12.5 2.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r k m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Romii Beta/Alpha_Hydri Beta/Dessica Beta/Nelvana"/>
+	</system>
+	<system name="Rator">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="37 0.0 5.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r k m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Alpha_Hydri Beta/Psi_Velorum"/>
+	</system>
+	<system name="Dessica">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="18 -17.0 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r k o t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Rho_Virginis"/>
+	</system>
+	<system name="Terix">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="30 -27.0 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r k m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Romii"/>
+	</system>
+	<system name="Psi_Velorum">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="52 3.0 3.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r f p m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Rator Beta/Devoras Beta/Delta_Velorum Beta/Beta_Pictoris"/>
+	</system>
+	<system name="Devoras">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="74 5.50 -4.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="a *r k m t *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Delta_Velorum Beta/Lambda_Hydrae"/>
+	</system>
+	<system name="Delta_Velorum">
+		<var name="faction" value="romulan"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="68 -2.50 1.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="a b *r f p m t *d *x j *d *n *p"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Devoras"/>
+	</system>
+	<system name="Lambda_Hydrae">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="79 23.50 -3.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="b *r f k o s *d *x"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/H_Atoria Beta/Devoras"/>
+	</system>
+	<system name="Beta_Pictoris">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="46 9.0 -4.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="16600"/>
+		<var name="planets" value="a c f p k i *d *n"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Nausicaa Beta/Acamar"/>
+	</system>
+
+	<system name="Nelvana">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="24 -4.5 -1.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a n j *d *k d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Rho_Virginis Beta/Kaleb"/>
+	</system>
+	<system name="Kaleb">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="21 -3.5 -3.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a n m *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Nelvana Beta/Alpha_Centauri"/>
+	</system>
+	<system name="Bolarus">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="7 -23.5 5.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a n s *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Stameris Beta/Benzar"/>
+	</system>
+
+	<system name="Gamma_Hromi">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="52 42 -1.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a n s *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos Beta/Yridia Beta/Acamar"/>
+	</system>
+	<system name="Acamar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="63.5 26 -1.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a n s *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Gamma_Hromi Beta/Beta_Thoridor Beta/Beta_Pictoris"/>
+	</system>
+
+	<system name="Qonos">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="68 58 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="150000"/>
+		<var name="planets" value="b s *o h d"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Donatu Beta/Yridia Beta/Morska Beta/Donatu Beta/Qovat Beta/Ganalda Beta/Gamma_Hromi"/>
+	</system>
+	<system name="Donatu">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="27 61 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos Beta/Shermans_Planet Beta/Boreth Beta/Ganalda"/>
+	</system>
+	<system name="Morska">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="68 46 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos Beta/Rura_Penthe Beta/Beta_Thoridor"/>
+	</system>
+	<system name="Beta_Thoridor">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="73 35 4.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *k p d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Morska Beta/H_Atoria Beta/Acamar"/>
+	</system>
+	<system name="H_Atoria">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="84 31 -2.9137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Beta_Thoridor Beta/Lambda_Hydrae"/>
+	</system>
+
+	<system name="Qovat">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="83 54 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="d n k s *d h d s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos"/>
+	</system>
+	<system name="Alhena">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="26 86 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Boreth"/>
+	</system>
+	<system name="Ganalda">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="47 62 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="d n f s *d h d s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos Beta/Donatu Beta/Cestus"/>
+	</system>
+
+	<system name="Boreth">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="21 87 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b m s *d h d  s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Donatu Beta/Alhena"/>
+	</system>
+	<system name="Rura_Penthe">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="70.5 48 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="a b s *d h d k s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Morska"/>
+	</system>
+	<system name="Aldebaran">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="1.5 52 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="31000"/>
+		<var name="planets" value=" a m s *d *h d n s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Setlik Beta/Shermans_Planet Alpha/Gamma_Ceti Beta/Castor Beta/Risa"/>
+	</system>
+	<system name="Castor">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="5.5 40 -0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="15000"/>
+		<var name="planets" value=" a b m *d *h d n s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Yridia Beta/Aldebaran Beta/Risa"/>
+	</system>
+	<system name="Risa">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="4 36.5 -3.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a b o *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Castor Beta/Pollux Beta/Tellun"/>
+	</system>
+	<system name="Tellun">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="11.5 32 -5.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a b m *d d f t *c *d *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Risa Beta/Pollux"/>
+	</system>
+
+	<system name="Nausicaa">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="24 26 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a b s *d *h d n s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Yridia Beta/Pollux Beta/Regulus Beta/Lorillia Beta/Beta_Pictoris"/>
+	</system>
+	<system name="Yridia">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="28 34 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value=" a b s *d *h d n s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Qonos Beta/Nausicaa Beta/Castor Beta/Gamma_Hromi"/>
+	</system>
+	<system name="Pollux">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="6 25.5 0.9137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a e s *d *h *d n s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Nausicaa Beta/Orion Beta/Tellun"/>
+	</system>
+	<system name="Lorillia">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="16.5 15 3.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a b o *d *h d f s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/P_Jem Beta/Nausicaa"/>
+	</system>
+	<system name="Regulus">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="31.5 29.5 -3.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="7.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value=" a b m *d *h s *c *e *k f"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Nausicaa"/>
+	</system>
+
+	<system name="Shermans_Planet">
+		<var name="faction" value="klingon"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="18 64 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Donatu Beta/Aldebaran"/>
+	</system>
+	<system name="Orion">
+		<var name="faction" value="orion_syndicate"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="4 19 4.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Pollux Beta/P_Jem"/>
+	</system>
+	<system name="Gorn">
+		<var name="faction" value="unknown"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="70 140 4.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b s *d h d m s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Cestus"/>
+	</system>
+	<system name="Cestus">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="73 132 -4.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="110000"/>
+		<var name="planets" value="b m e s *d h d s"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Gorn Beta/Alhena Alpha/Megara"/>
+	</system>
+
+ </sector>
+ <sector name="Alpha">
+	<system name="Tholia">
+		<var name="faction" value="tholian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-210 100 8.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Megara Alpha/Tharilia Alpha/Thibella"/>
+	</system>
+	<system name="Tharilia">
+		<var name="faction" value="tholian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-214 104 -1.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g k *e s *d *y *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Tholia Alpha/Thibella"/>
+	</system>
+	<system name="Thibella">
+		<var name="faction" value="tholian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-201 95 3.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Tholia Alpha/Tharilia"/>
+	</system>
+	<system name="Megara">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-90 88 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Tholia Alpha/Talar Beta/Cestus"/>
+	</system>
+	<system name="Talar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-47 -22 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Megara Alpha/Umoth"/>
+	</system>
+	<system name="Capella">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-11 34 1.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a e m *z s *d *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Gamma_Ceti Alpha/Volon Alpha/New_France"/>
+	</system>
+	<system name="Xyrillia">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-7 13.5 4.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="d m *f s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Terra_Nova Alpha/Umoth Alpha/Draylon"/>
+	</system>
+	<system name="New_France">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-9.5 30 3.82"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="c d m *z i *d *d *n p"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Capella"/>
+	</system>
+	<system name="Draylon">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-16.5 21 -2.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a e m *z s *d *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Xyrillia Alpha/Cor_Caroli Alpha/Kressari"/>
+	</system>
+	<system name="Mizar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-29 -12.5 7.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a q m *z i *d *d *n z j"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cor_Caroli Alpha/Regulon"/>
+	</system>
+	<system name="Regulon">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-40 -27 -1.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a e m *z s *d *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Mizar Alpha/Bajor"/>
+	</system>
+
+	<system name="Ferenginar">
+		<var name="faction" value="ferengi"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-47 -22 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Irtok Alpha/Clarus"/>
+	</system>
+	<system name="Irtok">
+		<var name="faction" value="ferengi"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-44 -18 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Ferenginar Alpha/Maxia_Zeta Alpha/Clarus"/>
+	</system>
+	<system name="Maxia_Zeta">
+		<var name="faction" value="ferengi"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-35 -13 1.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Irtok"/>
+	</system>
+	<system name="Fellebia">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-22 -12 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e m s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Maxia_Zeta Alpha/Mu_Herculis"/>
+	</system>
+	<system name="Clarus">
+		<var name="faction" value="ferengi"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-53 -16 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Ferenginar Alpha/Irtok"/>
+	</system>
+	<system name="Dozaria">
+		<var name="faction" value="breen"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-94 23.5 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k k s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia Alpha/Portas"/>
+	</system>
+	<system name="Portas">
+		<var name="faction" value="breen"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-93 18 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Dozaria Alpha/Breen"/>
+	</system>
+	<system name="Breen">
+		<var name="faction" value="breen"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-98 20 4.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="65000"/>
+		<var name="planets" value="a k e s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Portas"/>
+	</system>
+
+	<system name="Vega">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-19 -8 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y z s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Tellar Alpha/Denobula_Triaxa Alpha/Altair"/>
+	</system>
+	<system name="Denobula_Triaxa">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-19 -3 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Vega"/>
+	</system>
+	<system name="Altair">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-11 -10 2"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Vega Alpha/Barnards_Star Alpha/70_Ophiuchi Alpha/Sigma_Bootis"/>
+	</system>
+	<system name="Formalhaut">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-3 -8 0.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g m *y z s *e *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Barnards_Star Alpha/Acturus"/>
+	</system>
+
+	<system name="Trill">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-31 19 -0.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a *d *b g m *y e t z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Bajor"/>
+	</system>
+	<system name="Terra_Nova">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-14 9 0.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a *d *b g m s *y e t z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Deneb_Kaitos Alpha/Cor_Caroli Alpha/Xyrillia"/>
+	</system> 
+	<system name="Cor_Caroli">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-16.5 8.5 2.82"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="s *y *e *d *x t *c *f z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Terra_Nova Alpha/Draylon Alpha/Mizar"/>
+	</system> 
+	<system name="Almatha">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-45 44 0.01282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="g m *y e z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia"/>
+	</system>
+	<system name="Amleth">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-50 36 1.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="g m *y e z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia Alpha/Kelvas"/>
+	</system>
+	<system name="Kelvas">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-63 36 -1.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a g o *y e s *d *n *z z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Amleth Alpha/Soukara Alpha/Velos"/>
+	</system>
+	<system name="Soukara">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-58 40 0.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="b g k *y *d e z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Kelvas"/>
+	</system>
+	<system name="Avenal">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-64 26 1.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="b d k *y s *e *z d"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia"/>
+	</system>
+	<system name="Velos">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-66 48 1.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="b d k *y s *e *z d"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Kelvas"/>
+	</system>
+	<system name="Trelka">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-27 41 2.82"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="b d k *y s *e *z d"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia Alpha/Kelrabi"/>
+	</system>
+	<system name="Kelrabi">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-28 46.5 1.282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a f o *y s *e *z d"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Trelka Alpha/Setlik Alpha/Umoth"/>
+	</system>
+	<system name="Kressari">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-19 28 -1.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a p m *z j *d *d *n z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Draylon Alpha/Dorvan"/>
+	</system>
+
+	<system name="Cardassia">
+		<var name="faction" value="cardassian"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-53 28 0.01282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="g m *y e z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Bajor Alpha/Almatha Alpha/Amleth Alpha/Avenal Alpha/Trelka"/>
+	</system>
+	<system name="Bajor">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-47 23 0.01282"/>
+		<var name="spectrum" value="K0c"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="95000"/>
+		<var name="planets" value="a g *l m *y e t z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Cardassia Alpha/Trill Alpha/Dorvan Alpha/Regulon"/>
+	</system>
+	<system name="Betazed">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.778"/>
+		<var name="xyz" value="-14 42 4.1282"/>
+		<var name="spectrum" value="K0IV"/>
+		<var name="magnitude" value="6.49"/>
+		<var name="radius" value="75000"/>
+		<var name="planets" value="a d m *z t *d *d *n j z"/>
+		<var name="absolute_magnitude" value="5.2537"/>
+		<var name="jumps" value="Alpha/Gamma_Ceti Alpha/Setlik"/>
+	</system>
+
+	<system name="Beta_Canum_Venaticorum">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-5 4.5 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="15000"/>
+		<var name="planets" value="a b s *o h j *d *c"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Sol Beta/Axanar Beta/Deneb_Kaitos"/>
+	</system>
+	<system name="Beta_Comae_Berenices">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-2 -2 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="15000"/>
+		<var name="planets" value="a b s *o h j *d *c"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Sol Alpha/Barnards_Star Alpha/Tellar"/>
+	</system>
+	<system name="Tau_Ceti">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-0.542857 3 0.09137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="15000"/>
+		<var name="planets" value="d z s m *f h j *d *c s s t "/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Sol Beta/Axanar"/>
+	</system>
+	<system name="Deneb_Kaitos">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-12 6 0.49137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="16000"/>
+		<var name="planets" value="a f m *g h j *d *c u s t "/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Beta_Canum_Venaticorum Alpha/Terra_Nova"/>
+	</system>
+	<system name="Barnards_Star">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-3 -5 0.49137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value="a n p k *d s *d *f t q *d i"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Beta/Beta_Comae_Berenices Alpha/Altair Alpha/Formalhaut"/>
+	</system>
+	<system name="Tellar">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-10 -1 0.49137"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value="n p d m k *d s *d *f t q *d i d y"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Beta_Comae_Berenices Alpha/Vega"/>
+	</system>
+	<system name="Arcturus">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-3 -11 4.9"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="61000"/>
+		<var name="planets" value="a f d o k *d s *d *f t q *d i d y"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Formalhaut Beta/Tau_Bootis Alpha/70_Ophiuchi"/>
+	</system>
+	<system name="70_Ophiuchi">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-7 -12 4.9"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value="n p d m k *d s *d *f t q *d i d y"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Arcturus Alpha/Altair Alpha/Stameris Alpha/Sigma_Bootis"/>
+	</system>
+	<system name="Stameris">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-7 -22.5 0.9"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="11000"/>
+		<var name="planets" value="n p d m k *d s *d *f t q *d i d y"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/70_Ophiuchi Alpha/Gamma_Serpentis Beta/Bolarus"/>
+	</system>
+	<system name="Mu_Herculis">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-16 -13 -0.9"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="18000"/>
+		<var name="planets" value="a p m *k *d s *d *f t *q *d *d i d z"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Sigma_Bootis Alpha/Fellebia"/>
+	</system>
+	<system name="Sigma_Bootis">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-12 -11.5 -2.9"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="18000"/>
+		<var name="planets" value="a p m *k *d s *d *f t *q *d *d i d z"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Altair Alpha/70_Ophiuchi Alpha/Mu_Herculis"/>
+	</system>
+	<system name="Gamma_Serpentis">
+		<var name="faction" value="federation"/>
+		<var name="color" value="0.598"/>
+		<var name="xyz" value="-10 -19 -2.2"/>
+		<var name="spectrum" value="R..."/>
+		<var name="magnitude" value="4.43"/>
+		<var name="radius" value="18000"/>
+		<var name="planets" value="a b d m *c *d s *n *k t *q *d *d i d z"/>
+		<var name="absolute_magnitude" value="4.76286"/>
+		<var name="jumps" value="Alpha/Stameris"/>
+	</system>
+	<system name="Dorvan">
+		<var name="faction" value="maquis"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-33.5 34.5 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="b *r d f k m t *d *x z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Alpha/Bajor Alpha/Volon Alpha/Kressari"/>
+	</system>
+	<system name="Volon">
+		<var name="faction" value="maquis"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-26 40 1.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="a *b d f m s *e *x *r z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Alpha/Dorvan Alpha/Setlik Alpha/Minos_Korva Alpha/Capella"/>
+	</system>
+	<system name="Setlik">
+		<var name="faction" value="maquis"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-25.5 47.0 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="b *r d f k m t *d *x z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Alpha/Volon Alpha/Umoth Alpha/Kelrabi Beta/Aldebaran Alpha/Minos_Korva Alpha/Betazed"/>
+	</system>
+	<system name="Gamma_Ceti">
+		<var name="faction" value="neutral"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-8 44.5 8.013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="a r d f k o t *d *x z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Alpha/Minos_Korva Beta/Aldebaran Alpha/Capella Alpha/Betazed"/>
+	</system>
+
+	<system name="Minos_Korva">
+		<var name="faction" value="maquis"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-19.5 44.0 8.013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="b *r d f k m t *d *x z"/>
+		<var name="absolute_magnitude" value="9.59387"/>
+		<var name="jumps" value="Alpha/Setlik Alpha/Volon Alpha/Gamma_Ceti"/>
+	</system>
+	<system name="Umoth">
+		<var name="faction" value="maquis"/>
+		<var name="color" value="0"/>
+		<var name="xyz" value="-35.5 48 0.08013"/>
+		<var name="spectrum" value=""/>
+		<var name="magnitude" value="10.77"/>
+		<var name="radius" value="36600"/>
+		<var name="planets" value="a r m t *d *x *e *n z"/>
+		<var name="absolute_magnitude" value="6.59387"/>
+		<var name="jumps" value="Alpha/Setlik Alpha/Kelrabi Alpha/Talar"/>
+	</system>
+
+ </sector>
+	</systems>
+</galaxy>

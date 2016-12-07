@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/development/privgold/vegastrike-code/vegastrike/objconv/asteroidgen.cpp
+vector
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+ctime
+-
+float.h
+-
+

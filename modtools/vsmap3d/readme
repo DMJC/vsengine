@@ -1,0 +1,35 @@
+VSMap3D is published under the GPL V2. There is a gpl.txt file included in the package.
+Current release version is 1.3.4. For details check the changelog file.
+
+
+###############################################
+RUNNING vsmap3d and COMPILATION of source code:
+###############################################
+
+To run the skeleton you have 2 options:
+
+Option A (have it done by mystery):
+---------
+
+Call the run script (run.bat|run.bash) from a console.
+It'll take care of calling qmake, make, and start program.
+
+
+Option B (do it yourself):
+---------
+
+1) To create a Qt project file use qmake with at least these arguments:
+qmake -after QT+=opengl QT+=xml QT+=gui win32:CONFIG+=console OBJECTS_DIR=obj/MYPLATFORM/release MOC_DIR=moc/MYPLATFORM/release DESTDIR=bin/MYPLATFORM/release TARGET=vsmap3d
+
+2) To create a Makefile type:
+qmake
+
+3) To compile the code type:
+make
+
+1-3) for copy-pasters:
+qmake -after QT+=opengl QT+=xml QT+=gui win32:CONFIG+=console OBJECTS_DIR=obj/MYPLATFORM/release MOC_DIR=moc/MYPLATFORM/release DESTDIR=bin/MYPLATFORM/release TARGET=vsmap3d
+qmake
+make
+
+4) Locate your binary in the sub directory: bin/MYPLATFORM/release/

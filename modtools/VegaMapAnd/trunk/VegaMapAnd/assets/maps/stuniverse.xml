@@ -1,0 +1,590 @@
+<galaxy>
+<systems>
+	<sector name="Beta">
+	<system name="Lalande_25372">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="1 -5 -0.132677" />
+		<var name="jumps" value="Beta/Alpha_Centauri" />
+	</system>
+	<system name="P_Jem">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="10 15 -0.32677" />
+		<var name="jumps" value="Beta/Vulcan Beta/Orion Beta/Lorillia" />
+	</system>
+	<system name="Sirius">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="5 5 -0.032677" />
+		<var name="jumps" value="Beta/Andor Beta/Wolf_359" />
+	</system>
+
+	<system name="Andor">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="5 8 -0.032677" />
+		<var name="jumps" value="Beta/Axanar Beta/Wolf_359 Beta/Vulcan Beta/Sirius" />
+	</system>
+	<system name="Tenebia">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4.61538 -7.07692 -0.032677" />
+		<var name="jumps" value="Beta/Epsilon_Indi Beta/Alpha_Centauri Beta/Benzar Beta/Porrima Beta/Tau_Bootis" />
+	</system>
+	<system name="Epsilon_Indi">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="2 -7 -0.032677" />
+		<var name="jumps" value="Beta/Tenebia Beta/Alpha_Centauri Beta/Proxima_Centauri" />
+	</system>
+	<system name="Vulcan">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4 11 -0.01309" />
+		<var name="jumps" value="Beta/Axanar Beta/Wolf_359 Beta/Andor Alpha/Beta_Comae_Berenices Beta/P_Jem" />
+	</system>
+	<system name="Alpha_Centauri">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="3 -4 0.01282" />
+		<var name="jumps" value="Beta/Sol Beta/Proxima_Centauri Beta/Wolf_359 Beta/Tenebia Beta/Epsilon_Indi Beta/Lalande_25372 Beta/Kaleb" />
+	</system>
+	<system name="Proxima_Centauri">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4 -4 -0.014254" />
+		<var name="jumps" value="Beta/Sol Beta/Epsilon_Indi Beta/Alpha_Centauri" />
+	</system>
+	<system name="Axanar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="2 6 0.080095" />
+		<var name="jumps" value="Beta/Sol Beta/Vulcan Beta/Wolf_359 Beta/Andor Beta/Loracus Alpha/Tau_Ceti Beta/Sirius" />
+	</system>
+	<system name="Loracus">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="1 8 0.680095" />
+		<var name="jumps" value="Beta/Axanar" />
+	</system>
+
+	<system name="Wolf_359">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4 2 0.047583" />
+		<var name="jumps" value="Beta/Sol Beta/Axanar Beta/Andor Beta/Vulcan Beta/Sirius" />
+	</system>
+	<system name="Sol">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="0.01 0.01 0.01" />
+		<var name="jumps" value="Beta/Wolf_359 Beta/Epsilon_Indi Beta/Axanar Beta/Proxima_Centauri Beta/Alpha_Centauri Alpha/Beta_Comae_Berenices Alpha/Beta_Canum_Venaticorum Beta/Babel Alpha/Tau_Ceti" />
+	</system>
+	<system name="Babel">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4 -1 0.03733" />
+		<var name="jumps" value="Beta/Sol" />
+	</system>
+	<system name="Benzar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="7 -12.5 0.03733" />
+		<var name="jumps" value="Beta/Tenebia Beta/Bolarus" />
+	</system>
+	<system name="Porrima">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="13 -7.5 0.03733" />
+		<var name="jumps" value="Beta/Tenebia" />
+	</system>
+	<system name="Tau_Bootis">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="0.1 -12 0.03733" />
+		<var name="jumps" value="Alpha/Arcturus Beta/Tenebia" />
+	</system>
+	<system name="Romulus">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="27 -36 0.03733" />
+		<var name="jumps" value="Beta/Romii" />
+	</system>
+	<system name="Romii">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="25 -34.0 0.08013" />
+		<var name="jumps" value="Beta/Romulus Beta/Rho_Virginis Beta/Terix" />
+	</system>
+	<system name="Alpha_Hydri">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="33.5 -12.0 0.08013" />
+		<var name="jumps" value="Beta/Rho_Virginis Beta/Rator" />
+	</system>
+	<system name="Rho_Virginis">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="27 -12.5 2.08013" />
+		<var name="jumps" value="Beta/Romii Beta/Alpha_Hydri Beta/Dessica Beta/Nelvana" />
+	</system>
+	<system name="Rator">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="37 0.0 5.08013" />
+		<var name="jumps" value="Beta/Alpha_Hydri Beta/Psi_Velorum" />
+	</system>
+	<system name="Dessica">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="18 -17.0 0.08013" />
+		<var name="jumps" value="Beta/Rho_Virginis" />
+	</system>
+	<system name="Terix">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="30 -27.0 0.08013" />
+		<var name="jumps" value="Beta/Romii" />
+	</system>
+	<system name="Psi_Velorum">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="52 3.0 3.08013" />
+		<var name="jumps" value="Beta/Rator Beta/Devoras Beta/Delta_Velorum Beta/Beta_Pictoris" />
+	</system>
+	<system name="Devoras">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="74 5.50 -4.08013" />
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Delta_Velorum Beta/Lambda_Hydrae" />
+	</system>
+	<system name="Delta_Velorum">
+		<var name="faction" value="romulan" />
+		<var name="xyz" value="68 -2.50 1.08013" />
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Devoras" />
+	</system>
+	<system name="Lambda_Hydrae">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="79 23.50 -3.08013" />
+		<var name="jumps" value="Beta/H_Atoria Beta/Devoras" />
+	</system>
+	<system name="Beta_Pictoris">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="46 9.0 -4.08013" />
+		<var name="jumps" value="Beta/Psi_Velorum Beta/Nausicaa Beta/Acamar" />
+	</system>
+
+	<system name="Nelvana">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="24 -4.5 -1.09137" />
+		<var name="jumps" value="Beta/Rho_Virginis Beta/Kaleb" />
+	</system>
+	<system name="Kaleb">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="21 -3.5 -3.09137" />
+		<var name="jumps" value="Beta/Nelvana Beta/Alpha_Centauri" />
+	</system>
+	<system name="Bolarus">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="7 -23.5 5.09137" />
+		<var name="jumps" value="Alpha/Stameris Beta/Benzar" />
+	</system>
+
+	<system name="Gamma_Hromi">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="52 42 -1.09137" />
+		<var name="jumps" value="Beta/Qonos Beta/Yridia Beta/Acamar" />
+	</system>
+	<system name="Acamar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="63.5 26 -1.09137" />
+		<var name="jumps" value="Beta/Gamma_Hromi Beta/Beta_Thoridor Beta/Beta_Pictoris" />
+	</system>
+
+	<system name="Qonos">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="68 58 0.09137" />
+		<var name="jumps" value="Beta/Donatu Beta/Yridia Beta/Morska Beta/Donatu Beta/Qovat Beta/Ganalda Beta/Gamma_Hromi" />
+	</system>
+	<system name="Donatu">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="27 61 0.09137" />
+		<var name="jumps" value="Beta/Qonos Beta/Shermans_Planet Beta/Boreth Beta/Ganalda" />
+	</system>
+	<system name="Morska">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="68 46 0.09137" />
+		<var name="jumps" value="Beta/Qonos Beta/Rura_Penthe Beta/Beta_Thoridor" />
+	</system>
+	<system name="Beta_Thoridor">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="73 35 4.09137" />
+		<var name="jumps" value="Beta/Morska Beta/H_Atoria Beta/Acamar" />
+	</system>
+	<system name="H_Atoria">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="84 31 -2.9137" />
+		<var name="jumps" value="Beta/Beta_Thoridor Beta/Lambda_Hydrae" />
+	</system>
+
+	<system name="Qovat">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="83 54 0.09137" />
+		<var name="jumps" value="Beta/Qonos" />
+	</system>
+	<system name="Alhena">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="26 86 0.09137" />
+		<var name="jumps" value="Beta/Boreth" />
+	</system>
+	<system name="Ganalda">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="47 62 0.09137" />
+		<var name="jumps" value="Beta/Qonos Beta/Donatu Beta/Cestus" />
+	</system>
+
+	<system name="Boreth">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="21 87 0.09137" />
+		<var name="jumps" value="Beta/Donatu Beta/Alhena" />
+	</system>
+	<system name="Rura_Penthe">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="70.5 48 0.09137" />
+		<var name="jumps" value="Beta/Morska" />
+	</system>
+	<system name="Aldebaran">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="1.5 52 0.09137" />
+		<var name="jumps" value="Alpha/Setlik Beta/Shermans_Planet Alpha/Gamma_Ceti Beta/Castor Beta/Risa" />
+	</system>
+	<system name="Castor">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="5.5 40 -0.09137" />
+		<var name="jumps" value="Beta/Yridia Beta/Aldebaran Beta/Risa" />
+	</system>
+	<system name="Risa">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="4 36.5 -3.09137" />
+		<var name="jumps" value="Beta/Castor Beta/Pollux Beta/Tellun" />
+	</system>
+	<system name="Tellun">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="11.5 32 -5.09137" />
+		<var name="jumps" value="Beta/Risa Beta/Pollux" />
+	</system>
+
+	<system name="Nausicaa">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="24 26 0.09137" />
+		<var name="jumps" value="Beta/Yridia Beta/Pollux Beta/Regulus Beta/Lorillia Beta/Beta_Pictoris" />
+	</system>
+	<system name="Yridia">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="28 34 0.09137" />
+		<var name="jumps" value="Beta/Qonos Beta/Nausicaa Beta/Castor Beta/Gamma_Hromi" />
+	</system>
+	<system name="Pollux">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="6 25.5 0.9137" />
+		<var name="jumps" value="Beta/Nausicaa Beta/Orion Beta/Tellun" />
+	</system>
+	<system name="Lorillia">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="16.5 15 3.09137" />
+		<var name="jumps" value="Beta/P_Jem Beta/Nausicaa" />
+	</system>
+	<system name="Regulus">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="31.5 29.5 -3.09137" />
+		<var name="jumps" value="Beta/Nausicaa" />
+	</system>
+
+	<system name="Shermans_Planet">
+		<var name="faction" value="klingon" />
+		<var name="xyz" value="18 64 0.09137" />
+		<var name="jumps" value="Beta/Donatu Beta/Aldebaran" />
+	</system>
+	<system name="Orion">
+		<var name="faction" value="orion_syndicate" />
+		<var name="xyz" value="4 19 4.09137" />
+		<var name="jumps" value="Beta/Pollux Beta/P_Jem" />
+	</system>
+	<system name="Gorn">
+		<var name="faction" value="unknown" />
+		<var name="xyz" value="70 140 4.09137" />
+		<var name="jumps" value="Beta/Cestus" />
+	</system>
+	<system name="Cestus">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="73 132 -4.09137" />
+		<var name="jumps" value="Beta/Gorn Beta/Alhena Alpha/Megara" />
+	</system>
+
+ </sector>
+ <sector name="Alpha">
+	<system name="Tholia">
+		<var name="faction" value="tholian" />
+		<var name="xyz" value="-210 100 8.1282" />
+		<var name="jumps" value="Alpha/Megara Alpha/Tharilia Alpha/Thibella" />
+	</system>
+	<system name="Tharilia">
+		<var name="faction" value="tholian" />
+		<var name="xyz" value="-214 104 -1.1282" />
+		<var name="jumps" value="Alpha/Tholia Alpha/Thibella" />
+	</system>
+	<system name="Thibella">
+		<var name="faction" value="tholian" />
+		<var name="xyz" value="-201 95 3.1282" />
+		<var name="jumps" value="Alpha/Tholia Alpha/Tharilia" />
+	</system>
+	<system name="Megara">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-90 88 0.1282" />
+		<var name="jumps" value="Alpha/Tholia Alpha/Talar Beta/Cestus" />
+	</system>
+	<system name="Talar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-47 -22 0.1282" />
+		<var name="jumps" value="Alpha/Megara Alpha/Umoth" />
+	</system>
+	<system name="Capella">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-11 34 1.1282" />
+		<var name="jumps" value="Alpha/Gamma_Ceti Alpha/Volon Alpha/New_France" />
+	</system>
+	<system name="Xyrillia">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-7 13.5 4.1282" />
+		<var name="jumps" value="Alpha/Terra_Nova Alpha/Umoth Alpha/Draylon" />
+	</system>
+	<system name="New_France">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-9.5 30 3.82" />
+		<var name="jumps" value="Alpha/Capella" />
+	</system>
+	<system name="Draylon">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-16.5 21 -2.1282" />
+		<var name="jumps" value="Alpha/Xyrillia Alpha/Cor_Caroli Alpha/Kressari" />
+	</system>
+	<system name="Mizar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-29 -12.5 7.1282" />
+		<var name="jumps" value="Alpha/Cor_Caroli Alpha/Regulon" />
+	</system>
+	<system name="Regulon">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-40 -27 -1.1282" />
+		<var name="jumps" value="Alpha/Mizar Alpha/Bajor" />
+	</system>
+
+	<system name="Ferenginar">
+		<var name="faction" value="ferengi" />
+		<var name="xyz" value="-47 -22 0.1282" />
+		<var name="jumps" value="Alpha/Irtok Alpha/Clarus" />
+	</system>
+	<system name="Irtok">
+		<var name="faction" value="ferengi" />
+		<var name="xyz" value="-44 -18 0.1282" />
+		<var name="jumps" value="Alpha/Ferenginar Alpha/Maxia_Zeta Alpha/Clarus" />
+	</system>
+	<system name="Maxia_Zeta">
+		<var name="faction" value="ferengi" />
+		<var name="xyz" value="-35 -13 1.1282" />
+		<var name="jumps" value="Alpha/Irtok" />
+	</system>
+	<system name="Fellebia">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="-22 -12 0.1282" />
+		<var name="jumps" value="Alpha/Maxia_Zeta Alpha/Mu_Herculis" />
+	</system>
+	<system name="Clarus">
+		<var name="faction" value="ferengi" />
+		<var name="xyz" value="-53 -16 0.1282" />
+		<var name="jumps" value="Alpha/Ferenginar Alpha/Irtok" />
+	</system>
+	<system name="Dozaria">
+		<var name="faction" value="breen" />
+		<var name="xyz" value="-94 23.5 0.1282" />
+		<var name="jumps" value="Alpha/Cardassia Alpha/Portas" />
+	</system>
+	<system name="Portas">
+		<var name="faction" value="breen" />
+		<var name="xyz" value="-93 18 0.1282" />
+		<var name="jumps" value="Alpha/Dozaria Alpha/Breen" />
+	</system>
+	<system name="Breen">
+		<var name="faction" value="breen" />
+		<var name="xyz" value="-98 20 4.1282" />
+		<var name="jumps" value="Alpha/Portas" />
+	</system>
+
+	<system name="Vega">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-19 -8 0.1282" />
+		<var name="jumps" value="Alpha/Tellar Alpha/Denobula_Triaxa Alpha/Altair" />
+	</system>
+	<system name="Denobula_Triaxa">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-19 -3 0.1282" />
+		<var name="jumps" value="Alpha/Vega" />
+	</system>
+	<system name="Altair">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-11 -10 2" />
+		<var name="jumps" value="Alpha/Vega Alpha/Barnards_Star Alpha/70_Ophiuchi Alpha/Sigma_Bootis" />
+	</system>
+	<system name="Formalhaut">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-3 -8 0.1282" />
+		<var name="jumps" value="Alpha/Barnards_Star Alpha/Acturus" />
+	</system>
+
+	<system name="Trill">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-31 19 -0.282" />
+		<var name="jumps" value="Alpha/Bajor" />
+	</system>
+	<system name="Terra_Nova">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-14 9 0.282" />
+		<var name="jumps" value="Alpha/Deneb_Kaitos Alpha/Cor_Caroli Alpha/Xyrillia" />
+	</system> 
+	<system name="Cor_Caroli">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-16.5 8.5 2.82" />
+		<var name="jumps" value="Alpha/Terra_Nova Alpha/Draylon Alpha/Mizar" />
+	</system> 
+	<system name="Almatha">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-45 44 0.01282" />
+		<var name="jumps" value="Alpha/Cardassia" />
+	</system>
+	<system name="Amleth">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-50 36 1.282" />
+		<var name="jumps" value="Alpha/Cardassia Alpha/Kelvas" />
+	</system>
+	<system name="Kelvas">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-63 36 -1.282" />
+		<var name="jumps" value="Alpha/Amleth Alpha/Soukara Alpha/Velos" />
+	</system>
+	<system name="Soukara">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-58 40 0.282" />
+		<var name="jumps" value="Alpha/Kelvas" />
+	</system>
+	<system name="Avenal">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-64 26 1.282" />
+		<var name="jumps" value="Alpha/Cardassia" />
+	</system>
+	<system name="Velos">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-66 48 1.282" />
+		<var name="jumps" value="Alpha/Kelvas" />
+	</system>
+	<system name="Trelka">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-27 41 2.82" />
+		<var name="jumps" value="Alpha/Cardassia Alpha/Kelrabi" />
+	</system>
+	<system name="Kelrabi">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-28 46.5 1.282" />
+		<var name="jumps" value="Alpha/Trelka Alpha/Setlik Alpha/Umoth" />
+	</system>
+	<system name="Kressari">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="-19 28 -1.1282" />
+		<var name="jumps" value="Alpha/Draylon Alpha/Dorvan" />
+	</system>
+
+	<system name="Cardassia">
+		<var name="faction" value="cardassian" />
+		<var name="xyz" value="-53 28 0.01282" />
+		<var name="jumps" value="Alpha/Bajor Alpha/Almatha Alpha/Amleth Alpha/Avenal Alpha/Trelka" />
+	</system>
+	<system name="Bajor">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-47 23 0.01282" />
+		<var name="jumps" value="Alpha/Cardassia Alpha/Trill Alpha/Dorvan Alpha/Regulon" />
+	</system>
+	<system name="Betazed">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-14 42 4.1282" />
+		<var name="jumps" value="Alpha/Gamma_Ceti Alpha/Setlik" />
+	</system>
+
+	<system name="Beta_Canum_Venaticorum">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-5 4.5 0.09137" />
+		<var name="jumps" value="Beta/Sol Beta/Axanar Beta/Deneb_Kaitos" />
+	</system>
+	<system name="Beta_Comae_Berenices">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-2 -2 0.09137" />
+		<var name="jumps" value="Beta/Sol Alpha/Barnards_Star Alpha/Tellar" />
+	</system>
+	<system name="Tau_Ceti">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-0.542857 3 0.09137" />
+		<var name="jumps" value="Beta/Sol Beta/Axanar" />
+	</system>
+	<system name="Deneb_Kaitos">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-12 6 0.49137" />
+		<var name="jumps" value="Beta/Beta_Canum_Venaticorum Alpha/Terra_Nova" />
+	</system>
+	<system name="Barnards_Star">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-3 -5 0.49137" />
+		<var name="jumps" value="Beta/Beta_Comae_Berenices Alpha/Altair Alpha/Formalhaut" />
+	</system>
+	<system name="Tellar">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-10 -1 0.49137" />
+		<var name="jumps" value="Alpha/Beta_Comae_Berenices Alpha/Vega" />
+	</system>
+	<system name="Arcturus">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-3 -11 4.9" />
+		<var name="jumps" value="Alpha/Formalhaut Beta/Tau_Bootis Alpha/70_Ophiuchi" />
+	</system>
+	<system name="70_Ophiuchi">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-7 -12 4.9" />
+		<var name="jumps" value="Alpha/Arcturus Alpha/Altair Alpha/Stameris Alpha/Sigma_Bootis" />
+	</system>
+	<system name="Stameris">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-7 -22.5 0.9" />
+		<var name="jumps" value="Alpha/70_Ophiuchi Alpha/Gamma_Serpentis Beta/Bolarus" />
+	</system>
+	<system name="Mu_Herculis">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-16 -13 -0.9" />
+		<var name="jumps" value="Alpha/Sigma_Bootis Alpha/Fellebia" />
+	</system>
+	<system name="Sigma_Bootis">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-12 -11.5 -2.9" />
+		<var name="jumps" value="Alpha/Altair Alpha/70_Ophiuchi Alpha/Mu_Herculis" />
+	</system>
+	<system name="Gamma_Serpentis">
+		<var name="faction" value="federation" />
+		<var name="xyz" value="-10 -19 -2.2" />
+		<var name="jumps" value="Alpha/Stameris" />
+	</system>
+	<system name="Dorvan">
+		<var name="faction" value="maquis" />
+		<var name="xyz" value="-33.5 34.5 0.08013" />
+		<var name="jumps" value="Alpha/Bajor Alpha/Volon Alpha/Kressari" />
+	</system>
+	<system name="Volon">
+		<var name="faction" value="maquis" />
+		<var name="xyz" value="-26 40 1.08013" />
+		<var name="jumps" value="Alpha/Dorvan Alpha/Setlik Alpha/Minos_Korva Alpha/Capella" />
+	</system>
+	<system name="Setlik">
+		<var name="faction" value="maquis" />
+		<var name="xyz" value="-25.5 47.0 0.08013" />
+		<var name="jumps" value="Alpha/Volon Alpha/Umoth Alpha/Kelrabi Beta/Aldebaran Alpha/Minos_Korva Alpha/Betazed" />
+	</system>
+	<system name="Gamma_Ceti">
+		<var name="faction" value="neutral" />
+		<var name="xyz" value="-8 44.5 8.013" />
+		<var name="jumps" value="Alpha/Minos_Korva Beta/Aldebaran Alpha/Capella Alpha/Betazed" />
+	</system>
+
+	<system name="Minos_Korva">
+		<var name="faction" value="maquis" />
+		<var name="xyz" value="-19.5 44.0 8.013" />
+		<var name="jumps" value="Alpha/Setlik Alpha/Volon Alpha/Gamma_Ceti" />
+	</system>
+	<system name="Umoth">
+		<var name="faction" value="maquis" />
+		<var name="xyz" value="-35.5 48 0.08013" />
+		<var name="jumps" value="Alpha/Setlik Alpha/Kelrabi Alpha/Talar" />
+	</system>
+
+ </sector>
+	</systems>
+</galaxy>

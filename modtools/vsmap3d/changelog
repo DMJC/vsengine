@@ -1,0 +1,49 @@
+Changelog for VSMap3D
+
+The log starts at 1.3 since I didn't track changes before 1.3 ;-)
+Questions, comments: robert<the-dot-comes-here>wloch<@>o2online<and-another-dot>de
+Forum: http://vegastrike.sourceforge.net/forums/viewtopic.php?t=6774&start=0
+
+----------------------------
+Changes from 1.3.4 to 1.3.5:
+----------------------------
++ added a "package.bash" script to create the binary and source tar.bz2 ready to upload to SourceForge
++ added a logo (xcf-gimp file with layers, png, and ico)
++ enhanced route search by allowing selection of factions to be avoided/excluded
++ fixed bug that when starting in fullscreen and toggling back to normal the sliders would not restore themselves
+
+----------------------------
+Changes from 1.3.3 to 1.3.4:
+----------------------------
++ Will only print the names of factions that are in the filter list.
+
+----------------------------
+Changes from 1.3.2 to 1.3.3:
+----------------------------
++ VSMap3D restores fullscreen mode upon next start
+
+--------------------------
+Changes from 1.3 to 1.3.2:
+--------------------------
++ added using stars.txt and factions.xml contents
+  + tree shows logo of faction owning the system
+  + stars are shown in their colors depending on their size
+  + tooltip on systems in tree additionally shows star radius and color
+  + toggle switch for faction ownership bubbles around stars
++ faction filtering (press Shift to see your options)
+
+------------------------
+Changes from 1.2 to 1.3:
+------------------------
++ sources contain a Code::Blocks project file and build/run scripts (bat + bash)
+  you still need to add these as "tools" in Code::Blocks for *really* easy build'n'go
++ cleaned wrong signal->slot connections
++ added detection of universe.xml file in case milky_way.xml is missing
++ added universe file to vsmap3dconfig.xml configuration (your chance to specify any other universe file name for detection here)
++ changed gluPerspective to clip quadrupled maximum dimension, thus zoom far out will still show the full universe
++ limited max eye distance from universe center such that the universe is always fully visible if zooming far out and turning around
++ Qt 4.3 solves long-load-delay bug
++ had to adapt text render code for star names due to changes from Qt 4.0 to 4.3
++ added fullscreen toggle action to view menu
++ added quick help text being displayed at top of OpenGL widget
++ VSMap3D stores window geometry in config file

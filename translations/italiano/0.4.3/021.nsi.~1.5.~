@@ -1,0 +1,88 @@
+; Kinnear's NSIS SuperPiMP VS Install Script
+
+  Name "VegaStrike 0.4.3"        ; caption in titlebar
+  OutFile "vegastrike-043.exe"	; installer file to create
+  Icon "C:\vegastrike\data4.x\vegastrike.ico"		
+  BrandingText " "		; removes default 'nullsoft' branding at
+				; bottom of window
+  CRCCheck on			; YAY!
+  LicenseText "Installa Vega Strike 0.4.3 nel tuo computer."
+  LicenseData vega-license.txt
+
+;default install dir, and registry entry
+  AutoCloseWindow true
+  InstallDir "C:\Program Files\Vegastrike"
+  InstallDirRegKey HKLM SOFTWARE\Vegastrike\0.4.3\ "Install_Dir"
+
+  ComponentText "Installa Vega Strike 0.4.3 nel tuo computer."
+  DirText "Selezionare una cartella dove installare Vegastrike:"
+  EnabledBitmap "yes.bmp"
+  DisabledBitmap "no.bmp"
+  ShowInstDetails show
+
+;first option section - install the program and write uninstall registry
+;entries
+  Section "File di Vegastrike (Obbligatorio)"
+  SetOutPath $INSTDIR\Vegastrike-0.4.3
+  File /r "C:\vegastrike\data4.x\*.*"
+  WriteRegStr HKLM SOFTWARE\VegaStrike\0.4.3\ "Install_Dir" "$INSTDIR"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\VegaStrike-0.4.3\" "DisplayName" "VegaStrike 4.3"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\VegaStrike-0.4.3\" "UninstallString" '"$INSTDIR\Vegastrike-0.4.3\uninstall.exe"'
+  WriteUninstaller "Vegastrike-0.4.3\uninstall.exe"
+  Rename "$INSTDIR\Vegastrike.exe" "$INSTDIR\Vegastrike.exe.oldrelease"
+  Rename "$INSTDIR\Launcher.exe" "$INSTDIR\Launcher.exe.oldrelease"
+  Rename "$INSTDIR\Setup.exe" "$INSTDIR\Setup.exe.oldrelease"
+  SectionEnd
+
+;second install option - adds the shortcuts to the start menu. optional.
+  Section "Musiche di VegaStrike (Raccomandato)"
+  SetOutPath $INSTDIR\Vegastrike-0.4.3\music
+  File /r "F:\programming\vegastrike\anonymous\music\*.*"
+  SectionEnd
+
+;third install option - adds the shortcuts to the start menu. optional.
+  Section "Collegamenti nel menù di avvio"
+    CreateDirectory "$SMPROGRAMS\Vega Strike\0.4.3"
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Story.lnk" "$INSTDIR\Vegastrike-0.4.3\documentation\IntroMonologue.txt" "" "$INSTDIR\Vegastrike-0.4.3\documentation\IntroMonologue.txt" 0
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Manual.lnk" "$INSTDIR\Vegastrike-0.4.3\documentation\Vega_Strike_Players_Guide.pdf" "" "$INSTDIR\Vegastrike-0.4.3\documentation\Vega_Strike_Players_Guide.pdf" 0
+;    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Readme.lnk" "$INSTDIR\Vegastrike-0.4.3\documentation\readme.txt" "" "$INSTDIR\Vegastrike-0.4.3\documentation\readme.txt" 0
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Readme.lnk" "explorer.exe" "$INSTDIR\Vegastrike-0.4.3\.vegastrike\textures" "c:\windows\explorer.exe" 0
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike.lnk" "$INSTDIR\Vegastrike-0.4.3\bin\vegastrike.exe" "" "$INSTDIR\Vegastrike-0.4.3\bin\vegastrike.exe" 0
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Setup.lnk" "$INSTDIR\Vegastrike-0.4.3\bin\setup.exe" "" "$INSTDIR\Vegastrike-0.4.3\bin\setup.exe" 0
+    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Uninstall.lnk" "$INSTDIR\Vegastrike-0.4.3\uninstall.exe" "" "$INSTDIR\Vegastrike-0.4.3\uninstall.exe" 0
+;    CreateShortCut "$SMPROGRAMS\Vega Strike\0.4.3\Vega Strike Updater.lnk" "$INSTDIR\Vegastrike-0.4.3\bin\AutoUpdate.bat" "" "$INSTDIR\Vegastrike-0.4.3\bin\AutoUpdate.bat" 0
+  SectionEnd
+
+;Other Functions - this one is what to do once install is completed
+Function .onInstSuccess
+        ExecWait $INSTDIR/Vegastrike-0.4.3/bin/OpenALwEAX.exe
+      ExecWait $INSTDIR/Vegastrike-0.4.3/bin/SETUP.EXE 
+      MessageBox MB_YESNO "Installazione eseguita con successo. Visualizzare il file LEGGIMI?" IDNO NoReadme
+         ExecShell "open" $INSTDIR\Vegastrike-0.4.3\documentation\readme.txt
+         NoReadme:
+      MessageBox MB_YESNO "Desideri leggere l'antefatto di VegaStrike?" IDNO NoStory
+         ExecShell "open" "$INSTDIR\Vegastrike-0.4.3\history\a brief history in time and space.pdf"
+         NoStory:
+  FunctionEnd
+
+ Function .onInstFailed
+        MessageBox MB_OK "L'installazione è stata interrotta, oppure il pacchetto di installazione è deteriorato."  
+ FunctionEnd
+
+;uninstaller stuff
+UninstallText Questa operazione eliminerà le seguenti cartelle e tuttti i dati in esse contenuti, inclusi i tuoi salvataggi. Cliccare sul pulsante Disinstallaper continuare."
+
+
+Section "Uninstall"
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\VegaStrike-0.4.3\"
+  DeleteRegKey HKLM SOFTWARE\VegaStrike\0.4.3\
+  Delete "$SMPROGRAMS\Vega Strike\0.4.3\*.*"
+  RMDir /r "$SMPROGRAMS\Vega Strike\0.4.3\"
+  RMDir /r "$INSTDIR"
+SectionEnd
+
+; note - i haven't made the uninstaller remove VegaStrike folder. This is
+; because we don't want it to delete EVERY copy of VS.. just the one
+; they're uninstalling. :)
+
+; eof

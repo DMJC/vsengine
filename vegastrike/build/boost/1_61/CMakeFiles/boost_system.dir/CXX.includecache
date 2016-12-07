@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/development/privgold/vegastrike-code/vegastrike/boost/1_61/system/src/error_code.cpp
+boost/system/error_code.hpp
+-
+boost/system/detail/error_code.ipp
+-
+

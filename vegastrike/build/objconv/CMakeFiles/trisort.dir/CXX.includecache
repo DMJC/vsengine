@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/development/privgold/vegastrike-code/vegastrike/objconv/trisort.cpp
+stdio.h
+-
+stdlib.h
+-
+vector
+-
+string
+-
+algorithm
+-
+ctype.h
+-
+math.h
+-
+trisort.h
+/home/james/development/privgold/vegastrike-code/vegastrike/objconv/trisort.h
+
+/home/james/development/privgold/vegastrike-code/vegastrike/objconv/trisort.h
+

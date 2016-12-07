@@ -1,0 +1,6 @@
+Worked on folder checkouts
+Discussed breaking down models into components
+
+
+
+working on testing again

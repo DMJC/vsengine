@@ -1,0 +1,323 @@
+-------------------------------------------------------------------------------
+UnitConverter NEWS - History of user-visible changes.           -*- outline -*-
+A Vega Strike modding program for obj to bfxm conversion
+Description: Takes obj file inputs master textures, creates bfxm output and
+             converts textures to dds, updates parameters in units.csv
+
+For user manual, please go to:
+    http://vegastrike.sourceforge.net/wiki/Development:Tools:UnitConverter
+For forum discussion, visit:
+    http://vegastrike.sourceforge.net/forums/viewtopic.php?t=11885
+-------------------------------------------------------------------------------
+
+Changes from version 0.39 to version 0.40 from 2011-04-08
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Bugfix for Config sort label width to display full text.
+    * Added self.unitmesh since mesh name can differ from unit name.
+    * Added display on unit mesh parameter.
+    * Display info on loaded marker.
+    * Show object names rather than material names on Model screen for marker
+      objects.
+    * Increased initial screen size to 860x600
+    * Added label to show the source of the turret type selection, which
+      can be from the marker object or from units.csv
+
+Changes from version 0.38 to version 0.39 from 2011-04-05
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Case of newly added model will not be changed to title() case
+      anymore.
+    * Removed creation of nasty empty submodel when reading workspace
+      ini file.
+
+Changes from version 0.37 to version 0.38 from 2008-11-03
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    Features:
+    * Check png textures for POT dimensions
+    * Automatic master texture image type check by magic number based on image
+      header (magic) as accepted by nvcompress (png) (with Python 2.6 only)
+    * Added optional function for units.csv standard sort (by type, role, and key).
+    * Unit editor allows selection of dual/quad shield types.
+    * Workspace config files are portable (workdir is replaced by dir from where workspace file is read)
+    Bugfixes:
+    * bugfix for submeshes and faction textures
+    * bugfix for resetting unit parameters
+    * corrected default blendmode storing in workspace
+    * workspace save on changed parameters doesn't occur at startup
+
+Changes from version 0.36 to version 0.37 from 2008-10-24
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Subunit name matching will search for exact match first, then closest match
+    * Store only main model in workspace config for markers
+    * Avoid setting workdir when fetching .ani textures from helper subdir
+    * bugfix for reading workspace config files with submeshes
+    * bugfix for reset unit to include subunits and docks
+    * bugfix for adding turret and subunit information from markers
+    * bugfix for opening models with added submeshes (more than registered in workspace config file)
+    * bugfix for mtl file saving with submeshes
+
+Changes from version 0.35 to version 0.36 from 2008-10-23
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Support for submeshes with ani textures for blink lights
+      by pointing to ani files in diffuse texture.
+    * Added helper blender objects for blink lights submeshes.
+    * Improved error handling with models that were not found.
+
+Changes from version 0.34 to version 0.35 from 2008-10-22
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Added support for objects with submeshes
+    * Swap back to main model if a marker is loaded (to avoid accidentally
+      adding textures on the marker)
+    * Added Cargo_Import (fort station trade) editor
+
+Changes from version 0.33 to version 0.34 from 2008-10-15
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Possibility of simple forward/backward unit browsing through units.csv 
+      with left and right arrow buttons.
+    * Unit editor now includes all important stats.
+    * Added editing facilities for speed, acceleration (linear and angular)
+    * Added editing of capacitors, jump drive, overdrive, SPEC drive
+    * Added editing of radar parameters, cargo
+    * Joined marker-based mounts (turrets, subunits, docking ports, engines) on one tab
+    * Renamed "Mount" to "Marker" for required obj file
+    * Marker obj requires "marker" in the file name.
+    * Correction for shield variable double naming
+
+Changes from version 0.32 to version 0.33 from 2008-10-12
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Guessing unit type when adding new models
+    * Bugfix for hud image refresh from units.csv when viewed unit is different from model
+    * Enabled more unit stats editing (mass, upgrade and hold volume,
+      fuel capacity, hull, shield, armor, inertia, maneuver).
+    * All stats units are according to the international unit system (SI).
+
+Changes from version 0.31 to version 0.32 from 2008-10-09
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Using missions/modelview.mission to preview models.
+    * Installations can be viewed and tested as bases via
+      Special/Modelview.system with automatic update with the View function.
+    * Provided default units.csv entry for installations.
+    * Better readability of copied files in stdout messages.
+    * Bugfix for bypassing compressed textures.
+    * Added vssystem.py for reading/writing system files (tentative due to 
+      non-conformity to xml standard).
+
+Changes from version 0.30 to version 0.31 from 2008-10-08
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Config option to bypass compression of textures.
+    * Added support for texture 5 for PRT (used in CineMut type shaders).
+    * Set no compression of PRT texture 5 ever.
+    * Changed texture headers to 'input/output textures'.
+    * Get units.csv column entries based on column names
+     (instead of fixed positions).
+    * Reads texture info from mtl file after conversion from bfxm file.
+    * New config option for using master input textures in bfxm
+      (instead of compressed textures).
+    * Minor visual reorganization (config options, textures).
+    * Save ini on exit using atexit python function.
+    * Separated iniWrite() and workspaceWrite().
+    * Bugfix for selecting models in workspace.
+    * Fix for double header in mtl saving.
+    * Write update of incoherent mtl reference in obj file.
+    * Minor fixes and improvements.
+
+Changes from version 0.29 to version 0.30 from 2008-10-07
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Saving and loading of separate config files for each workspace.
+    * Added more configuration options.
+    * Added an application icon (works on Windows only).
+    * Bug fix for shield model textures naming.
+    * Fix to not convert marker meshes.
+    * Improved configuration read/write behavior.
+    * Config options for backing up obj/mtl files, and creating xmesh files.
+
+Changes from version 0.28 to version 0.29 from 2008-10-05
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Bugfix for scaled helper objects.
+    * Engine thruster diameter is read from the marker helper object.
+
+Changes from version 0.27 to version 0.28 from 2008-10-04
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Allow of adding and loading bfxm files into workspace.
+      When adding a new model just point to either bfxm or obj file.
+      It will convert a bfxm to obj and then you can continue the regular workflow.
+      The textures used in the bfxm file will not yet be loaded (this is the next step).
+    * Provides configurable units directory structure behavior:
+      either traditional: 'units/Shipname' or
+      progressive: 'units/vessels/Shipname'.
+      As such it supports VS and Mods equally.
+
+Changes from version 0.24 to version 0.27 from 2008-09-24
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Integrated support for defining used techniques.
+    * Mtl file requirement has been dropped.
+    * Object export doesn't require material export,
+      the mtllib entry will be created in the obj file if missing.
+      Materials file for mesher conversion will be auto generated.
+    * You can now store your default shader technique under Config.
+    * Fixed unwanted delete of file names on browse cancel.
+    * Deleted the ini file from release. it will be created from scratch on first run,
+      but you'll need to Config the app to work correctly (warning is shown).
+    * Manual sounds entry form (though unit sounds do not seem to work in-game).
+
+Changes from version 0.24 to version 0.26 from 2008-09-15
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Added support for subunit and docking port marker objects.
+    * Enabled editing of unit upgrades.
+    * You can now change the thruster type.
+    * Browse and change the turret types.
+    * Add upgrades from a dropdown (to change, just delete the
+      corresponding entry between {} in the form)
+
+Changes from version 0.23 to version 0.24 from 2008-09-13
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Added support for engine glow.
+    * Added support for turrets editing.
+    * Automatic positioning of engines and turrets from helper marker objects.
+    * Helper objects must follow the convention as described in the
+      wiki (engine_*, turret_*, dock_*).
+    * You may use substrings of turret types available in data/units/subunits
+      directory for the subtype naming, e.g. turret_PminusBeam will create a
+      turret of type turretLR_PminusBeam
+    * Helper objects must be exported all together to a separate obj file.
+    * The obj file must contain the word "marker", the sentence case is
+      unimportant (so it can be e.g. "Markers"
+    * You must add this obj file to the workspace in UnitsConverter to
+      make use of it. 
+    * Vector snap to cartesian axes is available in the vector class
+
+Changes from version 0.17 to version 0.23 from 2008-09-09
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Complete workflow ready.
+    * Bugfixes for data handling.
+    * Minor improvements, stabilization.
+    * first UnitConverter version that is error-free and offers
+      basic functionality
+
+Changes from version 0.17 to version 0.20 from 2008-09-07
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Added compression of the hud image
+    * Possibility to add shield mesh to the model workspace
+    * Display of the native mesh dimensions (length, width, height, all without
+      scale adjustment)
+    * Added testing the unit in VS, optionally with alternate faction textures 
+    * bug fixes
+
+Changes from version 0.14 to version 0.17 from 2008-09-04
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Added HUD image selection and compression
+    * Preliminary  editor for basic unit information in units.csv for
+      (type, combat role, shield, cockpit, description, scale)
+
+Changes from version 0.13 to version 0.14 from 2008-09-02
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Batch submesh conversion.
+
+Changes from version 0.09 to version 0.13 from 2008-09-01
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Bug fixes  to workspace.
+    * Definition of HUD image possible.
+
+Changes from version 0.07 to version 0.09 from 2008-08-29
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Rudimentary functionality capable of supporting basic model
+      and texture conversion operations is in place.
+    * Remembers workspace with several models.
+    * You can assign textures to models,
+    * change techniques,
+    * change blend mode,
+    * select factions from an option dropdown,
+    * view on-screen instructions for each workflow module,
+    * copy the converted files to the units data dir for the model.
+      If the dir doesn't exist, it will be created.
+
+Changes from version 0.04 to version 0.07 from 2008-08-27
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * convert model meshes
+    * convert shield meshes
+    * compress default master textures to dds
+    * compress faction master textures
+    * remembers master textures
+    * obj/mtl error checking and validation
+    * create new mtl file (or default mtl file if none exists)
+
+Changes from version 0.03 to version 0.04 from 2008-08-25
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * supports the workflow with a main mesh and a texture set
+    * bugfixes for bfxm conversion
+
+Changes from version 0.01 to version 0.03 from 2008-08-08
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * First preview version
+    * Three main "screens" are selectable via the buttons on the left.
+    * Model screen: Here you can specify the path to the obj and the mtl files.
+    * Materials screen: For each material in the obj file you can specify
+      master (input) textures.
+    * Config  screen: Specify the paths for mesher and nvcompress.
+      If any of the executables is in your system PATH you may just specify the
+      name without the path. 
+
+Changes from nonexistence to version 0.01 from 2008-08-05
+==========================================================
+
+    [pyramid <pyramid3d@users.sourceforge.net>]
+    * Program creation
+    * Main application framework.
+    * Application window with vertical tabs.
+
+-------------------------------------------------------------------------------
+Copyright 2008, 2011 pyramid, Vega Strike Project.
+Contact: hellcatv@users.sourceforge.net
+Internet: http://vegastrike.sourceforge.net/
+Copying and distribution of this file, with or without modification, are
+permitted provided the copyright notice and this notice are preserved.
+-------------------------------------------------------------------------------

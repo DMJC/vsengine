@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="vegamap" default="jar" basedir=".">
+
+    <description>Main build file for vegamap.</description>
+    
+    <property name="src.dir" value="src"/>
+    
+    <property name="extras.dir" value="extras"/>
+    <property name="extras.build.file" value="${extras.dir}/build.xml"/>
+
+    <property name="build.dir" value="build"/>
+    <property name="build.classes.dir" value="${build.dir}/classes"/>
+    
+    <property name="dist.dir" value="dist"/>
+    <property name="dist.jar" value="${dist.dir}/vegamap.jar"/>
+    <property name="jar.main.class" value="vegamap.view.GalaxyView"/>
+
+    <property name="package.dir" value="package"/>
+    <property name="package.name" value="vegamap"/>
+    <property name="package.version" value="0.1.1"/>
+    
+    <property name="package.full.name" value="${package.name}-${package.version}"/>
+    <property name="package.temp.dir" value="${package.dir}/${package.full.name}"/>
+    <property name="package.file" value="${package.dir}/${package.full.name}.zip"/>
+    
+    <target name="compile" description="Compile java sources into class files">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes.dir}"/>
+        
+        <javac destdir="${build.classes.dir}" srcdir="${src.dir}"/>
+    </target>
+
+    <target name="jar" depends="compile" description="Generates JAR File from compiled sources">
+        <mkdir dir="${dist.dir}"/>
+        
+        <jar basedir="${build.classes.dir}" jarfile="${dist.jar}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="${jar.main.class}"/>
+            </manifest>
+        </jar>
+    </target>
+    
+    <target name="pre_package" depends="jar">
+        <mkdir dir="${package.dir}"/>
+        <mkdir dir="${package.temp.dir}"/>
+        
+        <copy file="${dist.jar}" todir="${package.temp.dir}"/>
+        
+        <copy file="${extras.build.file}" todir="${package.temp.dir}"/>
+        
+        <copy todir="${package.temp.dir}">
+            <fileset dir="." includes="${package.name}.bat"/>
+            <fileset dir="." includes="${package.name}.sh"/>
+        
+            <fileset dir="." includes="license.txt"/>
+            <fileset dir="." includes="readme.txt"/>
+        
+            <fileset dir="." includes="extras/**/*"/>
+            <fileset dir="." includes="src/**/*.java"/>
+        </copy>
+    </target>
+    
+    <target name="package" depends="pre_package">
+        <zip zipfile="${package.file}" 
+             basedir="${package.dir}"
+             includes="${package.full.name}/**/*"/>
+             
+        <delete dir="${package.temp.dir}"/>
+    </target>
+    
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+    
+</project>

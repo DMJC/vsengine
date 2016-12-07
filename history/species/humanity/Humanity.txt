@@ -1,0 +1,32 @@
+Species: 
+
+  Homo Sapiens Sapiens,
+  Homo Sapiens Cosmonatalis,
+  Homo Sapiens Superioris,
+  Homo Sapiens Cyberis,
+  Homo Sapiens Pluralis 
+
+Physical Characteristics:
+
+  By subspecies:
+
+    Homo Sapiens Sapiens:
+Although small changes have occurred over the millenia, a great percentage of the human population remains without intentional genetic or physical modification, and thus remain not too far removed from the humans of more ancient history.  Whether through simple lack of resources, lack of desire, or rejection of change, Homo Sapiens Sapiens, unmodified except for the genetic drifts incurred over centuries of colonization, remains the most populous of the human subspecies.
+
+    Homo Sapiens Cosmonatalis: ("The Spaceborn")
+Crafted as a slave race by the now defunct Light-Bearer faction, the Spaceborn remain, frail and over-specialized, incapable of surviving in planetary environments.  Instead, as they were designed to, they spend their entire lives in micro-gravity.  The Spaceborn have a unique cardiovascular system superbly tuned to life outside of a gravity well.  Their bone structure, however, is a less cheery affair, and the Spaceborn, though not suffering the degenerative effects of planetborn entities in prolonged micro-gravity, never had much durability in the first place and are weaker and more easily injured.  They are almost universally tall, lanky, and flexible, and all are possessed of a rather pallid complexion tending towards a slight reddishness. Spaceborn frequently begin developing severe medical problems between the age of 60-80 Earth years, giving them a somewhat shorter life expectancy than that of the other subspecies.
+
+    Homo Sapiens Superioris: (Primary faction: Shapers)
+Many eugenics programs have been launched in human history, but none have been so successful.  The path of self-affected evolution via active genetic redesign has lead to a strain of humanity stronger, more durable, more resistant to disease and injury, of higher average intelligence, enjoying longer life-spans, and possessing keener senses.  Assuming that the universally ink-black UV resistant skin and complete lack of any hair other than the signature blue-white eye-brows is not disconcerting, any Superioris is almost certain to be considered physically beautiful, but it takes some experience to discern one Superioris from another.  However, these benefits come at the cost of much higher sustanence requirements, and a tremendous narrowing of diversity.
+
+    Homo Sapiens Cyberis: (Primary faction: Mechanists)
+      Having replaced many of their body parts with mechanical equivalents, or having forgone any pretense of human form, these cyborgs cover a diverse and vibrant set of body types.  However, no matter how modified they may be, at the least, portions of their brains and nervous systems remain.  Many sport enhancements specific to their employment or hobbies, and some take great efforts to disguise the modifications to the naked eye.
+
+    Homo Sapiens Pluralis: (Primary faction: Andolians)
+      Implanted at birth with hardware that allows data-net access and an array of near constantly transmitting sensors, a permanently linked existence has rendered this strain of humanity notably different in culture and mentality from all other strains.  While every Pluralis retains its individuality, each is awash in a similarly accessible sea of information.   Culling from the group of those not capable of entering into such an existence, combined with a willingness to engage in limited crafting of offspring has also lead to small but noticeable genetic drift over the past 800 years.  Implantation is universal, and the use of synthetic or mechanicaly enhanced body modifications is not uncommon, but the desire for total body replacement present in the Cyberis strain is absent.  While not overly concerned with improving the physical form, health related genetic traits deemed undesireable have been recorded, and then excised from the gene pool.  When isolated for long periods of time from any data-net, Pluralis individuals often experience pronounced withdrawl symptoms, earning them the nickname "Link-Junkies".
+
+Habitat:
+
+  Originating on the third world of the Sol System, all variants of humanity, even Homo Sapiens Cyberis, are most comfortable in Oxygen-Nitrogen atmospheres, and temperatures not overly distant from 294 Kelvin.    
+
+Culture:	

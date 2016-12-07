@@ -1,0 +1,18 @@
+VegaStrike
+
+Export Checklist:
+	Standard-
+
+SourceForge Account:
+	Make Accounts
+	Send info to Daniel and Jack
+	Create a Production Pipeline
+	
+
+Tortoise SVN
+	Export: Import
+
+Craig and I, make a thread
+	Content Pipeline
+	
+		

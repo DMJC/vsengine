@@ -1,0 +1,9 @@
+SDL		1.2.15
+Python		2.7.3
+Expat		2.1.0
+Glut		3.7.6
+freeGlut	2.8.0.0
+zlib		1.2.7
+ogg		1.3.0
+vorbis		1.3.3
+libpng		1.5.13

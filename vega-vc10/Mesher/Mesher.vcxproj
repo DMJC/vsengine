@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{513A290A-C77B-4F9D-AF72-F98009997AC7}</ProjectGuid>
+    <RootNamespace>Mesher</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>\;..\..\vegastrike\src;..\..\vegastrike\objconv\mesher;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\..\vegastrike\objconv\mesher\expat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../vegastrike/objconv/mesher;../vegastrike/src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\BFXM_to_Wavefront.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\BFXM_to_XMesh.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\Convert.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Converter.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\PrecompiledHeaders\Converter.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\Dims.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\from_BFXM.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\from_obj.cpp" />
+    <ClCompile Include="..\..\vegastrike\src\hashtable.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\main.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\OldSyntax.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\to_BFXM.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\to_obj.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\to_OgreMesh.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\Wavefront_to_BFXM.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\XMesh_to_BFXM.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\mesher\Modules\XMesh_to_Ogre.cpp" />
+    <ClCompile Include="..\..\vegastrike\src\xml_support.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\PrecompiledHeaders\Converter.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\Converter.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\from_BFXM.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\from_obj.h" />
+    <ClInclude Include="..\..\vegastrike\src\gnuhash.h" />
+    <ClInclude Include="..\..\vegastrike\src\hashtable.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\mesh_io.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\to_BFXM.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\to_obj.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\mesher\to_OgreMesh.h" />
+    <ClInclude Include="..\..\vegastrike\src\xml_support.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,181 @@
+VegaMapAnd - version history
+
+Future Development:
+- list systems with find *
+- seldom auto navigate stop condition error
+- text background blending error
+- galaxy rotation (3d, yeah)
+
+v0.26.05 | 2012-05-09
+- New: on map, press back key twice to exit
+- Improved: increased viewing depth
+- Improved: menu size for different screen densities
+- Improved: GUI positioning for different densities
+- Fix: "find system" menu color
+
+v0.25.06 | 2012-05-08
+- New: path finder
+- New: path selection indicator and help description
+- Improved: bugfix for force close on second path selection
+- Improved: catalog building without sdcard
+- Code: ignore long press while GalaxyView is not ready
+- Code cleanup
+
+v0.24.02 | 2012-05-07
+- New: remember last zoom and position
+- Improved: fix for crash with play sound option but no files
+
+v0.23.03 | 2012-05-07
+- New: sort system search entries
+- New: option for center cross
+- New: option for distance meter
+- Improve horizontal menu background size
+
+v0.22.07 | 2012-05-04
+- New: find system with auto complete
+- Code: refactored GLText
+- Code: renamed GLTexture to GLSprite
+- Code: moved background functions to sprites
+- Code: move loadSprites() to GLSprite
+- Code: moved drawSprite to GLSprite
+- Code: moved text drawing functions to GLDraw
+
+v0.21.06 | 2012-05-04
+- New: remember last searched system
+- New: linkified vegastrike link in about dialog
+- New: special star and font size for dense VegaStrike Sol region
+- New: auto navigation icon
+- Improved: font size adjust
+- Improved: automatic view port adjustment for zoom > 10
+
+v0.20.06 | 2012-05-04
+- New: find a system and auto navigate to it
+- New: auto navigation mode indicator
+- Code: added navigateTo function
+- Code: added search dialog
+- Code: embedded find call in thread
+
+v0.19.04 | 2012-05-03
+- New: draw home worlds
+- New: long tap to recenter
+- Improved: reduced scrolling distance
+- Improved: fix for crash on tap while loading
+
+v0.18.02 | 2012-05-02
+- Improved: exchanged jump and systems indicators
+- Updated help text
+
+v0.17.02 | 2012-05-02
+- Improved: correct viewport for distant stars
+- Improved: font size for distant systems
+
+v0.16.04 | 2012-04-30
+- New: depth sorting of systems before drawing
+- Improved: correct sector boxes drawing
+- Improved: don't paint jumps, names, sectors beyond viewport
+- Improved: inhibit zooming beyond view depth
+- Code: new GalaxySystems class
+ 
+v0.15.05 | 2012-04-29
+- New: added compass
+- New: added scale indicator
+- Improved: corrected texture coordinates
+- Improved: clock alignment
+- Improved: fix for viewport calculation
+- Code: overloaded Line()
+- Code: added drawText functions to GLDraw
+
+v0.14.03 | 2012-04-27
+- New: added jump network resolved indicator
+- Improved: further reduced jump network loading time
+- Improved: don't show unresolved jumps
+- Code: cleanup
+
+v0.13.01 | 2012-04-26
+- Improved: loading time through lazy loading of jump network
+
+v0.12.02 | 2012-04-26
+- New: included optimized universe files
+- Improved: font color correction for factions
+ 
+v0.11.04 | 2012-04-26
+- New: added current track info to about dialog
+- New: play soundtrack on map
+- New: initiate or stop music after settings change
+- Improved: continue playlist after track finished
+- Code: added 	quit() function
+
+v0.10.05 | 2012-04-25
+- New: red internal and external universe files
+- Improved: set default soundtrack option to false
+- Improved: sort internal and external map catalog 
+- Code: change map catalog params to list
+
+v0.09.03 | 2012-04-24
+- New: play vegastrike soundtrack files from music folder
+- Improved: bugfix for jumps to systems with wrong sector names (e.g. Beta/Daneb_Kaitos instead of Alpha/Daneb_Kaitos)
+
+v0.08.04 | 2012-04-24
+- New: show system faction and sector
+- New: application icon
+- New: splash screen
+- Improved: correction of jumps to zero point
+- Code: added updateZeroRoutes function
+
+v0.07.06 | 2012-04-23
+- New: colored system names
+- New: show system names
+- New: settings screen
+- New: about & help dialog
+- New: don't allow scrolling too far outside the universe
+- New: added context to navigate to web page
+
+ v0.06.05 | 2012-04-22
+- New: draw sector names
+- New: simple menu to toggle view options
+- New: in catalog verbose map names based on xml files
+- New: added home page urls in catalog
+- Improved: fix for wrong line rendering in some cases
+- Improved: fix for incorrect 3d font rendering
+- Code: new print3D function with overload
+
+v0.05.05 | 2012-04-20
+- New: draw sector boxes
+- New: limit drawing stars in viewport
+- Improved: eliminated duplicate jump routes 
+- Code: new GalaxyJumps class
+- Code: created setViewPort function
+
+v0.04.05 | 2012-04-19
+- New: formatted string when displaying stats
+- New: colored star sprites for factions
+- New: show jump routes
+- Code: added GLDraw class
+- Code: added line draw function 
+ 
+v0.03.05 | 2012-04-18
+- New: added backdrop to datetime
+- Improved: relative star size
+- Improved: orientation handling of the display
+- New: added  zoom buttons
+- Improved: concurrent zooming and scrolling
+- Code: extended drawText function with overloads
+- Code: changed drawSprites to take orthographic coordinates
+
+v0.02.06 | 2012-04-13
+- New: start zoom adjusted to universe size
+- New: zoom adjusted scroll speed
+- New: universe size adjusted star size
+- New: auto center map on start
+- New: zoom map
+- New: scroll map
+- New: universe display
+
+v0.01.03 | 2012-04-11
+- New: galaxy file loading
+- New: created openGL view
+
+v0.01.01 | 2012-04-10
+- started VegaMapAnd development
+- New: loading universe file catalog
+ 

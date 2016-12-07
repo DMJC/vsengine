@@ -1,0 +1,6 @@
+#!/bin/sh
+# ----------------------------------------------------
+# Linux command script for running UnitConverter
+# ----------------------------------------------------
+
+python unitconverter.py

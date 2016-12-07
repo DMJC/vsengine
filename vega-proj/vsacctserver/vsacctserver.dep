@@ -1,0 +1,169 @@
+# Microsoft Developer Studio Generated Dependency File, included by vsacctserver.mak
+
+..\..\vegastrike\src\accountserver.cpp : \
+	"..\..\..\vc98\include\basetsd.h"\
+	"..\..\vegastrike\src\config.h"\
+	"..\..\vegastrike\src\configxml.h"\
+	"..\..\vegastrike\src\easydom.h"\
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\networking\accountsxml.h"\
+	"..\..\vegastrike\src\networking\acctserver.h"\
+	"..\..\vegastrike\src\networking\const.h"\
+	"..\..\vegastrike\src\networking\GCPtr.h"\
+	"..\..\vegastrike\src\networking\netui.h"\
+	"..\..\vegastrike\src\networking\packetmem.h"\
+	"..\..\vegastrike\src\networking\vsnet_address.h"\
+	"..\..\vegastrike\src\networking\vsnet_cmd.h"\
+	"..\..\vegastrike\src\networking\vsnet_socket.h"\
+	"..\..\vegastrike\src\networking\vsnet_socketset.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	
+
+..\..\vegastrike\src\configxml.cpp : \
+	"..\..\vegastrike\src\configxml.h"\
+	"..\..\vegastrike\src\easydom.h"\
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	
+
+..\..\vegastrike\src\easydom.cpp : \
+	"..\..\vegastrike\src\easydom.h"\
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	
+
+..\..\vegastrike\src\endianness.cpp : \
+	"..\..\vegastrike\src\endianness.h"\
+	
+
+..\..\vegastrike\src\hashtable.cpp : \
+	"..\..\vegastrike\src\hashtable.h"\
+	
+
+..\..\vegastrike\src\lin_time.cpp : \
+	"..\..\..\vc98\include\basetsd.h"\
+	"..\..\vegastrike\src\debug_vs.h"\
+	"..\..\vegastrike\src\gldrv\winsys.h"\
+	"..\..\vegastrike\src\in.h"\
+	"..\..\vegastrike\src\in_kb.h"\
+	"..\..\vegastrike\src\macosx_math.h"\
+	"..\..\vegastrike\src\vegastrike.h"\
+	"..\include\gl\glut.h"\
+	"..\include\sdl\begin_code.h"\
+	"..\include\sdl\close_code.h"\
+	"..\include\sdl\sdl.h"\
+	"..\include\sdl\sdl_active.h"\
+	"..\include\sdl\sdl_audio.h"\
+	"..\include\sdl\sdl_byteorder.h"\
+	"..\include\sdl\sdl_cdrom.h"\
+	"..\include\sdl\sdl_error.h"\
+	"..\include\sdl\sdl_events.h"\
+	"..\include\sdl\sdl_getenv.h"\
+	"..\include\sdl\sdl_joystick.h"\
+	"..\include\sdl\sdl_keyboard.h"\
+	"..\include\sdl\sdl_keysym.h"\
+	"..\include\sdl\sdl_main.h"\
+	"..\include\sdl\sdl_mouse.h"\
+	"..\include\sdl\sdl_mutex.h"\
+	"..\include\sdl\sdl_quit.h"\
+	"..\include\sdl\sdl_rwops.h"\
+	"..\include\sdl\sdl_timer.h"\
+	"..\include\sdl\sdl_types.h"\
+	"..\include\sdl\sdl_version.h"\
+	"..\include\sdl\sdl_video.h"\
+	
+
+..\..\vegastrike\src\xml_support.cpp : \
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	
+
+..\..\vegastrike\src\networking\accountsxml.cpp : \
+	"..\..\..\vc98\include\basetsd.h"\
+	"..\..\vegastrike\src\config.h"\
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\networking\accountsxml.h"\
+	"..\..\vegastrike\src\networking\const.h"\
+	"..\..\vegastrike\src\networking\GCPtr.h"\
+	"..\..\vegastrike\src\networking\netui.h"\
+	"..\..\vegastrike\src\networking\packetmem.h"\
+	"..\..\vegastrike\src\networking\vsnet_address.h"\
+	"..\..\vegastrike\src\networking\vsnet_socket.h"\
+	"..\..\vegastrike\src\networking\vsnet_socketset.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	
+
+..\..\vegastrike\src\networking\acctserver.cpp : \
+	"..\..\..\vc98\include\basetsd.h"\
+	"..\..\vegastrike\src\cmd\collection.h"\
+	"..\..\vegastrike\src\cmd\container.h"\
+	"..\..\vegastrike\src\cmd\images.h"\
+	"..\..\vegastrike\src\cmd\iterator.h"\
+	"..\..\vegastrike\src\cmd\script\flightgroup.h"\
+	"..\..\vegastrike\src\cmd\script\mission.h"\
+	"..\..\vegastrike\src\cmd\script\msgcenter.h"\
+	"..\..\vegastrike\src\cmd\unit_generic.h"\
+	"..\..\vegastrike\src\cmd\weapon_xml.h"\
+	"..\..\vegastrike\src\config.h"\
+	"..\..\vegastrike\src\configxml.h"\
+	"..\..\vegastrike\src\debug_vs.h"\
+	"..\..\vegastrike\src\easydom.h"\
+	"..\..\vegastrike\src\faction.h"\
+	"..\..\vegastrike\src\faction_generic.h"\
+	"..\..\vegastrike\src\gfx\aux_texture.h"\
+	"..\..\vegastrike\src\gfx\matrix.h"\
+	"..\..\vegastrike\src\gfx\quaternion.h"\
+	"..\..\vegastrike\src\gfx\vec.h"\
+	"..\..\vegastrike\src\gfx\xvector.h"\
+	"..\..\vegastrike\src\gfxlib.h"\
+	"..\..\vegastrike\src\gfxlib_struct.h"\
+	"..\..\vegastrike\src\hashtable.h"\
+	"..\..\vegastrike\src\lin_time.h"\
+	"..\..\vegastrike\src\linecollide.h"\
+	"..\..\vegastrike\src\macosx_math.h"\
+	"..\..\vegastrike\src\networking\accountsxml.h"\
+	"..\..\vegastrike\src\networking\acctserver.h"\
+	"..\..\vegastrike\src\networking\client.h"\
+	"..\..\vegastrike\src\networking\const.h"\
+	"..\..\vegastrike\src\networking\cubicsplines.h"\
+	"..\..\vegastrike\src\networking\GCPtr.h"\
+	"..\..\vegastrike\src\networking\netui.h"\
+	"..\..\vegastrike\src\networking\packetmem.h"\
+	"..\..\vegastrike\src\networking\vsnet_address.h"\
+	"..\..\vegastrike\src\networking\vsnet_clientstate.h"\
+	"..\..\vegastrike\src\networking\vsnet_cmd.h"\
+	"..\..\vegastrike\src\networking\vsnet_serversocket.h"\
+	"..\..\vegastrike\src\networking\vsnet_socket.h"\
+	"..\..\vegastrike\src\networking\vsnet_socketset.h"\
+	"..\..\vegastrike\src\savegame.h"\
+	"..\..\vegastrike\src\star_system_generic.h"\
+	"..\..\vegastrike\src\universe_generic.h"\
+	"..\..\vegastrike\src\vegastrike.h"\
+	"..\..\vegastrike\src\vs_globals.h"\
+	"..\..\vegastrike\src\xml_support.h"\
+	"..\include\expat.h"\
+	"..\include\gl\glut.h"\
+	
+
+..\..\vegastrike\src\networking\packet.cpp : \
+	"..\..\..\vc98\include\basetsd.h"\
+	"..\..\vegastrike\src\config.h"\
+	"..\..\vegastrike\src\debug_vs.h"\
+	"..\..\vegastrike\src\lin_time.h"\
+	"..\..\vegastrike\src\macosx_math.h"\
+	"..\..\vegastrike\src\networking\const.h"\
+	"..\..\vegastrike\src\networking\GCPtr.h"\
+	"..\..\vegastrike\src\networking\packetmem.h"\
+	"..\..\vegastrike\src\networking\vsnet_address.h"\
+	"..\..\vegastrike\src\networking\vsnet_cmd.h"\
+	"..\..\vegastrike\src\networking\vsnet_socket.h"\
+	"..\..\vegastrike\src\networking\vsnet_socketset.h"\
+	"..\..\vegastrike\src\vegastrike.h"\
+	"..\include\gl\glut.h"\
+	"..\include\unistd.h"\
+	

@@ -1,0 +1,17 @@
+#ifndef _HASH_MAP_H_
+#define _HASH_MAP_H_
+#include <map>
+
+using namespace std;
+
+namespace stdext {
+	template<class KEY, class VALUE>
+	class hash_map : public ::std::map<KEY,VALUE> {
+	};
+
+	template<class T>
+	class hash_compare {
+	};
+};
+
+#endif

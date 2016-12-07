@@ -1,0 +1,63 @@
+Vega Map NEWS - History of user-visible changes.		        -*- outline -*-
+
+Changes from version 0.23 to version 0.23 from 2011-03-23
+==========================================================
+
+    * corrected Bzbr home system name [pyramid]
+
+Changes from version 0.22 to version 0.23 from 2011-03-22
+==========================================================
+
+    * corrected rimward and coreward directions
+      [pyramid <pyramid3d@users.sourceforge.net>]
+    * improved star radius scaling to allow smaller stars with a large zoom
+      [pyramid]
+    * starting map position is centered now [pyramid]
+    * display of home systems by a white circle indicator, which can
+      be toggled with the 'H' key. Currently only Vega Strike Upon The 
+      Coldest Sea home systems are included. [pyramid]
+    * improved text readbility with different zoom levels and star sizes
+      [pyramid]
+
+Changes from version 0.21 to version 0.22 from 2011-03-16
+==========================================================
+
+    * corrected sector name placement to not overlap the bounding box and
+      thus be easier to read [pyramid <pyramid3d@users.sourceforge.net>]
+    * introduced a very basic rimward / coreward and spinward / anti-spinward
+      compass [pyramid]
+
+Changes from version 0.20 to version 0.21 from 2011-03-11
+==========================================================
+
+    * added faction colors for Privateer Parallel Universe and PiArmada
+      mods [pyramid <pyramid3d@users.sourceforge.net>]
+    * added faction colors for Vega Trek mod [pyramid]
+
+Changes from version 0.1.1 to version 0.20 from 2011-03-10
+==========================================================
+
+    * added faction colors as in factions.xml for Vega Strike Upon The 
+      Coldest Sea mod. [pyramid <pyramid3d@users.sourceforge.net>]
+    * improved command line option handling [pyramid]
+    * now assumes default milky_way.xml without CL options [pyramid]
+    * added command line usage and help output [pyramid]
+    * added in-app key binding legend accessible with the ESC key
+      [pyramid]
+    * added key 'L' to toggle hiding of jump lines [pyramid]
+    * added keys ('+' and '-') to increase and decrease system bubble
+      size [pyramid]
+    * added quit key 'Q' [pyramid]
+    * defined additional zoom  out key 'X' [pyramid]
+    * added 'vsmap' batch file for easier startup [pyramid]
+
+Changes from *GENESIS* to version 0.1.1 from 2005-07-26
+=======================================================
+
+    *   update and release to version 0.1.1
+        [weaselfink <http://www.bissell.de/vegamap/>]
+    *   creation of VegMap [weaselfink]
+
+Copyright 2005, 2011 Stefan Bissell, Vega Strike Project.
+Copying and distribution of this file, with or without modification, are
+permitted provided the copyright notice and this notice are preserved.

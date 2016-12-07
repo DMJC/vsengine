@@ -1,0 +1,29 @@
+diff -ru ./cgi-accountserver/db.py ./cgi-accountserver.new/db.py
+--- ./cgi-accountserver/db.py	2008-12-30 00:37:12.000000000 +0100
++++ ./cgi-accountserver.new/db.py	2009-03-25 14:53:22.000000000 +0100
+@@ -66,8 +66,12 @@
+ 	def get_login_info(self, user, password):
+ 		pass
+ 	def hash_password(self, password):
+-		import md5
+-		return md5.md5(password).hexdigest()
++		if settings.password_hash_methode == 'md5':
++			import md5
++			return md5.md5(password).hexdigest()
++		elif settings.password_hash_methode == 'sha':
++			import sha
++			return sha.new(password).hexdigest()
+ 	
+ 	def compare_password(self, hash, password):
+ 		phash = self.hash_password(password)
+diff -ru ./cgi-accountserver/settings.sample.py ./cgi-accountserver.new/settings.sample.py
+--- ./cgi-accountserver/settings.sample.py	2008-12-30 00:37:12.000000000 +0100
++++ ./cgi-accountserver.new/settings.sample.py	2009-03-25 15:17:50.000000000 +0100
+@@ -41,4 +41,6 @@
+ 
+ dbconfig = file_dbconfig
+ 
++password_hash_methode = 'md5' #password can use sha or md5 hash metode
++
+ http_port = 8080 # Port number for httpserver.py
+Alleen in ./cgi-accountserver.new: .svn

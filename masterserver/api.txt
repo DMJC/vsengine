@@ -1,0 +1,121 @@
+                    Master server protocall spec.
+                      v0.1 final 2009-02-19
+                     By jean-paul anceaux (www2)
+
+server.php
+---------------------------
+Start Broadcast server 
+---------------------------
+
+server -> masterserver
+methode	post request with the get comand ?type=new
+
+
+string  name		name of the server
+string	maxplayers	max numbers of players that the server can handel
+bool	password	set to true if the server heft password protecion
+string	port		the tcp port that the server use in multiplay.
+string	mod		This gift with mod are in user
+
+
+--------------
+Server resopnts
+--------------
+masterserver -> server 
+
+name		The name that the server gift the the masterserver
+sesion_id	A random string use as a session token
+timeoute	This is the time that a server min one's connect to the master
+		server. 
+XML formate:
+<NewServer>
+   <name>[servername]</name>
+   <sesion_id>[sesion id]</sesion_id>
+   <timeoute>[server timeoute]</timeout>
+</NewServer>
+
+---------------------------
+Update server stats
+---------------------------
+server -> masterserver
+methode	post request with the get comand ?type=update
+
+string	name		The name of the server.
+string	sesion_id	The sesion id that server get form the mester server.
+string	current_players	Current number of players that are on the server.
+
+--------------
+Server resopnts
+--------------
+masterserver -> server 
+
+
+<ServerUpdate>
+	<succes/>
+</ServerUpdate>
+
+--------------
+Master server errors
+--------------
+masterserver -> server
+methode http respons with a xml payload
+
+
+Errors:
+		TIMEOUT		The server is to late with his responds.
+XML formate
+
+<error>
+ <errorcode>[errorcode]</errorcode>
+<error>
+--------------------------------------------------------------------------------
+Client.php
+
+----------------------
+get serverlist
+----------------------
+This is a simpel http GET requst form the server to the client.
+The requst use a filter comad like: "?mod=<mod>"
+And your get a out put like this.
+
+<ServerList>
+  <server>
+    <name>server 1</name>
+    <ipadress>138.159.66.24:8932</ipadress>
+    <password>false</password>
+    <MaxPlayers>30</MaxPlayers>
+    <CurrentPlayers>20<CurrentPlayers>
+    <mod>VS</mod>
+  </server>
+  <server>
+    <name>server 2</name>
+    <ipadress>13.59.6.4:8977</ipadress>
+    <password>false</password>
+    <MaxPlayers>30</MaxPlayers>
+    <CurrentPlayers>20<CurrentPlayers>
+    <mod>SW</mod>
+  </server>
+  <server>
+    <name>server 3</name>
+    <ipadress>138.159.66.24:9598</ipadress>
+    <password>true</password>
+    <MaxPlayers>10</MaxPlayers>
+    <CurrentPlayers>9<CurrentPlayers>
+    <mod>VT</mod>
+  </server>
+  ...
+  <server>
+    <name>server n</name>
+    <ipadress>21.58.6.99:4522</ipadress>
+    <password>false</password>
+    <MaxPlayers>30</MaxPlayers>
+    <CurrentPlayers>20<CurrentPlayers>
+    <mod>WCU</mod>
+  </server>
+</ServerList>
+
+name	 	The name of the server
+ipadress	The ipadress and the tcp port of the server.
+password	Set to true if the server is password protect else set to false.
+MaxPlayers	The max number of players that the server can handel.
+CurrentPlayers	The number of players that are current on the server.

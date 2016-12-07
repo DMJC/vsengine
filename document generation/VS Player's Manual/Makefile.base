@@ -1,0 +1,48 @@
+## build rules
+
+TEX_DEPS = overview.tex \
+	appendixA.tex appendixB.tex appendixC.tex \
+	splashnotice.tex remark.tex prettygloss.tex \
+        nomencldef.tex
+FIG_DEPS = ../images/AncestralShmrnArchitecture.png \
+	../images/Shmrn-footwear.png \
+	../images/Shmrn-pilot1.png \
+	../images/Dgn-body.png \
+	../images/Shmrn-formalwear.png \
+	../images/Shmrn-pilot.png \
+	../images/Dgn-motion.png \
+	../images/Shmrn-logo.png \
+	../images/Shmrn-render.png \
+	../images/Klk'k-bodyplan-side.png \
+	../images/Klk'k-bodyplan-front.png \
+	../images/Klk'k-bodyplan-head.png \
+	../images/Shmrn-medic.png \
+	../images/Shmrn-elder.png \
+	../images/Shmrn-overview.png \
+	../images/Uln-bodyplan.png \
+	../images/Aera.png \
+	../images/Lmpl.png \
+	../images/Lmpl-working.png \
+	../images/Mishtali.png \
+	../images/Mishtali1.png \
+	../images/Nuhln.png \
+	../images/Rlaan-worker-cutaway.png \
+	../images/Rlaan-defender-cutaway.png \
+	../images/Rlaan-perspective.png
+BIB_DEPS = biblio.bib 
+STY_DEPS = 
+LMAKE = ../scripts/latex-make
+NONBIB_DEPS = $(TEX_DEPS) $(FIG_DEPS) $(STY_DEPS) #$(ORG_DEPS)
+
+Manual.pdf Manual.aux: Manual.tex $(NONBIB_DEPS) $(BIB_DEPS)
+	-rm -f nomencldef.tex *.pdf *.toc *.lof *.lot *.aux *.bbl *.d *.log *.out *.blg *.idx *.ilg *.ind *.glg *.gls *.glo && echo '\usepackage{nomencl}' >nomencldef.tex && $(LMAKE) -p -d " " -t "$(NONBIB_DEPS)" -b "$(BIB_DEPS)" $< && makeindex Manual.glo -s nomencl.ist -o Manual.gls && rm Manual.pdf && $(LMAKE) -p -d " " -t "$(NONBIB_DEPS)" -b "$(BIB_DEPS)" $<
+
+nomencldef.tex:
+	echo '\usepackage{nomencl}' >nomencldef.tex
+
+
+## cleaning
+clean:
+	-rm -f *.pdf *.toc *.lof *.lot *.aux *.bbl *.d *.log *.out *.blg *.idx *.ilg *.ind *.glg *.gls *.glo
+
+

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{769293BE-B003-42E8-A98A-4818944E6A45}</ProjectGuid>
+    <RootNamespace>basemaker</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\include\gl;..\..\vegastrike\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glut32.lib;libpng_static.lib;zlib_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)BaseMaker-d.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(TargetName)</MapFileName>
+      <MapExports>true</MapExports>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\include;..\include\gl;..\..\vegastrike\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glut32.lib;libpng_static.lib;zlib_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vegastrike\objconv\basemaker\base_maker.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\basemaker\base_maker_texture.cpp" />
+    <ClCompile Include="..\..\vegastrike\objconv\basemaker\sprite.cpp" />
+    <ClCompile Include="..\..\vegastrike\src\xml_support.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcapimin.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcapistd.cpp" />
+    <ClCompile Include="..\jpeg-6b\jccoefct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jccolor.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcdctmgr.cpp" />
+    <ClCompile Include="..\jpeg-6b\jchuff.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcinit.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcmainct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcmarker.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcmaster.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcomapi.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcparam.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcphuff.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcprepct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jcsample.cpp" />
+    <ClCompile Include="..\jpeg-6b\jctrans.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdapimin.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdapistd.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdatadst.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdatasrc.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdcoefct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdcolor.cpp" />
+    <ClCompile Include="..\jpeg-6b\jddctmgr.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdhuff.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdinput.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdmainct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdmarker.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdmaster.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdmerge.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdphuff.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdpostct.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdsample.cpp" />
+    <ClCompile Include="..\jpeg-6b\jdtrans.cpp" />
+    <ClCompile Include="..\jpeg-6b\jerror.cpp" />
+    <ClCompile Include="..\jpeg-6b\jfdctflt.cpp" />
+    <ClCompile Include="..\jpeg-6b\jfdctfst.cpp" />
+    <ClCompile Include="..\jpeg-6b\jfdctint.cpp" />
+    <ClCompile Include="..\jpeg-6b\jidctflt.cpp" />
+    <ClCompile Include="..\jpeg-6b\jidctfst.cpp" />
+    <ClCompile Include="..\jpeg-6b\jidctint.cpp" />
+    <ClCompile Include="..\jpeg-6b\jidctred.cpp" />
+    <ClCompile Include="..\jpeg-6b\jmemmgr.cpp" />
+    <ClCompile Include="..\jpeg-6b\jmemnobs.cpp" />
+    <ClCompile Include="..\jpeg-6b\jquant1.cpp" />
+    <ClCompile Include="..\jpeg-6b\jquant2.cpp" />
+    <ClCompile Include="..\jpeg-6b\jutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\jpeg-6b\jchuff.h" />
+    <ClInclude Include="..\jpeg-6b\jdct.h" />
+    <ClInclude Include="..\jpeg-6b\jdhuff.h" />
+    <ClInclude Include="..\jpeg-6b\jerror.h" />
+    <ClInclude Include="..\jpeg-6b\jinclude.h" />
+    <ClInclude Include="..\jpeg-6b\jmemsys.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\basemaker\base_maker_texture.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\vegastrike\objconv\basemaker\sprite.h" />
+    <ClInclude Include="..\..\vegastrike\src\xml_support.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="basemaker.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

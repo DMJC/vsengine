@@ -1,0 +1,146 @@
+#! /bin/sh
+
+# Zusammenfassung: Ein Installationsprogramm für die ins deutsche übersetzten Dateien des Programms Vegastrike
+# Release: 0.2
+# Lizenz: GPL
+# Author: Plueschinger
+
+# Der Pfad, der normalerweise der des Vegastrike-Verzeichnisses ist 
+VEGAPATH=/usr/local/games/vegastrike
+
+# Falls der Pfad ein anderer ist, hier die Möglichkeit einer individuellen Pfadeingabe
+while [ ! -f "$VEGAPATH/master_part_list.csv" ]; do
+     echo "Das Verzeichnis /usr/local/games/vegastrike konnte nicht gefunden werden."
+     echo -e "Bitte geben Sie den Pfad mit dem Verzeichnis ein \nund drücken anschliessend die 'Enter-Taste'"
+     echo "z.B. /usr/games/vegastrike"
+     echo "oder 'q' ,um das Programm zu beenden und anschliessend die 'Enter-Taste':"
+     read VEGAPATH
+     if [ "$VEGAPATH" = "q" ];then
+          exit
+     fi
+done
+
+# Das Umbenennen und Ersetzen der Originaldateien
+if [ ! -f "$VEGAPATH/master_part_list.csv.en" ]; then
+     mv -f $VEGAPATH/master_part_list.csv $VEGAPATH/master_part_list.csv.en
+     echo "Verschiebe master_part_list.csv nach master_part_list.csv.en."
+     cp -f master_part_list.csv $VEGAPATH/master_part_list.csv
+     echo "Installiere die deutsche Version von master_part_list.csv."
+else
+     echo "/vegastrike/master_part_list.csv.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f master_part_list.csv $VEGAPATH/master_part_list.csv
+fi
+
+if [ ! -f "$VEGAPATH/bases/bartender.py.en" ]; then
+     mv -f $VEGAPATH/bases/bartender.py $VEGAPATH/bases/bartender.py.en
+     echo "Verschiebe bartender.py nach bartender.py.en."
+     cp -f bases/bartender.py $VEGAPATH/bases/bartender.py
+     echo "Installiere die deutsche Version von bartender.py."
+else
+     echo "/vegastrike/bases/bartender.py.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f bases/bartender.py $VEGAPATH/bases/bartender.py
+fi
+
+if [ ! -f "$VEGAPATH/bases/fixers/no.py.en" ]; then
+     mv -f $VEGAPATH/bases/fixers/no.py $VEGAPATH/bases/fixers/no.py.en
+     echo "Verschiebe no.py nach no.py.en."
+     cp -f bases/fixers/no.py $VEGAPATH/bases/fixers/no.py
+     echo "Installiere die deutsche Version von no.py."
+else
+     echo "/vegastrike/bases/fixers/no.py.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f bases/fixers/no.py $VEGAPATH/bases/fixers/no.py
+fi
+
+if [ ! -f "$VEGAPATH/modules/cargo_mission.py.en" ]; then
+     mv -f $VEGAPATH/modules/cargo_mission.py $VEGAPATH/modules/cargo_mission.py.en
+     echo "Verschiebe cargo_mission.py nach cargo_mission.py.en."
+     cp -f modules/cargo_mission.py $VEGAPATH/modules/cargo_mission.py
+     echo "Installiere die deutsche Version von cargo_mission.py."
+else
+     echo "/vegastrike/modules/cargo_mission.py.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f modules/cargo_mission.py $VEGAPATH/modules/cargo_mission.py
+fi
+
+if [ ! -f "$VEGAPATH/modules/dynamic_mission.py.en" ]; then
+     mv -f $VEGAPATH/modules/dynamic_mission.py $VEGAPATH/modules/dynamic_mission.py.en
+     echo "Verschiebe dynamic_mission.py nach dynamic_mission.py.en."
+     cp -f modules/dynamic_mission.py $VEGAPATH/modules/dynamic_mission.py
+     echo "Installiere die deutsche Version von dynamic_mission.py."
+else
+     echo "/vegastrike/modules/dynamic_mission.py.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f modules/dynamic_mission.py $VEGAPATH/modules/dynamic_mission.py
+fi
+
+if [ ! -f "$VEGAPATH/communications.en/aera.xml" ]; then
+     mv -f $VEGAPATH/communications $VEGAPATH/communications.en
+     echo "Verschiebe communications nach communications.en."
+     cp -rf communications $VEGAPATH/communications
+     echo "Installiere die deutsche Version von communications."
+else
+     echo "/vegastrike/communications.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -rf communications $VEGAPATH/communications
+fi
+
+if [ ! -f "$VEGAPATH/sprites/bases/fixers/no.png.en" ]; then
+     mv -f $VEGAPATH/sprites/bases/fixers/no.png $VEGAPATH/sprites/bases/fixers/no.png.en
+     echo "Verschiebe no.png nach no.png.en."
+     cp -f sprites/bases/fixers/no.png $VEGAPATH/sprites/bases/fixers/no.png
+     echo "Installiere die deutsche Version von no.png."
+else
+     echo "/vegastrike/sprites/bases/fixers/no.png.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f sprites/bases/fixers/no.png $VEGAPATH/sprites/bases/fixers/no.png
+fi
+
+if [ ! -f "$VEGAPATH/sprites/bases/fixers/yes.png.en" ]; then
+     mv -f $VEGAPATH/sprites/bases/fixers/yes.png $VEGAPATH/sprites/bases/fixers/yes.png.en
+     echo "Verschiebe yes.png nach yes.png.en."
+     cp -f sprites/bases/fixers/no.png $VEGAPATH/sprites/bases/fixers/no.png
+     echo "Installiere die deutsche Version von yes.png."
+else
+     echo "/vegastrike/sprites/bases/fixers/yes.png.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f sprites/bases/fixers/yes.png $VEGAPATH/sprites/bases/fixers/yes.png
+fi
+
+if [ ! -f "$VEGAPATH/sprites/bases/quit.png.en" ]; then
+     mv -f $VEGAPATH/sprites/quit.png $VEGAPATH/sprites/quit.png.en
+     echo "Verschiebe quit.png nach quit.png.en."
+     cp -f sprites/bases/quit.png $VEGAPATH/sprites/bases/quit.png
+     echo "Installiere die deutsche Version von quit.png."
+else
+     echo "/vegastrike/sprites/bases/quit.png.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f sprites/bases/quit.png $VEGAPATH/sprites/bases/quit.png
+fi
+
+if [ ! -f "$VEGAPATH/textures/cockpit/eject.png.en" ]; then
+     mv -f $VEGAPATH/textures/cockpit/eject.png $VEGAPATH/textures/cockpit/eject.png.en
+     echo "Verschiebe eject.png nach eject.png.en."
+     cp -f textures/cockpit/eject.png $VEGAPATH/textures/cockpit/eject.png
+     echo "Installiere die deutsche Version von eject.png."
+else
+     echo "/vegastrike/textures/cockpit/eject.png.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f textures/cockpit/eject.png $VEGAPATH/textures/cockpit/eject.png
+fi
+
+if [ ! -f "$VEGAPATH/textures/cockpit/jump.png.en" ]; then
+     mv -f $VEGAPATH/textures/cockpit/jump.png $VEGAPATH/textures/cockpit/jump.png.en
+     echo "Verschiebe jump.png nach jump.png.en."
+     cp -f textures/cockpit/jump.png $VEGAPATH/textures/cockpit/jump.png
+     echo "Installiere die deutsche Version von jump.png."
+else
+     echo "/vegastrike/textures/cockpit/jump.png.en existiert schon."
+     # Es wird trotzdem kopiert, falls die Installation von Hand angefangen und nicht beendet wurde
+     cp -f textures/cockpit/jump.png $VEGAPATH/textures/cockpit/jump.png
+fi
+
+echo -e "\nInstallation erfolgreich abgeschlossen.\n"
+

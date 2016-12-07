@@ -1,0 +1,1405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Networking">
+      <UniqueIdentifier>{0e99e184-a684-4eb9-9a02-e89a0727935f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Networking\lowlevel">
+      <UniqueIdentifier>{c2eb918f-b154-4a5a-877b-8d0f72a68794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collide2">
+      <UniqueIdentifier>{30595b60-9ce3-4472-ada7-582379f7a537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{eef78ed5-df41-4480-86b9-940ab79d0b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cmd">
+      <UniqueIdentifier>{44c03707-c264-4d8a-8a6c-0f70fe3dfefb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Python">
+      <UniqueIdentifier>{78f96458-204f-4bc5-852f-43dbc6495353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Script">
+      <UniqueIdentifier>{d715d59b-c1ab-4a8a-b33b-aaaabef6ce23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GFX">
+      <UniqueIdentifier>{2ed4ae79-4b5f-4c14-9742-e7da34220668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boost">
+      <UniqueIdentifier>{0a34fb46-1be2-4a05-a87d-ea5af849ad89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Networking">
+      <UniqueIdentifier>{a6cc6a32-207d-4d83-8ce8-ea1fe277a8cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Networking\lowlevel">
+      <UniqueIdentifier>{f6f12338-9dc2-4299-b298-51544f97a2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collide2">
+      <UniqueIdentifier>{ce859474-ce25-4116-9ce7-0aeb1c9889e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI">
+      <UniqueIdentifier>{b7fb18cd-2a74-44da-84bf-d5a42f058771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cmd">
+      <UniqueIdentifier>{1bddabe9-04f7-4330-9366-d3a1e694a776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Python">
+      <UniqueIdentifier>{f1e91605-069f-4276-8242-1943f247859c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Script">
+      <UniqueIdentifier>{78c34281-6a95-421a-9015-de724172df89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GFX">
+      <UniqueIdentifier>{be9004a0-d05b-4be8-a8e8-a2e71ef07e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vegastrike\src\configxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\director_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\easydom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\endianness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\faction_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\faction_util_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\faction_util_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\force_feedback_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\galaxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\galaxy_gen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\galaxy_xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfxlib_struct_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gldrv\gl_sphere_list_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gldrv\gl_vertex_list.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\hashtable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\libaudioserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\libserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\lin_time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\load_mission.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\macosx_math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\pk3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\posh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\savegame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\star_system_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\star_system_xml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\stardate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\universe_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\universe_util_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\universe_util_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\vegaserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\vs_globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\vsfilesystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\VSFileXMLSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\xml_serializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\xml_support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\XMLDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\accountsxml.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\client.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\cubicsplines.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\fileutil.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\inet.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\inet_file.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\mangle.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netclient.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netclient_clients.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netclient_devices.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netclient_login.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver_acct.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver_clients.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver_devices.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver_login.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\netserver_net.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\networkcomm_server.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\prediction.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\savenet_util.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\zonemgr.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\netbuffer.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\netui.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\packet.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\packetmem.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_address.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_clientstate.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_cmd.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_debug.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_dloadenum.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_dloadmgr.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_notify.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_oss.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_parsecmd.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_pipe.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_serversocket.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socket.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketbase.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketflags.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_sockethttp.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketset.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_sockettcp.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketudp.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_thread_non.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_thread_p.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\networking\lowlevel\vsnet_thread_sdl.cpp">
+      <Filter>Source Files\Networking\lowlevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\CSopcodecollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceAABB.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceContainer.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceHPoint.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceIndexedTriangle.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceMatrix3x3.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceMatrix4x4.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceOBB.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePlane.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePoint.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRandom.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRay.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRevisitedRadix.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceSegment.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceTriangle.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\Ice\IceUtils.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opbox.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_AABBCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_AABBTree.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_BaseModel.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_BoxPruning.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_Collider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_Common.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_HybridModel.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_LSSCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_MeshInterface.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_Model.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_OBBCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_OptimizedTree.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_Picking.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_PlanesCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_RayCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_SphereCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_SweepAndPrune.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_TreeBuilders.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_TreeCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\OPC_VolumeCollider.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opmatrix3.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opvector3.cpp">
+      <Filter>Source Files\Collide2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\aggressive.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\comm_ai.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\communication.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\communication_xml.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\docking.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\event_xml.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\fire.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\fireall.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\flybywire.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\flykeyboard_generic.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\flykeyboard_server.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\hard_coded_scripts.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\ikarus.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\missionscript.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\navigation.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\order.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\order_comm.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\script.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\tactics.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\turretai.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\ai\warpto.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\alphacurve.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\asteroid_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\atmosphere_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\base_util_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\beam_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\beam_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\bolt_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\bolt_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\building_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collection.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\collide_map.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\container.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\csv.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\faction_xml_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\fg_util.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\images_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\missile_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\mount.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\nebula_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\pilot.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\planet_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\role_bitmask.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_collide.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_const_cache.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_csv.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_factory_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_factory_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_functions_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_functions_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_util_generic.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_util_server.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\unit_xml.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\weapon_xml.cpp">
+      <Filter>Source Files\Cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\init.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\python_compile.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_exports.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_exports1.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_exports2.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_exports3.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_method_defs.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\unit_wrapper.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\python\universe_util_export.cpp">
+      <Filter>Source Files\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\c_alike\c_alike.tab.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\director_generic.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\flightgroup_server.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\c_alike\lex.yy.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\mission.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\mission_script.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\msgcenter.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\pythonmission.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_olist.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_omap.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_order.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_string.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_unit_generic.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_call_unit_server.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_callbacks.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_expression.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_generic.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_statement.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_util.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\cmd\script\script_variables.cpp">
+      <Filter>Source Files\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\background_server.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\cockpit_generic.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\lerp.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\matrix.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh_bin_server.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh_bxm.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh_poly.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh_server.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\mesh_xml.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\quaternion.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\sphere_generic.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\sphere_server.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\vec.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\vsbox_server.cpp">
+      <Filter>Source Files\GFX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\converter\arg_to_python_base.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\converter\builtin_converters.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\class.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\dict.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\enum.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\errors.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\exec.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\converter\from_python.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\function.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\function_doc_signature.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\import.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\inheritance.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\iterator.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\life_support.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\list.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\long.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\module.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\numeric.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object_operators.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object_protocol.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\pickle_support.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\converter\registry.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\slice.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\object\stl_iterator.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\str.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\tuple.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\converter\type_id.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\boost\1_45\src\wrapper.cpp">
+      <Filter>Source Files\Boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vegastrike\src\gfx\soundcontainer_generic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vegastrike\src\configxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\easydom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\endianness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\faction_generic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\galaxy_gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\galaxy_xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\hashtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\lin_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\load_mission.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\pk3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\posh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\savegame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\star_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\star_system_generic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\stardate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\universe_generic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\universe_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\vs_globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\vsfilesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\VSFileXMLSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\xml_serializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\xml_support.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\XMLDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\accountsxml.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\client.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\cubicsplines.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\fileutil.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\inet.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\inet_file.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\mangle.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\netclient.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\netserver.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\prediction.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\savenet_util.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\zonemgr.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\GCPtr.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\netbuffer.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\netui.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\packet.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\packetmem.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_address.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_clientstate.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_cmd.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_debug.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_dloadenum.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_dloadmgr.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_err.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_headers.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_notify.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_oss.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_parsecmd.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_pipe.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_serversocket.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socket.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketbase.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketflags.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_sockethttp.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketset.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_sockettcp.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_socketudp.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\networking\lowlevel\vsnet_thread.h">
+      <Filter>Header Files\Networking\lowlevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\basecollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\CSopcodecollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceAABB.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceAxes.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceBoundingSphere.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceContainer.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceFPU.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceHPoint.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceIndexedTriangle.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceLSS.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceMatrix3x3.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceMatrix4x4.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceMemoryMacros.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceOBB.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePairs.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePlane.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePoint.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IcePreprocessor.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRandom.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRay.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceRevisitedRadix.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceSegment.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceTriangle.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceTrilist.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceTypes.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\IceUtils.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opbox.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_AABBCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_AABBTree.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_BaseModel.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_BoxBoxOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_BoxPruning.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_Collider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_Common.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_HybridModel.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_IceHook.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_LSSAABBOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_LSSCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_LSSTriOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_MeshInterface.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_Model.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_OBBCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_OptimizedTree.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_Picking.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_PlanesAABBOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_PlanesCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_PlanesTriOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_RayAABBOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_RayCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_RayTriOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_Settings.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_SphereAABBOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_SphereCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_SphereTriOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_SweepAndPrune.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_TreeBuilders.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_TreeCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_TriBoxOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_TriTriOverlap.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\OPC_VolumeCollider.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Opcode.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodealgorithms.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodeextern.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodegarray.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodeqint.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodeqsqrt.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodesysdef.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\opcodetypes.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opmath.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opmatrix3.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\csgeom2\optransfrm.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\csgeom2\opvector3.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\segmentcell.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Ice\Stdafx.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide2\Stdafx.h">
+      <Filter>Header Files\Collide2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\aggressive.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\comm_ai.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\communication.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\docking.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\event_xml.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\fire.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\fireall.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\flybywire.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\hard_coded_scripts.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\ikarus.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\missionscript.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\navigation.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\order.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\script.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\tactics.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\turretai.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\ai\warpto.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\alphacurve.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\asteroid_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\beam.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\bolt.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\building_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collection.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\collide.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\container.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\csv.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\fg_util.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\missile_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\nebula_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\planet_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\role_bitmask.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\unit_collide.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\unit_const_cache.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\unit_csv.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\unit_generic.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\cmd\unit_util.h">
+      <Filter>Header Files\Cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\init.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\python_class.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\python_compile.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\python_unit_wrap.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\star_system_exports.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\unit_exports.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\unit_from_to_python.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\python\unit_wrapper_class.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\cockpit_generic.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\lerp.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\mesh_bxm.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\mesh_xml.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\quaternion.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\vec.h">
+      <Filter>Header Files\GFX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vegastrike\src\gfx\soundcontainer_generic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vsserver.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vsserver.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

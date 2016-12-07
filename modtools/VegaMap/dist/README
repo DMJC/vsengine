@@ -1,0 +1,25 @@
+VegaMap is a tool to view galaxy definition xml files for the Vega Strike engine.
+
+VegaMap was originally created by Stefan Bissell aka weaselfink (http://www.bissell.de/vegamap/).
+Versions v0.1 and 0.1.1 were created in 2005.
+In 2007 an enhanced version of VegaMap was integrated with VSTrade, a more extensive software for trade price analysis.
+In 2011 pyramid has picked up the old version and improved on some functionalities of the tool.
+
+Requirements
+============
+You will only require to have the Java Runtime Environment (JRE) version 1.5 or higher installed.
+
+Installation
+============
+Copy all files in the /dist folder to your location of preference, e.g. C:\PROGRAMS\VegaMap, or /usr/share/vegamap/.
+Run by double-clicking the vegamap.jar, or invoking vsmap from the command line.
+
+Credits
+=======
+weaselfink  2005
+pyramid     2011
+
+Future Enhancements
+===================
+    *   include a system find (and auto center function)
+    *   read savegame status

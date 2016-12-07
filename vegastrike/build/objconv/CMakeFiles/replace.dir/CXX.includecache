@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/james/development/privgold/vegastrike-code/vegastrike/objconv/replace.cpp
+string
+-
+stdlib.h
+-
+vector
+-
+algorithm
+-
+stdio.h
+-
+
