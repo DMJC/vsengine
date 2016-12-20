@@ -1,0 +1,30 @@
+#include "../include/gui.h"
+#include "../include/display.h"
+#include <gtkmm.h>
+#include <GL/gl.h>
+#include <iostream>
+
+
+void gui::make_gui()
+{
+cout << "Opening Glade File: " << endl;
+Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::builder->create_from_file("src/gui.gtkbuilder");
+
+cout << "File opened, now testing contents: " << endl;
+
+Gtk::Window* main_window = nullptr;
+
+builder->get_widget("ts_main_window", main_window);
+
+cout << "Success?: " << endl;
+
+//builder->get_widget("3ds_main_window", main_window);
+}
+
+
+gui::~gui()
+{
+
+}
+
+

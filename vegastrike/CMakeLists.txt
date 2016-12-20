@@ -6,7 +6,7 @@
 # ccmake will let you set the Build type (debug,release,basic)
 
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.6.3)
 
 project (vsUTCS)
 
@@ -498,11 +498,7 @@ SET(VEGASTRIKE_SOURCES ${LIBGUI_SOURCES}
 					   src/main.cpp 
 					   src/python/briefing_wrapper.cpp )
 
-	SET(VSFRED_SOURCES ${LIBGUI_SOURCES}
-                                           ${LIBNETCLIENT_SOURCES}
-                                           ${LIBROOTCLIENT_SOURCES}
-                                           ${LIBGFXCLIENT_SOURCES}
-                                           ${LIBAUDIO_SOURCES}
+SET(VSFRED_SOURCES ${LIBGUI_SOURCES}
 					   ${LIBNETCLIENT_SOURCES}
 					   ${LIBROOTCLIENT_SOURCES}
 					   ${LIBGFXCLIENT_SOURCES}
@@ -564,7 +560,13 @@ SET(VEGASTRIKE_SOURCES ${LIBGUI_SOURCES}
 					   src/gldrv/gl_texture.cpp
 					   src/gldrv/gl_vertex_list.cpp
 					   src/gldrv/winsys.cpp
-					   src/vsfred.cpp 
+					   src/vsfred/vsfred.cpp 
+					   src/vsfred/src/display.cpp
+					   src/vsfred/src/gui.cpp
+					   src/vsfred/src/preferences.cpp
+					   src/vsfred/src/scene.cpp
+					   src/vsfred/src/ship_editor.cpp
+					   src/vsfred/src/view.cpp
 					   src/python/briefing_wrapper.cpp )
 
 	SET(VEGASERVER_SOURCES ${LIBCMDSERVER_SOURCES}
@@ -735,13 +737,13 @@ ENDIF(NOT DISABLE_CLIENT)
 OPTION(DISABLE_VSFRED "Disable building the vegastrike fred bin"
         OFF )
 IF(NOT DISABLE_VSFRED)
-    add_executable(vsfred ${VSFRED_SOURCES})
+        add_executable(vsfred ${VSFRED_SOURCES})
 ENDIF(NOT DISABLE_VSFRED)
 
 OPTION(DISABLE_SERVER "Disable building the vegaserver bin"
         OFF )
 IF(NOT DISABLE_SERVER)
-    add_executable(vegaserver ${VEGASERVER_SOURCES})
+        add_executable(vegaserver ${VEGASERVER_SOURCES})
 ENDIF(NOT DISABLE_SERVER)
 
 
@@ -821,7 +823,7 @@ IF(NOT USE_SYSTEM_BOOST)
     IF(NOT DISABLE_CLIENT)
 	add_dependencies(vegastrike boost_python)
     ENDIF(NOT DISABLE_CLIENT)
-    IF(NOT DISABLE_FRED)
+    IF(NOT DISABLE_VSFRED)
 	add_dependencies(vsfred boost_python)
     ENDIF(NOT DISABLE_FRED)
     IF(NOT DISABLE_SERVER)
@@ -1061,16 +1063,30 @@ ENDIF(NOT DISABLE_CLIENT)
 # Vssetup Sub build file  
 add_subdirectory(setup)
 
-#ADD_CUSTOM_TARGET(vssetup DEPENDS setup/vssetup COMMAND ln -fs ${vsUTCS_BINARY_DIR}/setup/vssetup vssetup || true)
+#ADD_CUSTOM_TARGET(vsfred DEPENDS fred/vsfred COMMAND ln -fs ${vsUTCS_BINARY_DIR}/fred/vsfred vsfred || true)
 
 # Add other utilies here
 add_subdirectory(objconv)
 
 #ADD_CUSTOM_TARGET(mesher DEPENDS objconv/mesher COMMAND ln -fs ${vsUTCS_BINARY_DIR}/objconv/mesher mesher || true)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK3 REQUIRED gtkmm-3.0)
+# Setup CMake to use GTK+, tell the compiler where to look for headers
+# and to the linker where to look for libraries
+include_directories(${GTK3_INCLUDE_DIRS})
+message("include_dirs: ${GTK3_INCLUDE_DIRS}")
+link_directories(${GTK3_LIBRARY_DIRS})
+message("library_dirs: ${GTK3_LIBRARY_DIRS}")
+# Add other flags to the compiler
+add_definitions(${GTK3_CXXFLAGS_OTHER} -DVSFRED)
+#add_definitions(${GTK3_CXXFLAGS_OTHER} -std=gnu++0x)
+message("definitions: ${GTK3_CXXFLAGS_OTHER} -lpthread")
 IF(NOT DISABLE_VSFRED)
-target_link_libraries(vsfred ${TST_LIBS})
-set_target_properties(vsfred PROPERTIES LINK_FLAGS "-L/usr/lib ${TST_LFLAGS}")
+target_link_libraries(vsfred ${TST_LIBS} ${GTK3_LIBRARIES})
+set_target_properties(vsfred PROPERTIES LINK_FLAGS "-L/usr/lib ${TST_LFLAGS}"
+RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
 ENDIF(NOT DISABLE_VSFRED)
 
 IF(NOT DISABLE_SERVER)
@@ -1111,26 +1127,26 @@ MARK_AS_ADVANCED(FORCE
 	FFMPEG_FOUND
 	FFMPEG_LIBRARIES
 	FFMPEG_DEFINITIONS
-	GTK2_ATK_INCLUDE_DIR
-	GTK2_ATK_LIBRARY
-	GTK2_CAIRO_INCLUDE_DIR
-	GTK2_CAIRO_LIBRARY
-	GTK2_GDK_INCLUDE_DIR
-	GTK2_GDK_LIBRARY
-	GTK2_GDK_PIXBUF_LIBRARY
-	GTK2_GDK_PIXBUF_INCLUDE_DIR
-	GTK2_GLIBCONFIG_INCLUDE_DIR
-	GTK2_GLIB_INCLUDE_DIR
-	GTK2_GLIB_LIBRARY
-	GTK2_GMODULE_LIBRARY
-	GTK2_GOBJECT_LIBRARY
-	GTK2_PANGO_INCLUDE_DIR
-	GTK2_PANGO_LIBRARY
-	GTK2_GTHREAD_LIBRARY
-	GTK2_GTKGL_INCLUDE_DIR
-	GTK2_GTKGL_LIBRARY
-	GTK2_GTK_INCLUDE_DIR
-	GTK2_GTK_LIBRARY
+	GTK3_ATK_INCLUDE_DIR
+	GTK3_ATK_LIBRARY
+	GTK3_CAIRO_INCLUDE_DIR
+	GTK3_CAIRO_LIBRARY
+	GTK3_GDK_INCLUDE_DIR
+	GTK3_GDK_LIBRARY
+	GTK3_GDK_PIXBUF_LIBRARY
+	GTK3_GDK_PIXBUF_INCLUDE_DIR
+	GTK3_GLIBCONFIG_INCLUDE_DIR
+	GTK3_GLIB_INCLUDE_DIR
+	GTK3_GLIB_LIBRARY
+	GTK3_GMODULE_LIBRARY
+	GTK3_GOBJECT_LIBRARY
+	GTK3_PANGO_INCLUDE_DIR
+	GTK3_PANGO_LIBRARY
+	GTK3_GTHREAD_LIBRARY
+	GTK3_GTKGL_INCLUDE_DIR
+	GTK3_GTKGL_LIBRARY
+	GTK3_GTK_INCLUDE_DIR
+	GTK3_GTK_LIBRARY
 	LIBRARY_OUTPUT_PATH
 	OPENAL_INCLUDE_DIR
 	OPENAL_LIBRARY
