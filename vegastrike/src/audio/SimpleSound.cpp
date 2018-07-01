@@ -11,7 +11,7 @@
 namespace Audio {
 
     SimpleSound::SimpleSound(const std::string& name, VSFileSystem::VSFileType _type, bool streaming) 
-        throw()
+        noexcept
         : Sound(name, streaming),
           type(_type)
     {
@@ -22,7 +22,7 @@ namespace Audio {
     }
 
     void SimpleSound::loadStream() 
-        throw(Exception)
+        noexcept(false)
     {
         if (isStreamLoaded())
             throw(ResourceAlreadyLoadedException());
@@ -40,7 +40,7 @@ namespace Audio {
     }
     
     void SimpleSound::closeStream() 
-        throw(ResourceNotLoadedException)
+        noexcept(false) //throw(ResourceNotLoadedException)
     {
         if (!isStreamLoaded())
             throw(ResourceNotLoadedException());
@@ -48,7 +48,7 @@ namespace Audio {
     }
     
     SharedPtr<Stream> SimpleSound::getStream() const 
-        throw(ResourceNotLoadedException)
+        noexcept(false) //throw(ResourceNotLoadedException)
     {
         if (!isStreamLoaded())
             throw(ResourceNotLoadedException());
@@ -56,7 +56,7 @@ namespace Audio {
     }
     
     void SimpleSound::readBuffer(SoundBuffer &buffer) 
-        throw(Exception)
+        noexcept(false)
     {
         if (buffer.getFormat() == getFormat()) {
             // Same formats, so all we have to do is read bytes ;)
@@ -81,7 +81,7 @@ namespace Audio {
     }
     
     void SimpleSound::abortLoad()
-        throw()
+        noexcept
     {
         // Intentionally blank
     }

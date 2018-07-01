@@ -65,7 +65,7 @@ char *GetSetting(char *group) {
 		if (CUR->name == NULL) { continue; }
 		if (strcmp(CUR->name, group) == 0) { return CUR->setting; }
 	} while ((CUR = CUR->next) > 0);
-	return '\0';
+	return 0;
 }
 
 struct catagory *GetCatStruct(char *name) {

@@ -13,7 +13,7 @@ template<> Audio::CodecRegistry* Singleton<Audio::CodecRegistry>::_singletonInst
 
 namespace Audio {
 
-    CodecRegistry::CodecRegistry() throw()
+    CodecRegistry::CodecRegistry() noexcept
     {
     }
     
@@ -28,7 +28,7 @@ namespace Audio {
         codecPriority.clear();
     }
     
-    void CodecRegistry::add(Codec* codec, int priority) throw()
+    void CodecRegistry::add(Codec* codec, int priority) noexcept
     {
         if (codecPriority.find(codec) == codecPriority.end()) {
             codecPriority[codec] = priority;
@@ -53,7 +53,7 @@ namespace Audio {
         }
     }
     
-    void CodecRegistry::remove(Codec* codec) throw()
+    void CodecRegistry::remove(Codec* codec) noexcept
     {
         if (codecPriority.find(codec) != codecPriority.end()) {
             codecPriority.erase(codec);
@@ -145,7 +145,7 @@ namespace Audio {
 		return codec->open(path, type);
     }
     
-    CodecRegistration::CodecRegistration(Codec* _codec, int priority) throw()
+    CodecRegistration::CodecRegistration(Codec* _codec, int priority) noexcept
         : codec(_codec)
     {
         if (!CodecRegistry::getSingleton())

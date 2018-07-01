@@ -13,18 +13,18 @@
 
 namespace Audio {
 
-    Timestamp getGameTime() throw()
+    Timestamp getGameTime() noexcept
     {
         return Timestamp(UniverseUtil::GetGameTime());
     }
     
-    Timestamp getRealTime() throw()
+    Timestamp getRealTime() noexcept
     {
         return Timestamp(realTime());
     }
     
 
-    Scalar estimateGain(const Source &src, const Listener &listener) throw()
+    Scalar estimateGain(const Source &src, const Listener &listener) noexcept
     {
         // Base priority is source gain
         Scalar gain = src.getGain();

@@ -560,13 +560,17 @@ SET(VSFRED_SOURCES ${LIBGUI_SOURCES}
 					   src/gldrv/gl_texture.cpp
 					   src/gldrv/gl_vertex_list.cpp
 					   src/gldrv/winsys.cpp
-					   src/vsfred/vsfred.cpp 
+					   src/vsfred/vsfred.cpp
 					   src/vsfred/src/display.cpp
+					   src/vsfred/src/editor_callbacks.cpp
 					   src/vsfred/src/gui.cpp
+					   src/vsfred/src/mission.cpp
 					   src/vsfred/src/preferences.cpp
 					   src/vsfred/src/scene.cpp
 					   src/vsfred/src/ship_editor.cpp
+					   src/vsfred/src/ship_object.cpp
 					   src/vsfred/src/view.cpp
+					   src/vsfred/src/wing_object.cpp
 					   src/python/briefing_wrapper.cpp )
 
 	SET(VEGASERVER_SOURCES ${LIBCMDSERVER_SOURCES}
@@ -1085,7 +1089,7 @@ message("definitions: ${GTK3_CXXFLAGS_OTHER} -lpthread")
 IF(NOT DISABLE_VSFRED)
 target_link_libraries(vsfred ${TST_LIBS} ${GTK3_LIBRARIES})
 set_target_properties(vsfred PROPERTIES LINK_FLAGS "-L/usr/lib ${TST_LFLAGS}"
-RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
 )
 ENDIF(NOT DISABLE_VSFRED)
 

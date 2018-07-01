@@ -150,7 +150,6 @@ static string getMaterialHash( const GFXMaterial &mat,
 static string getMaterialHash( const Mesh_vec3f &v )
 {
     static const char hexdigs[] = "0123456789ABCDEF";
-    static char tmp[16];
     string ret;
     for (size_t i = 0; i < sizeof (v); i++) {
         ret += hexdigs[( ( (char*) &v )[i]>>4 )];
@@ -189,7 +188,7 @@ static string getMaterialHash( const XML &memfile )
                              memfile.alphatest );
     hash += "-";
 
-    sprintf( tmp, "-%d-", memfile.textures.size() );
+    sprintf( tmp, "-%lu-", memfile.textures.size() );
     hash += tmp;
     for (i = 0; i < memfile.textures.size(); i++) {
         sprintf( tmp, "%d,%d,", memfile.textures[i].index, memfile.textures[i].type );
@@ -197,7 +196,7 @@ static string getMaterialHash( const XML &memfile )
         hash += memfile.textures[i].name;
         hash += '#';
     }
-    sprintf( tmp, "-%d-", memfile.detailplanes.size() );
+    sprintf( tmp, "-%lu-", memfile.detailplanes.size() );
     hash += tmp;
     sprintf( tmp, "%d,%d,", memfile.detailtexture.index, memfile.detailtexture.type );
     hash += tmp;
@@ -443,7 +442,7 @@ static void SetupColorTplVars( map< string, string > &vars,
     bool   eqg   = (fabs( defg-g ) < 0.001);
     bool   eqb   = (fabs( defb-b ) < 0.001);
     bool   eqa   = (fabs( defa-a ) < 0.001);
-    bool   eqrgb = eqr && eqb && eqa;
+    bool   eqrgb = eqr && eqg && eqb && eqa;
 
     string rgbs  = "$("+rvar+") $("+gvar+") $("+bvar+")";
     string rgbas = "$("+rvar+") $("+gvar+") $("+bvar+") $("+avar+")";
@@ -536,7 +535,7 @@ static string AddMaterial( void *outputcontext, const XML &xml )
         string tpl, tplnam;
         map< string, string >::const_iterator tplit = templates.find( GetMaterialCategory( xml, tex ) );
         if ( ( tplit != templates.end() && !tplit->second.empty() )         //First, the appropriate one
-            || ( ( tplit = templates.find( "dif+glow+ppl+env" ) ) != templates.end() && !tplit->second.empty() )          //Next, try the übermaterial
+            || ( ( tplit = templates.find( "dif+glow+ppl+env" ) ) != templates.end() && !tplit->second.empty() )          //Next, try the Ã¼bermaterial
             || ( ( tplit = templates.find( "basic" ) ) != templates.end() && !tplit->second.empty() ) ) {
             //Finally, go to basics
             tpl    = tplit->second;
@@ -1075,13 +1074,13 @@ void Add( void *outputcontext, const XML &memfile )
 static void AutoOrganiseBuffers( Ogre::VertexData *data, Ogre::MeshPtr mesh )
 {
 #if (OGRE_VERSION_MAJOR == 1) && (OGRE_VERSION_MINOR < 1)
-    Ogre::VertexDeclaration *newDcl =
-        data->vertexDeclaration->getAutoOrganisedDeclaration(
-            mesh->hasSkeleton() );
-#else
-    Ogre::VertexDeclaration *newDcl =
-        data->vertexDeclaration->getAutoOrganisedDeclaration(
-            mesh->hasSkeleton(), mesh->hasVertexAnimation() || (mesh->getPoseCount() > 0) );
+    Ogre::VertexDeclaration *newDcl = data->vertexDeclaration->getAutoOrganisedDeclaration( mesh->hasSkeleton() );
+#endif
+#if (OGRE_VERSION_MAJOR == 1) && (OGRE_VERSION_MINOR < 8)
+    Ogre::VertexDeclaration *newDcl = data->vertexDeclaration->getAutoOrganisedDeclaration( mesh->hasSkeleton(), mesh->hasVertexAnimation() || (mesh->getPoseCount() > 0.f));
+#endif
+#if (OGRE_VERSION_MAJOR == 1) && (OGRE_VERSION_MINOR > 8)
+    Ogre::VertexDeclaration *newDcl = data->vertexDeclaration->getAutoOrganisedDeclaration( mesh->hasSkeleton(), mesh->hasVertexAnimation(), false/*mesh->hasVertexAnimationNormals()*/);
 #endif
     if ( *newDcl != *(data->vertexDeclaration) ) {
         //Usages don't matter here since we're onlly exporting
@@ -1101,7 +1100,6 @@ void Optimize( void *outputcontext )
         AutoOrganiseBuffers( newMesh->sharedVertexData, newMesh );
     //Dedicated geometry
     Ogre::Mesh::SubMeshIterator smIt = newMesh->getSubMeshIterator();
-    unsigned short idx = 0;
     while ( smIt.hasMoreElements() ) {
         Ogre::SubMesh *sm = smIt.getNext();
         if (!sm->useSharedVertices)
@@ -1110,7 +1108,7 @@ void Optimize( void *outputcontext )
 }
 
 void AutoLOD( void *outputcontext, bool force, int numLod, float reductionFactor, float refDistance )
-{
+{/*
     struct outputContext *ctxt = (struct outputContext*) outputcontext;
     MeshPtr newMesh = ctxt->top;
     if ( force || (newMesh->getNumLodLevels() <= 1) ) {
@@ -1136,7 +1134,7 @@ void AutoLOD( void *outputcontext, bool force, int numLod, float reductionFactor
         for (int iLod = 0; iLod < numLod; ++iLod, currDist *= distFactor)
             distanceList.push_back( currDist );
         newMesh->generateLodLevels( distanceList, quota, reduction );
-    }
+    }*/
 }
 
 void DoneMeshes( void *outputcontext )

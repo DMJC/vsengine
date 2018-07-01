@@ -7,7 +7,7 @@
 
 namespace Audio {
 
-    Renderer::Renderer() throw(Exception)
+    Renderer::Renderer() noexcept(false)
     {
     }
     
@@ -16,49 +16,49 @@ namespace Audio {
     }
     
     void Renderer::setMeterDistance(Scalar distance) 
-        throw()
+        noexcept
     {
         meterDistance = distance;
     }
     
     Scalar Renderer::getMeterDistance() const 
-        throw()
+        noexcept
     {
         return meterDistance;
     }
     
     void Renderer::setDopplerFactor(Scalar factor) 
-        throw()
+        noexcept
     {
         dopplerFactor = factor;
     }
     
     Scalar Renderer::getDopplerFactor() const 
-        throw()
+        noexcept
     {
         return dopplerFactor;
     }
     
     void Renderer::setOutputFormat(const Format &format) 
-        throw(Exception)
+        noexcept(false)
     {
         outputFormat = format;
     }
     
     const Format& Renderer::getOutputFormat() const 
-        throw()
+        noexcept
     {
         return outputFormat;
     }
     
     void Renderer::beginTransaction() 
-        throw(Exception)
+        noexcept(false)
     {
         // intentionally blank
     }
     
     void Renderer::commitTransaction() 
-        throw(Exception)
+        noexcept(false)
     {
         // intentionally blank
     }

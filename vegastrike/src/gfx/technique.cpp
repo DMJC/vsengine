@@ -20,7 +20,7 @@
 
 using namespace XMLDOM;
 using std::map;
-using std::auto_ptr;
+using std::unique_ptr;
 
 #ifdef _MSC_VER
 //Undefine those nasty MS macros - why god why!?
@@ -37,11 +37,11 @@ class Exception : public std::exception
 private:
     std::string _message;
 public:
-    virtual ~Exception() throw () {}
+    virtual ~Exception() noexcept {}
     Exception() {}
     Exception( const Exception &other ) : _message( other._message ) {}
     explicit Exception( const std::string &message ) : _message( message ) {}
-    virtual const char * what() const throw ()
+    virtual const char * what() const noexcept
     {
         return _message.c_str();
     }
@@ -486,7 +486,7 @@ Technique::Technique( const string &nam ) :
             +name+".technique" );
     }
 
-    auto_ptr< XMLDOM::XMLDocument >doc( serializer.close() );
+    unique_ptr< XMLDOM::XMLDocument >doc( serializer.close() );
 
     //Search for the <technique> tag
     XMLElement *techniqueNode = 0;

@@ -40,7 +40,7 @@ namespace Audio {
                  */
                 Duration expirationTime;
                 
-                void computeExpirationTime() throw()
+                void computeExpirationTime() noexcept
                 {
                     assert(parsed.get());
                     expirationTime = 10 + min(600UL, 2UL * parsed->root.numChildren());
@@ -55,7 +55,7 @@ namespace Audio {
                     touch();
                 }
                 
-                void touch() const throw()
+                void touch() const noexcept
                 {
                     lastUsageTime = getRealTime();
                 }
@@ -151,7 +151,7 @@ namespace Audio {
     
     using namespace __impl;
 
-    TemplateManager::TemplateManager() throw() :
+    TemplateManager::TemplateManager() noexcept :
         data(new TemplateManagerData)
     {
     }
@@ -197,13 +197,13 @@ namespace Audio {
     }
 
     void TemplateManager::setDefaultDefinitionFile(const std::string &x) 
-        throw()
+        noexcept
     {
         data->defaultDefinitionFile = x;
     }
     
     const std::string& TemplateManager::getDefaultDefinitionFile() const 
-        throw()
+        noexcept
     {
         return data->defaultDefinitionFile;
     }

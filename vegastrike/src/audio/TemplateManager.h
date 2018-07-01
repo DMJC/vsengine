@@ -55,7 +55,7 @@ namespace Audio {
         /** Construct a new manager 
          * @remarks End-users of the class shouldn't be using this. Singletons need it.
          */
-        TemplateManager() throw();
+        TemplateManager() noexcept;
         
         ~TemplateManager();
         
@@ -77,12 +77,12 @@ namespace Audio {
          * @remarks when a template named without its source definition file is requested, it is assumed
          *      to come from this definition file.
          */
-        void setDefaultDefinitionFile(const std::string &x) throw();
+        void setDefaultDefinitionFile(const std::string &x) noexcept;
         
         /** Get the default definition file
          * @see setDefaultDefinitionFile
          */
-        const std::string& getDefaultDefinitionFile() const throw();
+        const std::string& getDefaultDefinitionFile() const noexcept;
         
         /** Get a source template by its key */
         SharedPtr<SourceTemplate> getSourceTemplate(const std::string &name) throw(Exception);

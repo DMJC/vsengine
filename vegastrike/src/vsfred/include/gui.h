@@ -1,12 +1,16 @@
 #ifndef GUI_H
 #define GUI_H
 #include "display.h"
+#include "editor_callbacks.h"
+#include "scene.h"
+
 
 class gui
 {
-	public:
+	private:
 	Glib::RefPtr<Gtk::Builder> builder;
-	void make_gui();
+	public:
+	void make_gui(scene current_scene);
 	virtual ~gui();
 
 };

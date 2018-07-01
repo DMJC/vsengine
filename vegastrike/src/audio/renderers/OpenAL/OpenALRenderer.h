@@ -33,7 +33,7 @@ namespace Audio {
         
     public:
         /** Initialize the renderer with default or config-driven settings. */
-        OpenALRenderer() throw(Exception);
+        OpenALRenderer() noexcept(false);
         
         virtual ~OpenALRenderer();
         
@@ -41,16 +41,16 @@ namespace Audio {
         virtual SharedPtr<Sound> getSound(
             const std::string &name, 
             VSFileSystem::VSFileType type = VSFileSystem::UnknownFile, 
-            bool streaming = false) throw(Exception);
+            bool streaming = false) noexcept(false);
         
         /** @copydoc Renderer::owns */
         virtual bool owns(SharedPtr<Sound> sound);
         
         /** @copydoc Renderer::attach(SharedPtr<Source>) */
-        virtual void attach(SharedPtr<Source> source) throw(Exception);
+        virtual void attach(SharedPtr<Source> source) noexcept(false);
         
         /** @copydoc Renderer::attach(SharedPtr<Listener>) */
-        virtual void attach(SharedPtr<Listener> listener) throw(Exception);
+        virtual void attach(SharedPtr<Listener> listener) noexcept(false);
         
         /** @copydoc Renderer::detach(SharedPtr<Source>) */
         virtual void detach(SharedPtr<Source> source) throw();
@@ -65,23 +65,23 @@ namespace Audio {
         virtual void setDopplerFactor(Scalar factor) throw();
         
         /** @copydoc Renderer::setOutputFormat */
-        virtual void setOutputFormat(const Format &format) throw(Exception);
+        virtual void setOutputFormat(const Format &format) noexcept(false);
         
         /** @copydoc Renderer::beginTransaction */
-        virtual void beginTransaction() throw(Exception);
+        virtual void beginTransaction() noexcept(false);
         
         /** @copydoc Renderer::commitTransaction */
-        virtual void commitTransaction() throw(Exception);
+        virtual void commitTransaction() noexcept(false);
     protected:
     
         /** Makes sure the AL context is valid, creating one if necessary */
-        virtual void checkContext() throw(Exception);
+        virtual void checkContext() noexcept(false);
         
         /** Sets expected defaults into the context */
-        virtual void initContext() throw(Exception);
+        virtual void initContext() noexcept(false);
         
         /** Sets doppler effect globals into the context */
-        void setupDopplerEffect() throw(Exception);
+        void setupDopplerEffect() noexcept(false);
     };
     
 };

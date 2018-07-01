@@ -9,7 +9,7 @@
 
 namespace Audio {
 
-    Listener::Listener() throw() :
+    Listener::Listener() noexcept :
         cosAngleRange(-1,-1),
         position(0,0,0),
         atDirection(0,0,-1),
@@ -25,20 +25,20 @@ namespace Audio {
     {
     }
 
-    Range<Scalar> Listener::getAngleRange() const throw() 
+    Range<Scalar> Listener::getAngleRange() const noexcept 
     { 
         return Range<Scalar>(Scalar(acos(cosAngleRange.min)), 
                              Scalar(acos(cosAngleRange.max))); 
     }
     
-    void Listener::setAngleRange(Range<Scalar> r) throw() 
+    void Listener::setAngleRange(Range<Scalar> r) noexcept 
     { 
         cosAngleRange.min = Scalar(cos(r.min)); 
         cosAngleRange.max = Scalar(cos(r.max));
         dirty.attributes = 1; 
     }
 
-    void Listener::update(int flags) throw()
+    void Listener::update(int flags) noexcept
     {
         if (!dirty.attributes)
             flags &= ~RenderableListener::UPDATE_ATTRIBUTES;
@@ -65,7 +65,7 @@ namespace Audio {
         }
     }
 
-    Vector3 Listener::toLocalDirection(Vector3 dir) const throw()
+    Vector3 Listener::toLocalDirection(Vector3 dir) const noexcept
     {
         return worldToLocal * dir;
     }

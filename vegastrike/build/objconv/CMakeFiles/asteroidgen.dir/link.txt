@@ -1,1 +1,1 @@
-/usr/bin/c++    -O2  -DNV_CUBE_MAP -DBOOST_PYTHON_NO_PY_SIGNATURES -include config.h -pipe -Wall -fvisibility=hidden  -Bsymbolic CMakeFiles/asteroidgen.dir/asteroidgen.cpp.o  -o asteroidgen -rdynamic 
+/usr/bin/c++   -O2  -DNV_CUBE_MAP -DBOOST_PYTHON_NO_PY_SIGNATURES -include config.h -pipe -Wall -fvisibility=hidden  -Bsymbolic -rdynamic CMakeFiles/asteroidgen.dir/asteroidgen.cpp.o  -o asteroidgen 

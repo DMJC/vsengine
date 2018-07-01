@@ -50,7 +50,6 @@ class Galaxy;
 class Universe
 {
 protected:
-//    std::auto_ptr<GalaxyXML::Galaxy> galaxy;
     std::unique_ptr<GalaxyXML::Galaxy> galaxy;
 ///The users cockpit
     unsigned int current_cockpit;

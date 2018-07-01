@@ -137,7 +137,7 @@ void VSExit( int code)
     winsys_exit( code );
 }
 
-void cleanup( void )
+void cleanup( void ) 
 {
     STATIC_VARS_DESTROYED = true;
     printf( "Thank you for playing!\n" );
@@ -434,7 +434,7 @@ void bootstrap_main_loop()
     new_scene.create_scene();
     /*load the GUI*/
     gui new_gui;
-    new_gui.make_gui();
+    new_gui.make_gui(new_scene);
 
     static bool LoadMission  = true;
 //    InitTime();

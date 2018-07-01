@@ -10,7 +10,7 @@
 
 namespace Audio {
 
-    SimpleScene::SimpleScene(const std::string &name) throw() :
+    SimpleScene::SimpleScene(const std::string &name) noexcept :
         Scene(name)
     {
     }
@@ -38,7 +38,7 @@ namespace Audio {
     }
     
     Listener& SimpleScene::getListener() 
-        throw()
+        noexcept
     {
         return listener;
     }
@@ -55,27 +55,27 @@ namespace Audio {
     }
     
     void SimpleScene::attach(SimpleSource *source) 
-        throw()
+        noexcept
     {
         source->notifySceneAttached(this);
     }
     
     void SimpleScene::detach(SimpleSource *source) 
-        throw()
+        noexcept
     {
         source->notifySceneAttached(0);
     }
     
     /** Gets an iterator over active sources */ 
     SimpleScene::SourceIterator SimpleScene::getActiveSources() 
-        throw()
+        noexcept
     {
         return activeSources.begin();
     }
     
     /** Gets the ending iterator of active sources */
     SimpleScene::SourceIterator SimpleScene::getActiveSourcesEnd() 
-        throw()
+        noexcept
     {
         return activeSources.end();
     }

@@ -1,3 +1,3 @@
 #!/bin/sh
-java -jar vegamap.jar -f milky_way.xml
+java -jar vegamap.jar -f wcuniverse.xml
 echo bye bye traveler!

@@ -41,6 +41,14 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
+
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
@@ -62,6 +70,14 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -336,13 +352,28 @@ OPENAL_INCLUDE_DIR:PATH=/usr/include/AL
 OPENAL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libopenal.so
 
 //Path to a file.
+OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
+OPENGL_GLX_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a file.
 OPENGL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENGL_egl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libEGL.so
 
 //Path to a library.
 OPENGL_gl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGL.so
 
 //Path to a library.
 OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLU.so
+
+//Path to a library.
+OPENGL_glx_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLX.so
+
+//Path to a library.
+OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
@@ -354,10 +385,10 @@ OPcollide_LIB_DEPENDS:STATIC=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a file.
-PNG_INCLUDE_DIRS:PATH=/usr/include
+PNG_INCLUDE_DIRS:PATH=/usr/include/libpng16
 
 //Path to a library.
-PNG_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libpng12.so.0
+PNG_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libpng.so
 
 //Path to a file.
 PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
@@ -470,16 +501,16 @@ Atk_STATIC_CFLAGS:INTERNAL=-I/usr/include/atk-1.0;-I/usr/include/glib-2.0;-I/usr
 Atk_STATIC_CFLAGS_I:INTERNAL=
 Atk_STATIC_CFLAGS_OTHER:INTERNAL=
 Atk_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/atk-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-Atk_STATIC_LDFLAGS:INTERNAL=-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread
-Atk_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+Atk_STATIC_LDFLAGS:INTERNAL=-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread
+Atk_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
 Atk_STATIC_LIBDIR:INTERNAL=
-Atk_STATIC_LIBRARIES:INTERNAL=atk-1.0;gobject-2.0;ffi;glib-2.0;pcre
+Atk_STATIC_LIBRARIES:INTERNAL=atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre
 Atk_STATIC_LIBRARY_DIRS:INTERNAL=
 Atk_STATIC_LIBS:INTERNAL=
 Atk_STATIC_LIBS_L:INTERNAL=
 Atk_STATIC_LIBS_OTHER:INTERNAL=
 Atk_STATIC_LIBS_PATHS:INTERNAL=
-Atk_VERSION:INTERNAL=2.20.0
+Atk_VERSION:INTERNAL=2.28.1
 Atk_atk_INCLUDEDIR:INTERNAL=
 Atk_atk_LIBDIR:INTERNAL=
 Atk_atk_PREFIX:INTERNAL=
@@ -491,7 +522,7 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/james/development/privgold/vegastrike-code/ve
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=6
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=11
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
@@ -504,6 +535,10 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
+CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
+CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -518,6 +553,10 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=0
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -552,6 +591,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Generator instance identifier.
+CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -591,10 +632,12 @@ CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
+//Platform information initialized
+CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.6
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.11
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -645,24 +688,20 @@ Cairo_STATIC_CFLAGS:INTERNAL=-I/usr/include/cairo;-I/usr/include/glib-2.0;-I/usr
 Cairo_STATIC_CFLAGS_I:INTERNAL=
 Cairo_STATIC_CFLAGS_OTHER:INTERNAL=
 Cairo_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/cairo;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16
-Cairo_STATIC_LDFLAGS:INTERNAL=-lcairo;-lz;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread;-lpixman-1;-lfontconfig;-lexpat;-lfreetype;-lexpat;-lfreetype;-lz;-lpng12;-lm;-lz;-lm;-lpng12;-lm;-lz;-lm;-lxcb-shm;-lxcb-render;-lXrender;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp
-Cairo_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+Cairo_STATIC_LDFLAGS:INTERNAL=-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lfontconfig;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lpng16;-lm;-lm;-lz;-lxcb-shm;-lxcb;-lxcb-render;-lxcb;-lXrender;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp
+Cairo_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread
 Cairo_STATIC_LIBDIR:INTERNAL=
-Cairo_STATIC_LIBRARIES:INTERNAL=cairo;z;gobject-2.0;ffi;glib-2.0;pcre;pixman-1;fontconfig;expat;freetype;expat;freetype;z;png16;m;z;m;png16;m;z;m;xcb-shm;xcb-render;Xrender;Xext;X11;pthread;xcb;Xau;Xdmcp
+Cairo_STATIC_LIBRARIES:INTERNAL=cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;fontconfig;expat;z;m;m;z;expat;freetype;z;m;m;z;png16;m;m;z;xcb-shm;xcb;xcb-render;xcb;Xrender;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;Xext;X11;pthread;xcb;Xau;Xdmcp
 Cairo_STATIC_LIBRARY_DIRS:INTERNAL=
 Cairo_STATIC_LIBS:INTERNAL=
 Cairo_STATIC_LIBS_L:INTERNAL=
 Cairo_STATIC_LIBS_OTHER:INTERNAL=
 Cairo_STATIC_LIBS_PATHS:INTERNAL=
-Cairo_VERSION:INTERNAL=1.14.6
+Cairo_VERSION:INTERNAL=1.15.10
 Cairo_cairo_INCLUDEDIR:INTERNAL=
 Cairo_cairo_LIBDIR:INTERNAL=
 Cairo_cairo_PREFIX:INTERNAL=
 Cairo_cairo_VERSION:INTERNAL=
-//MODIFIED property for variable: DISABLE_FFMPEG
-DISABLE_FFMPEG-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: DISABLE_OGRE
-DISABLE_OGRE-MODIFIED:INTERNAL=ON
 //ADVANCED property for variable: EXPAT_INCLUDE_DIR
 EXPAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EXPAT_LIBRARY
@@ -670,7 +709,7 @@ EXPAT_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FFMPEG_INCLUDE_DIR
 FFMPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Details about finding EXPAT
-FIND_PACKAGE_MESSAGE_DETAILS_EXPAT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libexpat.so][/usr/include][v2.2.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_EXPAT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libexpat.so][/usr/include][v2.2.5()]
 //Details about finding GLUT
 FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libglut.so][/usr/include][v()]
 //Details about finding JPEG
@@ -678,17 +717,17 @@ FIND_PACKAGE_MESSAGE_DETAILS_JPEG:INTERNAL=[/usr/lib/x86_64-linux-gnu/libjpeg.so
 //Details about finding OpenAL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenAL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libopenal.so][/usr/include/AL][v()]
 //Details about finding OpenGL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libGL.so][/usr/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29()]
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.4.2()]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython2.7.so][/usr/include/python2.7][v2.7.12+(2)]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython2.7.so][/usr/include/python2.7][v2.7.15(2)]
 //Details about finding SDL
 FIND_PACKAGE_MESSAGE_DETAILS_SDL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread][/usr/include/SDL][v1.2.15()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libz.so][/usr/include][v1.2.8()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libz.so][/usr/include][v1.2.11()]
 //ADVANCED property for variable: GLUT_INCLUDE_DIR
 GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_Xi_LIBRARY
@@ -697,46 +736,40 @@ GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
 GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_glut_LIBRARY
 GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_ATK_INCLUDE_DIR
-GTK2_ATK_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_ATK_LIBRARY
-GTK2_ATK_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_CAIRO_INCLUDE_DIR
-GTK2_CAIRO_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_CAIRO_LIBRARY
-GTK2_CAIRO_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GDK_INCLUDE_DIR
-GTK2_GDK_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GDK_LIBRARY
-GTK2_GDK_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GDK_PIXBUF_INCLUDE_DIR
-GTK2_GDK_PIXBUF_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GDK_PIXBUF_LIBRARY
-GTK2_GDK_PIXBUF_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GLIBCONFIG_INCLUDE_DIR
-GTK2_GLIBCONFIG_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GLIB_INCLUDE_DIR
-GTK2_GLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GLIB_LIBRARY
-GTK2_GLIB_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GMODULE_LIBRARY
-GTK2_GMODULE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GOBJECT_LIBRARY
-GTK2_GOBJECT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GTHREAD_LIBRARY
-GTK2_GTHREAD_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GTKGL_INCLUDE_DIR
-GTK2_GTKGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GTKGL_LIBRARY
-GTK2_GTKGL_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GTK_INCLUDE_DIR
-GTK2_GTK_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_GTK_LIBRARY
-GTK2_GTK_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_PANGO_INCLUDE_DIR
-GTK2_PANGO_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GTK2_PANGO_LIBRARY
-GTK2_PANGO_LIBRARY-ADVANCED:INTERNAL=1
+GTK3_CFLAGS:INTERNAL=-I/usr/include/gtkmm-3.0;-I/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include;-I/usr/include/atkmm-1.6;-I/usr/include/atk-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/glibmm-2.4;-I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include;-I/usr/include/sigc++-2.0;-I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include;-I/usr/include/giomm-2.4;-I/usr/lib/x86_64-linux-gnu/giomm-2.4/include;-I/usr/include/pangomm-1.4;-I/usr/lib/x86_64-linux-gnu/pangomm-1.4/include;-I/usr/include/cairomm-1.0;-I/usr/lib/x86_64-linux-gnu/cairomm-1.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/gtk-3.0;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include;-I/usr/include/gtk-3.0/unix-print;-I/usr/include/gdkmm-3.0;-I/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include;-pthread
+GTK3_CFLAGS_I:INTERNAL=
+GTK3_CFLAGS_OTHER:INTERNAL=-pthread
+GTK3_FOUND:INTERNAL=1
+GTK3_INCLUDEDIR:INTERNAL=/usr/include
+GTK3_INCLUDE_DIRS:INTERNAL=/usr/include/gtkmm-3.0;/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include;/usr/include/atkmm-1.6;/usr/include/atk-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/glibmm-2.4;/usr/lib/x86_64-linux-gnu/glibmm-2.4/include;/usr/include/sigc++-2.0;/usr/lib/x86_64-linux-gnu/sigc++-2.0/include;/usr/include/giomm-2.4;/usr/lib/x86_64-linux-gnu/giomm-2.4/include;/usr/include/pangomm-1.4;/usr/lib/x86_64-linux-gnu/pangomm-1.4/include;/usr/include/cairomm-1.0;/usr/lib/x86_64-linux-gnu/cairomm-1.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/gtk-3.0;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include;/usr/include/gtk-3.0/unix-print;/usr/include/gdkmm-3.0;/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include
+GTK3_LDFLAGS:INTERNAL=-lgtkmm-3.0;-latkmm-1.6;-lgdkmm-3.0;-lgiomm-2.4;-lpangomm-1.4;-lglibmm-2.4;-lgtk-3;-lgdk-3;-lpangocairo-1.0;-lpango-1.0;-latk-1.0;-lcairo-gobject;-lgio-2.0;-lcairomm-1.0;-lcairo;-lsigc-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0
+GTK3_LDFLAGS_OTHER:INTERNAL=
+GTK3_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+GTK3_LIBRARIES:INTERNAL=gtkmm-3.0;atkmm-1.6;gdkmm-3.0;giomm-2.4;pangomm-1.4;glibmm-2.4;gtk-3;gdk-3;pangocairo-1.0;pango-1.0;atk-1.0;cairo-gobject;gio-2.0;cairomm-1.0;cairo;sigc-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0
+GTK3_LIBRARY_DIRS:INTERNAL=
+GTK3_LIBS:INTERNAL=
+GTK3_LIBS_L:INTERNAL=
+GTK3_LIBS_OTHER:INTERNAL=
+GTK3_LIBS_PATHS:INTERNAL=
+GTK3_PREFIX:INTERNAL=/usr
+GTK3_STATIC_CFLAGS:INTERNAL=-I/usr/include/gtkmm-3.0;-I/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include;-I/usr/include/atkmm-1.6;-I/usr/include/atk-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/glibmm-2.4;-I/usr/lib/x86_64-linux-gnu/glibmm-2.4/include;-I/usr/include/sigc++-2.0;-I/usr/lib/x86_64-linux-gnu/sigc++-2.0/include;-I/usr/include/giomm-2.4;-I/usr/lib/x86_64-linux-gnu/giomm-2.4/include;-I/usr/include/pangomm-1.4;-I/usr/lib/x86_64-linux-gnu/pangomm-1.4/include;-I/usr/include/cairomm-1.0;-I/usr/lib/x86_64-linux-gnu/cairomm-1.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/gtk-3.0;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/dbus-1.0;-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include;-I/usr/include/gtk-3.0/unix-print;-I/usr/include/gdkmm-3.0;-I/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include;-pthread
+GTK3_STATIC_CFLAGS_I:INTERNAL=
+GTK3_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+GTK3_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gtkmm-3.0;/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include;/usr/include/atkmm-1.6;/usr/include/atk-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/glibmm-2.4;/usr/lib/x86_64-linux-gnu/glibmm-2.4/include;/usr/include/sigc++-2.0;/usr/lib/x86_64-linux-gnu/sigc++-2.0/include;/usr/include/giomm-2.4;/usr/lib/x86_64-linux-gnu/giomm-2.4/include;/usr/include/pangomm-1.4;/usr/lib/x86_64-linux-gnu/pangomm-1.4/include;/usr/include/cairomm-1.0;/usr/lib/x86_64-linux-gnu/cairomm-1.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/gtk-3.0;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include;/usr/include/gtk-3.0/unix-print;/usr/include/gdkmm-3.0;/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include
+GTK3_STATIC_LDFLAGS:INTERNAL=-lgtkmm-3.0;-latkmm-1.6;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglibmm-2.4;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lsigc-2.0;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lglibmm-2.4;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lsigc-2.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lsigc-2.0;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lpangoft2-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lpangocairo-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-ldl;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgdk_pixbuf-2.0;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-latk-bridge-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-latspi;-lpthread;-lsystemd;-pthread;-lpcre;-lpcre;-pthread;-lwayland-client;-ldl;-lpangoft2-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairomm-1.0;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lpangocairo-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-ldl;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgdk_pixbuf-2.0;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-latk-bridge-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-latspi;-lpthread;-lsystemd;-pthread;-lpcre;-lpcre;-pthread;-lwayland-client;-ldl;-lpangoft2-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgdk_pixbuf-2.0;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lgdkmm-3.0;-lgiomm-2.4;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lglibmm-2.4;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lsigc-2.0;-lpangomm-1.4;-lglibmm-2.4;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lsigc-2.0;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lpangoft2-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lgtk-3;-lgdk-3;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lpangocairo-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXinerama;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXi;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXrandr;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcursor;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcomposite;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXdamage;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXfixes;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-ldl;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lcairo-gobject;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgdk_pixbuf-2.0;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-latk-bridge-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-latspi;-ldbus-1;-lpthread;-lsystemd;-pthread;-lpcre;-lpcre;-pthread;-lwayland-client;-lxkbcommon;-lwayland-cursor;-lwayland-egl;-lwayland-client;-lepoxy;-ldl;-lpangoft2-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairomm-1.0;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lfontconfig;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb-shm;-lxcb;-lxcb-render;-lxcb;-lXrender;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp;-lsigc-2.0;-lgdk_pixbuf-2.0;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz
+GTK3_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread
+GTK3_STATIC_LIBDIR:INTERNAL=
+GTK3_STATIC_LIBRARIES:INTERNAL=gtkmm-3.0;atkmm-1.6;ffi;pcre;pcre;glibmm-2.4;ffi;pcre;pcre;sigc-2.0;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;glibmm-2.4;ffi;pcre;pcre;sigc-2.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;sigc-2.0;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;pangoft2-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;m;pcre;pcre;gobject-2.0;ffi;pcre;pcre;pangocairo-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;fontconfig;expat;freetype;z;m;m;z;expat;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;dl;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;ffi;pcre;pcre;glib-2.0;pcre;pcre;gdk_pixbuf-2.0;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;atk-bridge-2.0;ffi;pcre;pcre;atspi;pthread;systemd;pcre;pcre;wayland-client;dl;pangoft2-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;cairomm-1.0;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;m;pcre;pcre;gobject-2.0;ffi;pcre;pcre;pangocairo-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;fontconfig;expat;freetype;z;m;m;z;expat;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;dl;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;ffi;pcre;pcre;glib-2.0;pcre;pcre;gdk_pixbuf-2.0;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;atk-bridge-2.0;ffi;pcre;pcre;atspi;pthread;systemd;pcre;pcre;wayland-client;dl;pangoft2-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;ffi;pcre;pcre;glib-2.0;pcre;pcre;gdk_pixbuf-2.0;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;gdkmm-3.0;giomm-2.4;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;glibmm-2.4;ffi;pcre;pcre;sigc-2.0;pangomm-1.4;glibmm-2.4;gobject-2.0;ffi;glib-2.0;pcre;pcre;sigc-2.0;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;pangoft2-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;gtk-3;gdk-3;m;pcre;pcre;gobject-2.0;ffi;pcre;pcre;pangocairo-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;fontconfig;expat;freetype;z;m;m;z;expat;X11;pthread;xcb;X11;pthread;xcb;Xinerama;X11;pthread;xcb;X11;pthread;xcb;Xi;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xrandr;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcursor;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcomposite;X11;pthread;xcb;X11;pthread;xcb;Xdamage;X11;pthread;xcb;X11;pthread;xcb;Xfixes;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;dl;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;cairo-gobject;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;ffi;pcre;pcre;glib-2.0;pcre;pcre;gdk_pixbuf-2.0;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;atk-bridge-2.0;ffi;pcre;pcre;atspi;dbus-1;pthread;systemd;pcre;pcre;wayland-client;xkbcommon;wayland-cursor;wayland-egl;wayland-client;epoxy;dl;pangoft2-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;cairomm-1.0;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;fontconfig;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb-shm;xcb;xcb-render;xcb;Xrender;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;Xext;X11;pthread;xcb;Xau;Xdmcp;sigc-2.0;gdk_pixbuf-2.0;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z
+GTK3_STATIC_LIBRARY_DIRS:INTERNAL=
+GTK3_STATIC_LIBS:INTERNAL=
+GTK3_STATIC_LIBS_L:INTERNAL=
+GTK3_STATIC_LIBS_OTHER:INTERNAL=
+GTK3_STATIC_LIBS_PATHS:INTERNAL=
+GTK3_VERSION:INTERNAL=3.22.2
+GTK3_gtkmm-3.0_INCLUDEDIR:INTERNAL=
+GTK3_gtkmm-3.0_LIBDIR:INTERNAL=
+GTK3_gtkmm-3.0_PREFIX:INTERNAL=
+GTK3_gtkmm-3.0_VERSION:INTERNAL=
 //Have function finite
 HAVE_FINITE:INTERNAL=1
 //Have include float.h
@@ -775,7 +808,7 @@ LIBPNG_CFLAGS_OTHER:INTERNAL=
 LIBPNG_FOUND:INTERNAL=1
 LIBPNG_INCLUDEDIR:INTERNAL=/usr/include/libpng16
 LIBPNG_INCLUDE_DIRS:INTERNAL=/usr/include/libpng16
-LIBPNG_LDFLAGS:INTERNAL=-lpng12
+LIBPNG_LDFLAGS:INTERNAL=-lpng16
 LIBPNG_LDFLAGS_OTHER:INTERNAL=
 LIBPNG_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 LIBPNG_LIBRARIES:INTERNAL=png16
@@ -789,7 +822,7 @@ LIBPNG_STATIC_CFLAGS:INTERNAL=-I/usr/include/libpng16
 LIBPNG_STATIC_CFLAGS_I:INTERNAL=
 LIBPNG_STATIC_CFLAGS_OTHER:INTERNAL=
 LIBPNG_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libpng16
-LIBPNG_STATIC_LDFLAGS:INTERNAL=-lpng12;-lm;-lz;-lm
+LIBPNG_STATIC_LDFLAGS:INTERNAL=-lpng16;-lm;-lz;-lm
 LIBPNG_STATIC_LDFLAGS_OTHER:INTERNAL=
 LIBPNG_STATIC_LIBDIR:INTERNAL=
 LIBPNG_STATIC_LIBRARIES:INTERNAL=png16;m;z;m
@@ -798,7 +831,7 @@ LIBPNG_STATIC_LIBS:INTERNAL=
 LIBPNG_STATIC_LIBS_L:INTERNAL=
 LIBPNG_STATIC_LIBS_OTHER:INTERNAL=
 LIBPNG_STATIC_LIBS_PATHS:INTERNAL=
-LIBPNG_VERSION:INTERNAL=1.6.23
+LIBPNG_VERSION:INTERNAL=1.6.26
 LIBPNG_libpng_INCLUDEDIR:INTERNAL=
 LIBPNG_libpng_LIBDIR:INTERNAL=
 LIBPNG_libpng_PREFIX:INTERNAL=
@@ -807,7 +840,7 @@ LIBPNG_libpng_VERSION:INTERNAL=
 MATH_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MATH_LIBRARIES
 MATH_LIBRARIES-ADVANCED:INTERNAL=1
-OGRE_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE
+OGRE_CFLAGS:INTERNAL=-I/usr/include/OGRE;-pthread
 OGRE_CFLAGS_I:INTERNAL=
 OGRE_CFLAGS_OTHER:INTERNAL=-pthread
 OGRE_FOUND:INTERNAL=1
@@ -831,7 +864,7 @@ OGRE_OGRE_LIBDIR:INTERNAL=
 OGRE_OGRE_PREFIX:INTERNAL=
 OGRE_OGRE_VERSION:INTERNAL=
 OGRE_PREFIX:INTERNAL=/usr
-OGRE_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE
+OGRE_STATIC_CFLAGS:INTERNAL=-I/usr/include/OGRE;-pthread
 OGRE_STATIC_CFLAGS_I:INTERNAL=
 OGRE_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
 OGRE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE
@@ -849,14 +882,58 @@ OGRE_VERSION:INTERNAL=1.9.0
 OPENAL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENAL_LIBRARY
 OPENAL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
+OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
+OPENGL_GLX_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_INCLUDE_DIR
 OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_egl_LIBRARY
+OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_gl_LIBRARY
 OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glx_LIBRARY
+OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_opengl_LIBRARY
+OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+PC_EXPAT_CFLAGS:INTERNAL=
+PC_EXPAT_CFLAGS_I:INTERNAL=
+PC_EXPAT_CFLAGS_OTHER:INTERNAL=
+PC_EXPAT_FOUND:INTERNAL=1
+PC_EXPAT_INCLUDEDIR:INTERNAL=/usr/include
+PC_EXPAT_INCLUDE_DIRS:INTERNAL=
+PC_EXPAT_LDFLAGS:INTERNAL=-lexpat
+PC_EXPAT_LDFLAGS_OTHER:INTERNAL=
+PC_EXPAT_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_EXPAT_LIBRARIES:INTERNAL=expat
+PC_EXPAT_LIBRARY_DIRS:INTERNAL=
+PC_EXPAT_LIBS:INTERNAL=
+PC_EXPAT_LIBS_L:INTERNAL=
+PC_EXPAT_LIBS_OTHER:INTERNAL=
+PC_EXPAT_LIBS_PATHS:INTERNAL=
+PC_EXPAT_PREFIX:INTERNAL=/usr
+PC_EXPAT_STATIC_CFLAGS:INTERNAL=
+PC_EXPAT_STATIC_CFLAGS_I:INTERNAL=
+PC_EXPAT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EXPAT_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_EXPAT_STATIC_LDFLAGS:INTERNAL=-lexpat
+PC_EXPAT_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EXPAT_STATIC_LIBDIR:INTERNAL=
+PC_EXPAT_STATIC_LIBRARIES:INTERNAL=expat
+PC_EXPAT_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EXPAT_STATIC_LIBS:INTERNAL=
+PC_EXPAT_STATIC_LIBS_L:INTERNAL=
+PC_EXPAT_STATIC_LIBS_OTHER:INTERNAL=
+PC_EXPAT_STATIC_LIBS_PATHS:INTERNAL=
+PC_EXPAT_VERSION:INTERNAL=2.2.5
+PC_EXPAT_expat_INCLUDEDIR:INTERNAL=
+PC_EXPAT_expat_LIBDIR:INTERNAL=
+PC_EXPAT_expat_PREFIX:INTERNAL=
+PC_EXPAT_expat_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PNG_INCLUDE_DIRS
@@ -889,16 +966,16 @@ Pango_STATIC_CFLAGS:INTERNAL=-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I
 Pango_STATIC_CFLAGS_I:INTERNAL=
 Pango_STATIC_CFLAGS_OTHER:INTERNAL=
 Pango_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-Pango_STATIC_LDFLAGS:INTERNAL=-lpango-1.0;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread
-Pango_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+Pango_STATIC_LDFLAGS:INTERNAL=-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread
+Pango_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread
 Pango_STATIC_LIBDIR:INTERNAL=
-Pango_STATIC_LIBRARIES:INTERNAL=pango-1.0;m;gobject-2.0;ffi;glib-2.0;pcre
+Pango_STATIC_LIBRARIES:INTERNAL=pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre
 Pango_STATIC_LIBRARY_DIRS:INTERNAL=
 Pango_STATIC_LIBS:INTERNAL=
 Pango_STATIC_LIBS_L:INTERNAL=
 Pango_STATIC_LIBS_OTHER:INTERNAL=
 Pango_STATIC_LIBS_PATHS:INTERNAL=
-Pango_VERSION:INTERNAL=1.40.1
+Pango_VERSION:INTERNAL=1.42.0
 Pango_pango_INCLUDEDIR:INTERNAL=
 Pango_pango_LIBDIR:INTERNAL=
 Pango_pango_PREFIX:INTERNAL=
@@ -909,7 +986,7 @@ SDLMAIN_LIBRARY-ADVANCED:INTERNAL=1
 SDL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL_LIBRARY
 SDL_LIBRARY-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread;-lpthread;-lpthread;-lpthread
 //CHECK_TYPE_SIZE: sizeof(void*)
 SIZEOF_VOID_P:INTERNAL=8
 //ADVANCED property for variable: SWSCALE_INCLUDE_DIR
@@ -922,10 +999,27 @@ ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
 ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+__pkg_config_arguments_Atk:INTERNAL=REQUIRED;atk
+__pkg_config_arguments_Cairo:INTERNAL=REQUIRED;cairo
+__pkg_config_arguments_GTK3:INTERNAL=REQUIRED;gtkmm-3.0
+__pkg_config_arguments_OGRE:INTERNAL=OGRE>=1.2.0
+__pkg_config_arguments_PC_EXPAT:INTERNAL=QUIET;expat
+__pkg_config_arguments_Pango:INTERNAL=REQUIRED;pango
+__pkg_config_arguments_avformat1:INTERNAL=libavformat
+__pkg_config_arguments_avutil1:INTERNAL=libavutil
+__pkg_config_arguments_ffmpeg1:INTERNAL=libavcodec
+__pkg_config_arguments_gdk2.0:INTERNAL=REQUIRED;gdk-2.0
+__pkg_config_arguments_glib2.0:INTERNAL=REQUIRED;glib-2.0
+__pkg_config_arguments_gmod2.0:INTERNAL=REQUIRED;gmodule-2.0
+__pkg_config_arguments_gtk2.0:INTERNAL=REQUIRED;gtk+-2.0
+__pkg_config_arguments_pixbuf:INTERNAL=gdk-pixbuf-2.0
+__pkg_config_arguments_swscale1:INTERNAL=libswscale
 __pkg_config_checked_Atk:INTERNAL=1
 __pkg_config_checked_Cairo:INTERNAL=1
+__pkg_config_checked_GTK3:INTERNAL=1
 __pkg_config_checked_LIBPNG:INTERNAL=1
 __pkg_config_checked_OGRE:INTERNAL=1
+__pkg_config_checked_PC_EXPAT:INTERNAL=1
 __pkg_config_checked_Pango:INTERNAL=1
 __pkg_config_checked_avformat1:INTERNAL=1
 __pkg_config_checked_avutil1:INTERNAL=1
@@ -956,16 +1050,16 @@ avformat1_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 avformat1_STATIC_CFLAGS_I:INTERNAL=
 avformat1_STATIC_CFLAGS_OTHER:INTERNAL=
 avformat1_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-avformat1_STATIC_LDFLAGS:INTERNAL=-lavformat;-ldl;-lXv;-lX11;-lXext;-lvdpau;-lva;-lva-drm;-lva;-lva-x11;-lva;-lxcb;-lxcb-shm;-lxcb;-lxcb-xfixes;-lxcb-render;-lxcb-shape;-lxcb;-lxcb-shape;-lxcb;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-ljack;-lasound;-lSDL;-ldc1394;-lGL;-lopenal;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-logg;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lschroedinger-1.0;-lrubberband;-lrtmp;-lz;-lgmp;-lpulse;-lopus;-lopenjp2;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;-lopencv_calib3d;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;-lopencv_contrib;/usr/lib/x86_64-linux-gnu/libopencv_core.so;-lopencv_core;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;-lopencv_features2d;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;-lopencv_flann;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;-lopencv_gpu;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;-lopencv_highgui;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;-lopencv_imgproc;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;-lopencv_legacy;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;-lopencv_ml;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;-lopencv_objdetect;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;-lopencv_ocl;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;-lopencv_photo;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;-lopencv_stitching;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;-lopencv_superres;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;-lopencv_ts;/usr/lib/x86_64-linux-gnu/libopencv_video.so;-lopencv_video;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-lopencv_videostab;-lmp3lame;-lmodplug;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-lebur128;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-ldl;-lcrystalhd;-lm;-llzma;-lbz2;-lz;-pthread;-lavcodec;-ldl;-lXv;-lX11;-lXext;-lvdpau;-lva;-lva-drm;-lva;-lva-x11;-lva;-lxcb;-lxcb-shm;-lxcb;-lxcb-xfixes;-lxcb-render;-lxcb-shape;-lxcb;-lxcb-shape;-lxcb;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-ljack;-lasound;-lSDL;-ldc1394;-lGL;-lopenal;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-logg;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lschroedinger-1.0;-lrubberband;-lrtmp;-lz;-lgmp;-lpulse;-lopus;-lopenjp2;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;-lopencv_calib3d;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;-lopencv_contrib;/usr/lib/x86_64-linux-gnu/libopencv_core.so;-lopencv_core;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;-lopencv_features2d;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;-lopencv_flann;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;-lopencv_gpu;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;-lopencv_highgui;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;-lopencv_imgproc;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;-lopencv_legacy;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;-lopencv_ml;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;-lopencv_objdetect;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;-lopencv_ocl;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;-lopencv_photo;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;-lopencv_stitching;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;-lopencv_superres;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;-lopencv_ts;/usr/lib/x86_64-linux-gnu/libopencv_video.so;-lopencv_video;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-lopencv_videostab;-lmp3lame;-lmodplug;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-lebur128;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-ldl;-lcrystalhd;-lm;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-lm
-avformat1_STATIC_LDFLAGS_OTHER:INTERNAL=/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-pthread;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-pthread
+avformat1_STATIC_LDFLAGS:INTERNAL=-lavformat;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-pthread;-lavcodec;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-pthread;-lm;-lsoxr;-lm;-lavutil;-lm;-lswresample;-lm;-lsoxr;-lm;-lavutil;-lm
+avformat1_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread
 avformat1_STATIC_LIBDIR:INTERNAL=
-avformat1_STATIC_LIBRARIES:INTERNAL=avformat;dl;Xv;X11;Xext;vdpau;va;va-drm;va;va-x11;va;xcb;xcb-shm;xcb;xcb-xfixes;xcb-render;xcb-shape;xcb;xcb-shape;xcb;X11;cdio_paranoia;cdio_cdda;cdio;jack;asound;SDL;dc1394;GL;openal;zvbi;zmq;xvidcore;x265;x264;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;ogg;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;schroedinger-1.0;rubberband;rtmp;z;gmp;pulse;opus;openjp2;opencv_calib3d;opencv_contrib;opencv_core;opencv_features2d;opencv_flann;opencv_gpu;opencv_highgui;opencv_imgproc;opencv_legacy;opencv_ml;opencv_objdetect;opencv_ocl;opencv_photo;opencv_stitching;opencv_superres;opencv_ts;opencv_video;opencv_videostab;mp3lame;modplug;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;ebur128;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;dl;crystalhd;m;lzma;bz2;z;avcodec;dl;Xv;X11;Xext;vdpau;va;va-drm;va;va-x11;va;xcb;xcb-shm;xcb;xcb-xfixes;xcb-render;xcb-shape;xcb;xcb-shape;xcb;X11;cdio_paranoia;cdio_cdda;cdio;jack;asound;SDL;dc1394;GL;openal;zvbi;zmq;xvidcore;x265;x264;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;ogg;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;schroedinger-1.0;rubberband;rtmp;z;gmp;pulse;opus;openjp2;opencv_calib3d;opencv_contrib;opencv_core;opencv_features2d;opencv_flann;opencv_gpu;opencv_highgui;opencv_imgproc;opencv_legacy;opencv_ml;opencv_objdetect;opencv_ocl;opencv_photo;opencv_stitching;opencv_superres;opencv_ts;opencv_video;opencv_videostab;mp3lame;modplug;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;ebur128;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;dl;crystalhd;m;lzma;bz2;z;swresample;m;soxr;avutil;m
+avformat1_STATIC_LIBRARIES:INTERNAL=avformat;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;avcodec;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;m;soxr;m;avutil;m;swresample;m;soxr;m;avutil;m
 avformat1_STATIC_LIBRARY_DIRS:INTERNAL=
 avformat1_STATIC_LIBS:INTERNAL=
 avformat1_STATIC_LIBS_L:INTERNAL=
 avformat1_STATIC_LIBS_OTHER:INTERNAL=
 avformat1_STATIC_LIBS_PATHS:INTERNAL=
-avformat1_VERSION:INTERNAL=57.41.100
+avformat1_VERSION:INTERNAL=57.83.100
 avformat1_libavformat_INCLUDEDIR:INTERNAL=
 avformat1_libavformat_LIBDIR:INTERNAL=
 avformat1_libavformat_PREFIX:INTERNAL=
@@ -999,7 +1093,7 @@ avutil1_STATIC_LIBS:INTERNAL=
 avutil1_STATIC_LIBS_L:INTERNAL=
 avutil1_STATIC_LIBS_OTHER:INTERNAL=
 avutil1_STATIC_LIBS_PATHS:INTERNAL=
-avutil1_VERSION:INTERNAL=55.28.100
+avutil1_VERSION:INTERNAL=55.78.100
 avutil1_libavutil_INCLUDEDIR:INTERNAL=
 avutil1_libavutil_LIBDIR:INTERNAL=
 avutil1_libavutil_PREFIX:INTERNAL=
@@ -1024,26 +1118,26 @@ ffmpeg1_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 ffmpeg1_STATIC_CFLAGS_I:INTERNAL=
 ffmpeg1_STATIC_CFLAGS_OTHER:INTERNAL=
 ffmpeg1_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-ffmpeg1_STATIC_LDFLAGS:INTERNAL=-lavcodec;-ldl;-lXv;-lX11;-lXext;-lvdpau;-lva;-lva-drm;-lva;-lva-x11;-lva;-lxcb;-lxcb-shm;-lxcb;-lxcb-xfixes;-lxcb-render;-lxcb-shape;-lxcb;-lxcb-shape;-lxcb;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-ljack;-lasound;-lSDL;-ldc1394;-lGL;-lopenal;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-logg;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lschroedinger-1.0;-lrubberband;-lrtmp;-lz;-lgmp;-lpulse;-lopus;-lopenjp2;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;-lopencv_calib3d;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;-lopencv_contrib;/usr/lib/x86_64-linux-gnu/libopencv_core.so;-lopencv_core;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;-lopencv_features2d;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;-lopencv_flann;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;-lopencv_gpu;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;-lopencv_highgui;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;-lopencv_imgproc;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;-lopencv_legacy;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;-lopencv_ml;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;-lopencv_objdetect;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;-lopencv_ocl;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;-lopencv_photo;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;-lopencv_stitching;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;-lopencv_superres;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;-lopencv_ts;/usr/lib/x86_64-linux-gnu/libopencv_video.so;-lopencv_video;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-lopencv_videostab;-lmp3lame;-lmodplug;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-lebur128;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-ldl;-lcrystalhd;-lm;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-lm
-ffmpeg1_STATIC_LDFLAGS_OTHER:INTERNAL=/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so;/usr/lib/x86_64-linux-gnu/libopencv_core.so;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so;/usr/lib/x86_64-linux-gnu/libopencv_flann.so;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so;/usr/lib/x86_64-linux-gnu/libopencv_ml.so;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so;/usr/lib/x86_64-linux-gnu/libopencv_photo.so;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so;/usr/lib/x86_64-linux-gnu/libopencv_superres.so;/usr/lib/x86_64-linux-gnu/libopencv_ts.so;/usr/lib/x86_64-linux-gnu/libopencv_video.so;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so;-pthread
+ffmpeg1_STATIC_LDFLAGS:INTERNAL=-lavcodec;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-pthread;-lswresample;-lm;-lsoxr;-lm;-lavutil;-lm
+ffmpeg1_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
 ffmpeg1_STATIC_LIBDIR:INTERNAL=
-ffmpeg1_STATIC_LIBRARIES:INTERNAL=avcodec;dl;Xv;X11;Xext;vdpau;va;va-drm;va;va-x11;va;xcb;xcb-shm;xcb;xcb-xfixes;xcb-render;xcb-shape;xcb;xcb-shape;xcb;X11;cdio_paranoia;cdio_cdda;cdio;jack;asound;SDL;dc1394;GL;openal;zvbi;zmq;xvidcore;x265;x264;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;ogg;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;schroedinger-1.0;rubberband;rtmp;z;gmp;pulse;opus;openjp2;opencv_calib3d;opencv_contrib;opencv_core;opencv_features2d;opencv_flann;opencv_gpu;opencv_highgui;opencv_imgproc;opencv_legacy;opencv_ml;opencv_objdetect;opencv_ocl;opencv_photo;opencv_stitching;opencv_superres;opencv_ts;opencv_video;opencv_videostab;mp3lame;modplug;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;ebur128;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;dl;crystalhd;m;lzma;bz2;z;swresample;m;soxr;avutil;m
+ffmpeg1_STATIC_LIBRARIES:INTERNAL=avcodec;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;swresample;m;soxr;m;avutil;m
 ffmpeg1_STATIC_LIBRARY_DIRS:INTERNAL=
 ffmpeg1_STATIC_LIBS:INTERNAL=
 ffmpeg1_STATIC_LIBS_L:INTERNAL=
 ffmpeg1_STATIC_LIBS_OTHER:INTERNAL=
 ffmpeg1_STATIC_LIBS_PATHS:INTERNAL=
-ffmpeg1_VERSION:INTERNAL=57.48.101
+ffmpeg1_VERSION:INTERNAL=57.107.100
 ffmpeg1_libavcodec_INCLUDEDIR:INTERNAL=
 ffmpeg1_libavcodec_LIBDIR:INTERNAL=
 ffmpeg1_libavcodec_PREFIX:INTERNAL=
 ffmpeg1_libavcodec_VERSION:INTERNAL=
-gdk2.0_CFLAGS:INTERNAL=-pthread;-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/gio-unix-2.0/;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+gdk2.0_CFLAGS:INTERNAL=-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/harfbuzz;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-pthread
 gdk2.0_CFLAGS_I:INTERNAL=
 gdk2.0_CFLAGS_OTHER:INTERNAL=-pthread
 gdk2.0_FOUND:INTERNAL=1
 gdk2.0_INCLUDEDIR:INTERNAL=/usr/include
-gdk2.0_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/gio-unix-2.0/;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+gdk2.0_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/harfbuzz;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/
 gdk2.0_LDFLAGS:INTERNAL=-lgdk-x11-2.0;-lpangocairo-1.0;-lpango-1.0;-lcairo;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0
 gdk2.0_LDFLAGS_OTHER:INTERNAL=
 gdk2.0_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
@@ -1054,20 +1148,20 @@ gdk2.0_LIBS_L:INTERNAL=
 gdk2.0_LIBS_OTHER:INTERNAL=
 gdk2.0_LIBS_PATHS:INTERNAL=
 gdk2.0_PREFIX:INTERNAL=/usr
-gdk2.0_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/gio-unix-2.0/;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+gdk2.0_STATIC_CFLAGS:INTERNAL=-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/harfbuzz;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-pthread
 gdk2.0_STATIC_CFLAGS_I:INTERNAL=
 gdk2.0_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
-gdk2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/gio-unix-2.0/;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-gdk2.0_STATIC_LDFLAGS:INTERNAL=-lgdk-x11-2.0;-lgio-2.0;-lz;-lresolv;-lselinux;-lXinerama;-lXi;-lXrandr;-lXcursor;-lXcomposite;-lXdamage;-lXfixes;-lpangocairo-1.0;-lpangoft2-1.0;-lharfbuzz;-lgraphite2;-lpango-1.0;-lm;-lcairo;-lz;-lpixman-1;-lfontconfig;-lexpat;-lfreetype;-lexpat;-lfreetype;-lz;-lpng12;-lm;-lz;-lm;-lpng12;-lm;-lz;-lm;-lxcb-shm;-lxcb-render;-lXrender;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp;-lgdk_pixbuf-2.0;-lm;-lgmodule-2.0;-pthread;-ldl;-lpng12;-lm;-lz;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread
-gdk2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+gdk2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/harfbuzz;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/
+gdk2.0_STATIC_LDFLAGS:INTERNAL=-lgdk-x11-2.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lpangocairo-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lpangoft2-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lgdk_pixbuf-2.0;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXinerama;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXi;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXrandr;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcursor;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcomposite;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXdamage;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXfixes;-lpthread;-lxcb;-lcairo;-lz;-lz;-lz;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lfontconfig;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lpng16;-lm;-lm;-lz;-lxcb-shm;-lxcb;-lxcb-render;-lxcb;-lXrender;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp
+gdk2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread
 gdk2.0_STATIC_LIBDIR:INTERNAL=
-gdk2.0_STATIC_LIBRARIES:INTERNAL=gdk-x11-2.0;gio-2.0;z;resolv;selinux;Xinerama;Xi;Xrandr;Xcursor;Xcomposite;Xdamage;Xfixes;pangocairo-1.0;pangoft2-1.0;harfbuzz;graphite2;pango-1.0;m;cairo;z;pixman-1;fontconfig;expat;freetype;expat;freetype;z;png16;m;z;m;png16;m;z;m;xcb-shm;xcb-render;Xrender;Xext;X11;pthread;xcb;Xau;Xdmcp;gdk_pixbuf-2.0;m;gmodule-2.0;dl;png16;m;z;m;gobject-2.0;ffi;glib-2.0;pcre
+gdk2.0_STATIC_LIBRARIES:INTERNAL=gdk-x11-2.0;m;pcre;pcre;gobject-2.0;ffi;pcre;pcre;pangocairo-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;pangoft2-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;gdk_pixbuf-2.0;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;fontconfig;expat;freetype;z;m;m;z;expat;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xinerama;X11;pthread;xcb;X11;pthread;xcb;Xi;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xrandr;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcursor;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcomposite;X11;pthread;xcb;X11;pthread;xcb;Xdamage;X11;pthread;xcb;X11;pthread;xcb;Xfixes;pthread;xcb;cairo;z;z;z;gobject-2.0;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;fontconfig;expat;z;m;m;z;expat;freetype;z;m;m;z;png16;m;m;z;xcb-shm;xcb;xcb-render;xcb;Xrender;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;Xext;X11;pthread;xcb;Xau;Xdmcp
 gdk2.0_STATIC_LIBRARY_DIRS:INTERNAL=
 gdk2.0_STATIC_LIBS:INTERNAL=
 gdk2.0_STATIC_LIBS_L:INTERNAL=
 gdk2.0_STATIC_LIBS_OTHER:INTERNAL=
 gdk2.0_STATIC_LIBS_PATHS:INTERNAL=
-gdk2.0_VERSION:INTERNAL=2.24.30
+gdk2.0_VERSION:INTERNAL=2.24.32
 gdk2.0_gdk-2.0_INCLUDEDIR:INTERNAL=
 gdk2.0_gdk-2.0_LIBDIR:INTERNAL=
 gdk2.0_gdk-2.0_PREFIX:INTERNAL=
@@ -1092,16 +1186,16 @@ glib2.0_STATIC_CFLAGS:INTERNAL=-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-g
 glib2.0_STATIC_CFLAGS_I:INTERNAL=
 glib2.0_STATIC_CFLAGS_OTHER:INTERNAL=
 glib2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-glib2.0_STATIC_LDFLAGS:INTERNAL=-lglib-2.0;-pthread;-lpcre;-pthread
-glib2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+glib2.0_STATIC_LDFLAGS:INTERNAL=-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread
+glib2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
 glib2.0_STATIC_LIBDIR:INTERNAL=
-glib2.0_STATIC_LIBRARIES:INTERNAL=glib-2.0;pcre
+glib2.0_STATIC_LIBRARIES:INTERNAL=glib-2.0;pcre;pcre
 glib2.0_STATIC_LIBRARY_DIRS:INTERNAL=
 glib2.0_STATIC_LIBS:INTERNAL=
 glib2.0_STATIC_LIBS_L:INTERNAL=
 glib2.0_STATIC_LIBS_OTHER:INTERNAL=
 glib2.0_STATIC_LIBS_PATHS:INTERNAL=
-glib2.0_VERSION:INTERNAL=2.48.1
+glib2.0_VERSION:INTERNAL=2.56.0
 glib2.0_glib-2.0_INCLUDEDIR:INTERNAL=
 glib2.0_glib-2.0_LIBDIR:INTERNAL=
 glib2.0_glib-2.0_PREFIX:INTERNAL=
@@ -1126,26 +1220,26 @@ gmod2.0_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/glib-2.0;-I/usr/lib/x86_6
 gmod2.0_STATIC_CFLAGS_I:INTERNAL=
 gmod2.0_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
 gmod2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-gmod2.0_STATIC_LDFLAGS:INTERNAL=-Wl,--export-dynamic;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-pthread
-gmod2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,--export-dynamic;-pthread
+gmod2.0_STATIC_LDFLAGS:INTERNAL=-Wl,--export-dynamic;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread
+gmod2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,--export-dynamic;-pthread;-pthread;-pthread
 gmod2.0_STATIC_LIBDIR:INTERNAL=
-gmod2.0_STATIC_LIBRARIES:INTERNAL=gmodule-2.0;dl;glib-2.0;pcre
+gmod2.0_STATIC_LIBRARIES:INTERNAL=gmodule-2.0;dl;glib-2.0;pcre;pcre
 gmod2.0_STATIC_LIBRARY_DIRS:INTERNAL=
 gmod2.0_STATIC_LIBS:INTERNAL=
 gmod2.0_STATIC_LIBS_L:INTERNAL=
 gmod2.0_STATIC_LIBS_OTHER:INTERNAL=
 gmod2.0_STATIC_LIBS_PATHS:INTERNAL=
-gmod2.0_VERSION:INTERNAL=2.48.1
+gmod2.0_VERSION:INTERNAL=2.56.0
 gmod2.0_gmodule-2.0_INCLUDEDIR:INTERNAL=
 gmod2.0_gmodule-2.0_LIBDIR:INTERNAL=
 gmod2.0_gmodule-2.0_PREFIX:INTERNAL=
 gmod2.0_gmodule-2.0_VERSION:INTERNAL=
-gtk2.0_CFLAGS:INTERNAL=-pthread;-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/gio-unix-2.0/;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/atk-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/libpng16;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/freetype2
+gtk2.0_CFLAGS:INTERNAL=-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/harfbuzz;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-I/usr/include/atk-1.0;-pthread
 gtk2.0_CFLAGS_I:INTERNAL=
 gtk2.0_CFLAGS_OTHER:INTERNAL=-pthread
 gtk2.0_FOUND:INTERNAL=1
 gtk2.0_INCLUDEDIR:INTERNAL=/usr/include
-gtk2.0_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/gio-unix-2.0/;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/atk-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/libpng16;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/freetype2
+gtk2.0_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/harfbuzz;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/;/usr/include/atk-1.0
 gtk2.0_LDFLAGS:INTERNAL=-lgtk-x11-2.0;-lgdk-x11-2.0;-lpangocairo-1.0;-latk-1.0;-lcairo;-lgdk_pixbuf-2.0;-lgio-2.0;-lpangoft2-1.0;-lpango-1.0;-lgobject-2.0;-lglib-2.0;-lfontconfig;-lfreetype
 gtk2.0_LDFLAGS_OTHER:INTERNAL=
 gtk2.0_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
@@ -1156,20 +1250,20 @@ gtk2.0_LIBS_L:INTERNAL=
 gtk2.0_LIBS_OTHER:INTERNAL=
 gtk2.0_LIBS_PATHS:INTERNAL=
 gtk2.0_PREFIX:INTERNAL=/usr
-gtk2.0_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/gio-unix-2.0/;-I/usr/include/cairo;-I/usr/include/pango-1.0;-I/usr/include/atk-1.0;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/libpng16;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/pango-1.0;-I/usr/include/harfbuzz;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/freetype2
+gtk2.0_STATIC_CFLAGS:INTERNAL=-I/usr/include/gtk-2.0;-I/usr/lib/x86_64-linux-gnu/gtk-2.0/include;-I/usr/include/pango-1.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-I/usr/include/cairo;-I/usr/include/pixman-1;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/harfbuzz;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/gio-unix-2.0/;-I/usr/include/atk-1.0;-pthread
 gtk2.0_STATIC_CFLAGS_I:INTERNAL=
 gtk2.0_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
-gtk2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/gio-unix-2.0/;/usr/include/cairo;/usr/include/pango-1.0;/usr/include/atk-1.0;/usr/include/cairo;/usr/include/pixman-1;/usr/include/libpng16;/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/pango-1.0;/usr/include/harfbuzz;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/freetype2
-gtk2.0_STATIC_LDFLAGS:INTERNAL=-lgtk-x11-2.0;-lgdk-x11-2.0;-lgio-2.0;-lXinerama;-lXi;-lXrandr;-lXcursor;-lXcomposite;-lXdamage;-lXfixes;-lpangocairo-1.0;-latk-1.0;-lcairo;-lz;-lpixman-1;-lpng12;-lm;-lz;-lm;-lxcb-shm;-lxcb-render;-lXrender;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp;-lgdk_pixbuf-2.0;-lm;-lpng12;-lm;-lz;-lm;-lgio-2.0;-lz;-lresolv;-lselinux;-lgmodule-2.0;-pthread;-ldl;-lpangoft2-1.0;-lharfbuzz;-lgraphite2;-lpango-1.0;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lexpat;-lfreetype;-lz;-lpng12;-lm;-lz;-lm
-gtk2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+gtk2.0_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gtk-2.0;/usr/lib/x86_64-linux-gnu/gtk-2.0/include;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/cairo;/usr/include/pixman-1;/usr/include/freetype2;/usr/include/libpng16;/usr/include/harfbuzz;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0/;/usr/include/atk-1.0
+gtk2.0_STATIC_LDFLAGS:INTERNAL=-lgtk-x11-2.0;-lgdk-x11-2.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lpangocairo-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfontconfig;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lexpat;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXinerama;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXi;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXrandr;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcursor;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXcomposite;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXdamage;-lX11;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXfixes;-lpthread;-lxcb;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lfreetype;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-latk-1.0;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lcairo;-lz;-lz;-lz;-lffi;-pthread;-lpcre;-lpcre;-pthread;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpixman-1;-lexpat;-lz;-lm;-lm;-lz;-lexpat;-lz;-lm;-lm;-lz;-lm;-lm;-lz;-lxcb-shm;-lxcb;-lxcb-render;-lxcb;-lXrender;-lX11;-lpthread;-lxcb;-lpthread;-lxcb;-lX11;-lpthread;-lxcb;-lXext;-lX11;-lpthread;-lxcb;-lXau;-lXdmcp;-lgdk_pixbuf-2.0;-lm;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz;-lgio-2.0;-lz;-lresolv;-lselinux;-lmount;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-pthread;-lpcre;-lpcre;-pthread;-lpangoft2-1.0;-lpango-1.0;-lm;-pthread;-lpcre;-lpcre;-pthread;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lfreetype;-lz;-lm;-lm;-lz;-lfontconfig;-lexpat;-lfreetype;-lz;-lpng16;-lm;-lm;-lz;-lexpat;-lharfbuzz;-lm;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgraphite2
+gtk2.0_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread;-pthread
 gtk2.0_STATIC_LIBDIR:INTERNAL=
-gtk2.0_STATIC_LIBRARIES:INTERNAL=gtk-x11-2.0;gdk-x11-2.0;gio-2.0;Xinerama;Xi;Xrandr;Xcursor;Xcomposite;Xdamage;Xfixes;pangocairo-1.0;atk-1.0;cairo;z;pixman-1;png16;m;z;m;xcb-shm;xcb-render;Xrender;Xext;X11;pthread;xcb;Xau;Xdmcp;gdk_pixbuf-2.0;m;png16;m;z;m;gio-2.0;z;resolv;selinux;gmodule-2.0;dl;pangoft2-1.0;harfbuzz;graphite2;pango-1.0;m;gobject-2.0;ffi;glib-2.0;pcre;fontconfig;expat;freetype;expat;freetype;z;png16;m;z;m
+gtk2.0_STATIC_LIBRARIES:INTERNAL=gtk-x11-2.0;gdk-x11-2.0;m;pcre;pcre;gobject-2.0;ffi;pcre;pcre;pangocairo-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;expat;freetype;z;m;m;z;expat;harfbuzz;m;pcre;pcre;graphite2;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z;ffi;pcre;pcre;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;fontconfig;expat;freetype;z;m;m;z;expat;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xinerama;X11;pthread;xcb;X11;pthread;xcb;Xi;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xrandr;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcursor;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;X11;pthread;xcb;Xcomposite;X11;pthread;xcb;X11;pthread;xcb;Xdamage;X11;pthread;xcb;X11;pthread;xcb;Xfixes;pthread;xcb;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;freetype;z;m;m;z;m;m;z;xcb;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;pthread;xcb;atk-1.0;gobject-2.0;ffi;glib-2.0;pcre;pcre;cairo;z;z;z;ffi;pcre;pcre;glib-2.0;pcre;pcre;pixman-1;expat;z;m;m;z;expat;z;m;m;z;m;m;z;xcb-shm;xcb;xcb-render;xcb;Xrender;X11;pthread;xcb;pthread;xcb;X11;pthread;xcb;Xext;X11;pthread;xcb;Xau;Xdmcp;gdk_pixbuf-2.0;m;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;png16;m;m;z;gio-2.0;z;resolv;selinux;mount;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;pcre;pcre;pangoft2-1.0;pango-1.0;m;pcre;pcre;gobject-2.0;ffi;glib-2.0;pcre;pcre;freetype;z;m;m;z;fontconfig;expat;freetype;z;png16;m;m;z;expat;harfbuzz;m;glib-2.0;pcre;pcre;graphite2
 gtk2.0_STATIC_LIBRARY_DIRS:INTERNAL=
 gtk2.0_STATIC_LIBS:INTERNAL=
 gtk2.0_STATIC_LIBS_L:INTERNAL=
 gtk2.0_STATIC_LIBS_OTHER:INTERNAL=
 gtk2.0_STATIC_LIBS_PATHS:INTERNAL=
-gtk2.0_VERSION:INTERNAL=2.24.30
+gtk2.0_VERSION:INTERNAL=2.24.32
 gtk2.0_gtk+-2.0_INCLUDEDIR:INTERNAL=
 gtk2.0_gtk+-2.0_LIBDIR:INTERNAL=
 gtk2.0_gtk+-2.0_PREFIX:INTERNAL=
@@ -1178,12 +1272,12 @@ gtk2.0_gtk+-2.0_VERSION:INTERNAL=
 ogg_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ogg_LIBRARY
 ogg_LIBRARY-ADVANCED:INTERNAL=1
-pixbuf_CFLAGS:INTERNAL=-pthread;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+pixbuf_CFLAGS:INTERNAL=-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-pthread;-I/usr/include/libpng16
 pixbuf_CFLAGS_I:INTERNAL=
 pixbuf_CFLAGS_OTHER:INTERNAL=-pthread
 pixbuf_FOUND:INTERNAL=1
 pixbuf_INCLUDEDIR:INTERNAL=/usr/include
-pixbuf_INCLUDE_DIRS:INTERNAL=/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+pixbuf_INCLUDE_DIRS:INTERNAL=/usr/include/gdk-pixbuf-2.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/libpng16
 pixbuf_LDFLAGS:INTERNAL=-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0
 pixbuf_LDFLAGS_OTHER:INTERNAL=
 pixbuf_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
@@ -1194,20 +1288,20 @@ pixbuf_LIBS_L:INTERNAL=
 pixbuf_LIBS_OTHER:INTERNAL=
 pixbuf_LIBS_PATHS:INTERNAL=
 pixbuf_PREFIX:INTERNAL=/usr
-pixbuf_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/libpng16;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+pixbuf_STATIC_CFLAGS:INTERNAL=-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include;-pthread;-I/usr/include/libpng16
 pixbuf_STATIC_CFLAGS_I:INTERNAL=
 pixbuf_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
-pixbuf_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gdk-pixbuf-2.0;/usr/include/libpng16;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
-pixbuf_STATIC_LDFLAGS:INTERNAL=-lgdk_pixbuf-2.0;-lm;-lgmodule-2.0;-pthread;-ldl;-lpng12;-lm;-lz;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-pthread
-pixbuf_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+pixbuf_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/gdk-pixbuf-2.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/libpng16
+pixbuf_STATIC_LDFLAGS:INTERNAL=-lgdk_pixbuf-2.0;-lm;-lgobject-2.0;-lffi;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lgmodule-2.0;-pthread;-ldl;-lglib-2.0;-pthread;-lpcre;-lpcre;-pthread;-lpng16;-lm;-lm;-lz
+pixbuf_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread;-pthread;-pthread
 pixbuf_STATIC_LIBDIR:INTERNAL=
-pixbuf_STATIC_LIBRARIES:INTERNAL=gdk_pixbuf-2.0;m;gmodule-2.0;dl;png16;m;z;m;gobject-2.0;ffi;glib-2.0;pcre
+pixbuf_STATIC_LIBRARIES:INTERNAL=gdk_pixbuf-2.0;m;gobject-2.0;ffi;glib-2.0;pcre;pcre;gmodule-2.0;dl;glib-2.0;pcre;pcre;png16;m;m;z
 pixbuf_STATIC_LIBRARY_DIRS:INTERNAL=
 pixbuf_STATIC_LIBS:INTERNAL=
 pixbuf_STATIC_LIBS_L:INTERNAL=
 pixbuf_STATIC_LIBS_OTHER:INTERNAL=
 pixbuf_STATIC_LIBS_PATHS:INTERNAL=
-pixbuf_VERSION:INTERNAL=2.34.0
+pixbuf_VERSION:INTERNAL=2.36.11
 pixbuf_gdk-pixbuf-2.0_INCLUDEDIR:INTERNAL=
 pixbuf_gdk-pixbuf-2.0_LIBDIR:INTERNAL=
 pixbuf_gdk-pixbuf-2.0_PREFIX:INTERNAL=
@@ -1242,7 +1336,7 @@ swscale1_STATIC_LIBS:INTERNAL=
 swscale1_STATIC_LIBS_L:INTERNAL=
 swscale1_STATIC_LIBS_OTHER:INTERNAL=
 swscale1_STATIC_LIBS_PATHS:INTERNAL=
-swscale1_VERSION:INTERNAL=4.1.100
+swscale1_VERSION:INTERNAL=4.8.100
 swscale1_libswscale_INCLUDEDIR:INTERNAL=
 swscale1_libswscale_LIBDIR:INTERNAL=
 swscale1_libswscale_PREFIX:INTERNAL=

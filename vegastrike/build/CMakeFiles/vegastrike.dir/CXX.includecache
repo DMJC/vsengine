@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -9933,6 +9933,26 @@ gfx/vec.h
 /usr/include/AL/al.h
 
 /usr/include/AL/alc.h
+
+/usr/include/libpng16/png.h
+pnglibconf.h
+/usr/include/libpng16/pnglibconf.h
+pngconf.h
+/usr/include/libpng16/pngconf.h
+
+/usr/include/libpng16/pngconf.h
+limits.h
+-
+stddef.h
+-
+stdio.h
+-
+setjmp.h
+-
+time.h
+-
+
+/usr/include/libpng16/pnglibconf.h
 
 /usr/include/python2.7/code.h
 

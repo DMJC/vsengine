@@ -44,7 +44,7 @@ namespace Audio {
     public:
         /** Construct an empty registry 
          * @remarks End-users of the class shouldn't be using this. Singletons need it*/
-        CodecRegistry() throw();
+        CodecRegistry() noexcept;
         
         ~CodecRegistry();
         
@@ -54,14 +54,14 @@ namespace Audio {
          *      that any further call will be a no-op. Previos priority will still apply.
          * @param codec The codec to be added to the registry.
          */
-        void add(Codec* codec, int priority = 0) throw();
+        void add(Codec* codec, int priority = 0) noexcept;
         
         /**
          * Remove a codec from the registry
          * @remarks If the codec had already been removed, this is a no-op.
          * @param codec The codec to be removed from the registry.
          */
-        void remove(Codec* codec) throw();
+        void remove(Codec* codec) noexcept;
         
         /**
          * Find a codec by its name
@@ -97,7 +97,7 @@ namespace Audio {
     {
         Codec *codec;
     public:
-        CodecRegistration(Codec* codec, int priority = 0) throw();
+        CodecRegistration(Codec* codec, int priority = 0) noexcept;
         ~CodecRegistration();
     };
 

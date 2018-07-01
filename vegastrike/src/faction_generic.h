@@ -72,7 +72,7 @@ public:
     std::vector< std::string >     explosion_name;
     std::vector< unsigned char >   comm_face_sex;
     MapStringFloat ship_relation_modifier;
-    // This should be a std::auto_ptr, but then "cmd/unit.h" has to be included
+    // This should be a std::shared_ptr, but then "cmd/unit.h" has to be included
     boost::shared_ptr<Unit> contraband;
 ///Figures out the relationships of each faction with each other
     static void ParseAllAllies( /*Universe * thisuni*/ );

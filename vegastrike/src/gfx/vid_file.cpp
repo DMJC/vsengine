@@ -204,7 +204,7 @@ public:
             avformat_close_input( &pFormatCtx );
     }
 
-    void open( const std::string &path ) throw (VidFile::Exception)
+    void open( const std::string &path ) noexcept(false)// (VidFile::Exception)
     {
         if (pCodecCtx != 0) throw VidFile::Exception( "Already open" );
         //Initialize libavcodec/libavformat if necessary
@@ -377,7 +377,7 @@ public:
 #endif /* !HAVE_FFMPEG */
 /* ************************************ */
 
-VidFile::VidFile() throw () :
+VidFile::VidFile() noexcept :
     impl( NULL )
 {}
 
@@ -387,12 +387,12 @@ VidFile::~VidFile()
         delete impl;
 }
 
-bool VidFile::isOpen() const throw ()
+bool VidFile::isOpen() const noexcept
 {
     return impl != NULL;
 }
 
-void VidFile::open( const std::string &path, size_t maxDimension, bool forcePOT ) throw (Exception)
+void VidFile::open( const std::string &path, size_t maxDimension, bool forcePOT ) noexcept(false)//throw (Exception)
 {
 #ifdef HAVE_FFMPEG
     if (!impl)
@@ -402,7 +402,7 @@ void VidFile::open( const std::string &path, size_t maxDimension, bool forcePOT 
 #endif
 }
 
-void VidFile::close() throw ()
+void VidFile::close() noexcept
 {
     if (impl) {
         delete impl;
@@ -410,37 +410,37 @@ void VidFile::close() throw ()
     }
 }
 
-float VidFile::getFrameRate() const throw ()
+float VidFile::getFrameRate() const noexcept
 {
     return impl ? impl->frameRate : 0;
 }
 
-float VidFile::getDuration() const throw ()
+float VidFile::getDuration() const noexcept
 {
     return impl ? impl->duration : 0;
 }
 
-int VidFile::getWidth() const throw ()
+int VidFile::getWidth() const noexcept
 {
     return impl ? impl->width : 0;
 }
 
-int VidFile::getHeight() const throw ()
+int VidFile::getHeight() const noexcept
 {
     return impl ? impl->height : 0;
 }
 
-void* VidFile::getFrameBuffer() const throw ()
+void* VidFile::getFrameBuffer() const noexcept
 {
     return impl ? impl->frameBuffer : 0;
 }
 
-int VidFile::getFrameBufferStride() const throw ()
+int VidFile::getFrameBufferStride() const noexcept
 {
     return impl ? impl->frameBufferStride : 0;
 }
 
-bool VidFile::seek( float time ) throw (Exception)
+bool VidFile::seek( float time ) noexcept(false)//throw (Exception)
 {
     return (impl != 0) && impl->seek( time );
 }

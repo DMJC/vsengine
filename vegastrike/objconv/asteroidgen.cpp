@@ -144,9 +144,9 @@ public:
 struct asteroid
 {
     Vector center;
-    float  radius;
+    float  radius = 0.0;
     Vector YawPitchRoll;
-    int    num_polys;
+    int    num_polys = 0;
     vector< Vector >points;
     vector< Tri >   polygon;
     asteroid() : center( 0, 0, 0 )
